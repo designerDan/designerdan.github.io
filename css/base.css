@@ -502,6 +502,20 @@ a.linkedin {
   .push1 {
     grid-column: 2 / span 2;
   }
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.bk-block {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 3rem;
+}
+.yt-block {
+  background-color: var(--color-white);
+  padding: 3rem;
 }
 
 .text-col {
@@ -525,7 +539,7 @@ a.linkedin {
 .quote-text {
   font-family: var(--font-family-dec);
   font-weight: 900;
-  font-size: 1.33rem;
+  font-size: 1.6rem;
 }
 
 /* benefits */
