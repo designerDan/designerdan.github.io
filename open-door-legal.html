@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;900&display=swap">
   <link rel="stylesheet" href="./css/base.css">
+  
+  <!-- Add GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
   <header class="site-head">
@@ -77,45 +80,47 @@
           <h1 class="hero-title">Open Door Legal</h1>
         </div>
       </section>
-    <section class="sp2">
+    <section class="intro">
+      <h2>Open Door Legal is an award-winning nonprofit working to show that poverty will be dramatically reduced when everyone has access to the law.</h2>
+      <p class="embiggen">Open Door Legal wanted a multi-sided marketplace in Salesforce to more easily assign, track, and work with legal referrals.</p>
+      <p class="hero-tag">Contributions</p>
+      <p>UX Design</p>
+      <p class="hero-tag">Team</p>
+      <p>Product Manager, Engineer, Me</p>
+      <p class="hero-tag">Timeline</p>
+      <p>1 month</p>      
+    </section>
+    <section class="img-break">
+      <img  src="imgs/odl-results.webp"
+            width="2880"
+            height="1620"
+            alt="Screenshot of a referral system interface with empty referral activity and received referrals sections."
+            loading="lazy">
+    </section>
+    <section class="research">
+      <p class="hero-tag">Research</p>
+      <img  src="imgs/odl-research.webp"
+              width="1920"
+              height="1080"
+              alt=""
+              loading="lazy">
       <div class="grid">
         <div class="col2">
-          <p class="hero-tag">Overview</p>
-          <h2 class="h2">A legal organization wanted to a multi-sided marketplace for legal referrals built in Salesforce.</h2>
-        </div>
-        <div class="col">
-          <p class="hero-tag">Timeline</p>
-          <p>1 month</p>
-          <p class="hero-tag">Team</p>
-          <p>Product Manager, Engineer, Me</p>
-          <p class="hero-tag">Contributions</p>
-          <p>UX Design</p>
+          <h3>An introductory intake revealed the organization's current way of working is highly manual, prone to error, and difficult to stay on top of.</h3>
+          <p>Admin search a database for organizations to send a referral to. They get back a list of access details, which tells them if they need to call, email, fax, or postmail the referral to an office. The referral is then manually logged as sent. While this way of operating works and is successful it is less than ideal.</p>
         </div>
       </div>
     </section>
-    <section class="sp2">        
-      <div class="text-col">
-        <p class="hero-tag">Research &#38; Insights</p>
-        <img  src="imgs/odl-research.webp"
-                width="1920"
-                height="1080"
-                alt=""
-                loading="lazy">
-        <h3 class="h3">The organization's current way of working is highly manual.</h3>
-        <div class="grid">
-            <div class="col2">
-                <p>Admin search a database for organizations to send a referral to. They get back a list of access details, which tells them if they need to call, email, fax, or postmail the referral to an office. The referral is then manually logged as sent. While this way of operating works and is successful it is less than ideal.</p>
-            </div>
-        </div>
-        <p class="hero-tag sp2">Process</p>
+    <section class="process">
+      <p class="hero-tag sp2">Process</p>
         <img  src="imgs/odl-process.webp"
                 width="1920"
                 height="1080"
                 alt="An image of a product requirements document discussing features and metrics for a referral system in a legal aid platform."
                 loading="lazy">
-        <h3 class="h3">Work was organized in user story fashion with a well documented description, outcome, and value, and prioritized using the MoSCoW framework, which was the organizational standard, and favorite of the project person.</h3>
         <div class="grid">
           <div class="col2">
+            <h3>Work was organized in user story fashion with a well documented description, outcome, and value, and prioritized using the MoSCoW framework, which was the organizational standard, and favorite of the project person.</h3>
             <p class="padded-dn">From there I created user flows and mockups for those flows. Through reviews, critiques, and testing sessions I refined my flows documenting the changes through a change log as shown below.</p>
           </div>
         </div>
@@ -124,90 +129,125 @@
                 height="1080"
                 alt="Three flowchart diagrams with color-coded elements and change logs beneath each."
                 loading="lazy">
-        <p class="hero-tag sp2">Results</p>
-        <img  src="imgs/odl-results.webp"
-                width="1920"
-                height="1080"
-                alt="Screenshot of a referral system interface with empty referral activity and received referrals sections."
-                loading="lazy">
-        <div class="grid">
-            <div class="col2">
-                <p class="padded">To pull focus to the importance of this new referral flow I established a referral focused home page. It contains a snapshot of the most important action of creating a referral and status on any sent or received referrals. This layout does what a good homepage does and makes it a one stop shop for anything and everything referral related.</p>
-            </div>
-        </div>
-        <img  src="imgs/odl-results02.webp"
-                width="1920"
-                height="1080"
-                alt="Screenshot of a referral management system with tabs for creating and tracking referrals."
-                loading="lazy">
-        <div class="grid">
-            <div class="col2">
-                <p>A challenge for integrating the new referral marketplace is that many vendors exist outside of the Salesforce system, meaning the manual way of referring clients has to be accounted for inside Salesforce.</p>
-                <p class="padded-dn">I provided for both internal Salesforce referrals and manual external referrals with an in-network and out-of-network designation when creating a referral as well as through the tabbed interface for Referral Activity. This solution provides a clean and logical place for the different types of referrals.</p>
-            </div>
-        </div>
-        <img  src="imgs/odl-results03.webp"
-                width="1920"
-                height="1080"
-                alt="Screenshot of a referral system interface indicating a declined referral."
-                loading="lazy">
-        <div class="grid">
-            <div class="col2">
-                <p class="padded">Here you're seeing the receiver's perspective of the referral. It is simple and exists to communicate the information vital to processing it. The interactions here are basic and intended to be so keeping effort and errors to a minimum.</p>
-            </div>
-        </div>
-        <img  src="imgs/odl-results04.webp"
-                width="1920"
-                height="1080"
-                alt="Screenshot of a referral tracking interface with status progression indicators and recent activity logs."
-                loading="lazy">
-        <div class="grid">
-            <div class="col2">
-                <p class="padded">I designed the actual referral as an object within Salesforce. It is self-contained. I keep all actions Everythin you need to know about a referral and any actions you need to take with a referral are close by, minimizing the chance of losing your place or forgetting an important detail, reducing the effort and cognitive load required to succeed when dealing with referrals.</p>
-            </div>
-        </div>
-        <img  src="imgs/odl-results05.webp"
-                width="1920"
-                height="1080"
-                alt="Screenshot of a referral system interface with form fields and referral activity log."
-                loading="lazy">
-        <div class="grid">
-            <div class="col2">
-                <p class="padded">I lean heavily into notifications to communicate status updates. This is what notifications were designed to do. They are a well trod and beneficial interaction pattern.</p>
-            </div>
-        </div>
-        <img  src="imgs/odl-results06.webp"
-                width="1920"
-                height="1080"
-                alt="Screenshot of a referral management system interface with various fields and activity log indicating a closed referral."
-                loading="lazy">
-        <div class="grid">
-            <div class="col2">
-                <p class="padded">Here you're seeing the final state of a referral. When there is nothing more than can be done with it or to it then it is considered closed. Designing for this state is communicating the lack of actions that can be taken, which I accomplish with a status bar and an update to the activity timeline. My design makes it clear you can leave this referral and go about your other business.</p>
-            </div>
+    </section>
+    <section class="img-break">
+      <img  src="imgs/odl-process03.webp"
+            width="2880"
+            height="1530"
+            alt="Swimlanes diagram showing the screens and how the users interact with one another."
+            loading="lazy">
+    </section>
+    <section class="results">
+      <p class="hero-tag">Results</p>
+      <video width="1920" height="1080" preload controls poster="./imgs/odl-cover.webp" loading="lazy">
+        <source src="./vids/odl-main.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <div class="grid">
+        <div class="col2">
+          <p class="padded">To pull focus to the importance of this new referral flow I established a referral focused home page. It contains a snapshot of the most important action of creating a referral and status on any sent or received referrals. This layout does what a good homepage does and makes it a one stop shop for anything and everything referral related.</p>
         </div>
       </div>
-      <div class="grid2">
-        <div class="bk-block">
-          <p class="hero-tag sp2">Impact</p>
-          <h3 class="h3">To date, my designs increased NPS by 80 basis points, reduced referral redundancies by 16%, and enhanced logging and user adoption of the referral feature by 40%. All within expected ranges of improvement.</h3>
-          <div class="grid">
-            <div class="col3">
-              <blockquote>
-                <p class="quote-text">“You're the best UX designer we've ever had.”</p>
-              </blockquote>
-              <p class="quote-text">&ndash; Executive Director</p>
-            </div>
-          </div>
+      <img  src="imgs/odl-results02.webp"
+              width="1920"
+              height="1080"
+              alt="Screenshot of a referral management system with tabs for creating and tracking referrals."
+              loading="lazy">
+      <div class="grid">
+        <div class="col2">
+          <p>A challenge for integrating the new referral marketplace is that many vendors exist outside of the Salesforce system, meaning the manual way of referring clients has to be accounted for inside Salesforce.</p>
+          <p class="padded-dn">I provided for both internal Salesforce referrals and manual external referrals with an in-network and out-of-network designation when creating a referral as well as through the tabbed interface for Referral Activity. This solution provides a clean and logical place for the different types of referrals.</p>
         </div>
-        <div class="yt-block">
-          <p class="hero-tag sp2">What's Next</p>
-          <h3 class="h3">My designs are under review every 30 days up to one business quarter.</h3>
-          <div class="grid">
-            <div class="col3">
-              <p>If progress continues in the positive direction and the metric milestones are being hit then I have no more involvement. If I were to touch this project again I would work to minimize the referral real estate on the home page and I would look for ways to connect referrals to more objects inside Salesforce for greater impact and extensibility.</p>
-            </div>
+      </div>
+      <img  src="imgs/odl-results03.webp"
+              width="1920"
+              height="1080"
+              alt="Screenshot of a referral system interface indicating a declined referral."
+              loading="lazy">
+      <div class="grid">
+        <div class="col2">
+          <p class="padded">Here you're seeing the receiver's perspective of the referral. It is simple and exists to communicate the information vital to processing it. The interactions here are basic and intended to be so keeping effort and errors to a minimum.</p>
+        </div>
+      </div>
+      <img  src="imgs/odl-results04.webp"
+              width="1920"
+              height="1080"
+              alt="Screenshot of a referral tracking interface with status progression indicators and recent activity logs."
+              loading="lazy">
+      <div class="grid">
+        <div class="col2">
+          <p class="padded">I designed the actual referral as an object within Salesforce. It is self-contained. I keep all actions Everythin you need to know about a referral and any actions you need to take with a referral are close by, minimizing the chance of losing your place or forgetting an important detail, reducing the effort and cognitive load required to succeed when dealing with referrals.</p>
+        </div>
+      </div>
+      <img  src="imgs/odl-results05.webp"
+              width="1920"
+              height="1080"
+              alt="Screenshot of a referral system interface with form fields and referral activity log."
+              loading="lazy">
+      <div class="grid">
+        <div class="col2">
+          <p class="padded">I lean heavily into notifications to communicate status updates. This is what notifications were designed to do. They are a well trod and beneficial interaction pattern.</p>
+        </div>
+      </div>
+      <img  src="imgs/odl-results06.webp"
+              width="1920"
+              height="1080"
+              alt="Screenshot of a referral management system interface with various fields and activity log indicating a closed referral."
+              loading="lazy">
+      <div class="grid">
+        <div class="col2">
+          <p class="padded">Here you're seeing the final state of a referral. When there is nothing more than can be done with it or to it then it is considered closed. Designing for this state is communicating the lack of actions that can be taken, which I accomplish with a status bar and an update to the activity timeline. My design makes it clear you can leave this referral and go about your other business.</p>
+        </div>
+      </div>
+    </section>
+    <section class="impact">
+      <p class="hero-tag">Impact</p>
+      <div class="stats">
+        <div class="stat">       
+          <blockquote>
+            <p class="stat-text">You're the best Salesforce designer we've ever had.</p>
+          </blockquote>
+          <p class="stat-title">Executive Director, ODL</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">-16%</p>
+          <p class="stat-title">Referral redundancies</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">+80</p>
+          <p class="stat-title">NPS basis points</p>
+        </div> 
+      </div>
+    </section>
+    <section class="next">
+      <h2>Other projects of note</h2>
+      <div class="grid2">
+        <a href="./new-voters" class="next-link">
+          <div class="next-link_img-container -yt">
+            <video width="1920" height="1080" preload controls poster="./imgs/nv-cover.webp" loading="lazy">
+              <source src="./vids/nv-main.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
           </div>
+          <p class="next-link_title">New-Voters</p>
+          <p>Voting drives made easy and fun.</p>
+          <p class="next-link_cta">View project</p>
+        </a>
+        <a href="./zix" class="next-link">
+          <div class="next-link_img-container -br">
+            <img src="./imgs/zx-hero.webp"
+                  width="1458"
+                  height="1136"
+                  srcset="./imgs/zx-hero.webp 292w,
+                          ./imgs/zx-hero@2x.webp 584w"
+                  sizes="(max-width: 768px) 100vw, 729px"
+                  alt="Web interface showing a customer management dashboard with filters, list of customers, and admin controls."
+                  loading="lazy">
+          </div>
+          <p class="next-link_title">Zix</p>
+          <p>Unifying and growing a B2B SaaS.</p>
+          <p class="next-link_cta">View project</p>
+        </a>
       </div>
     </section>
     <section class="hero -br">
