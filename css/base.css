@@ -401,7 +401,6 @@ a.linkedin {
   font-size:.75rem;
   margin-right:1rem;
   text-transform: uppercase;
-  max-width: 35vw;
 }
 @media screen and (orientation:landscape) {
   .hero-tag {
@@ -435,6 +434,7 @@ a.linkedin {
   font-weight: 900;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 3rem;
 }
 @media screen and (orientation:landscape) {
   .hero-title {
@@ -541,6 +541,15 @@ a.linkedin {
 }
 
 /* sections */
+.intro {
+  margin: 5rem auto 3rem;
+}
+.research,
+.process,
+.results {
+  margin: 3rem auto;
+}
+
 @media screen and (orientation: landscape) {
   .intro {
     margin: 8rem 22vw;
@@ -549,7 +558,11 @@ a.linkedin {
 }
 .img-break {
   margin: 0 auto;
-  max-width: 90vw;
+}
+@media screen and (orientation: landscape) {
+  .img-break {
+    max-width: 90vw;
+  }
 }
 @media screen and (orientation: landscape) {
   .research,
