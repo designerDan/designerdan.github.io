@@ -34,6 +34,7 @@
   --color-grey: #D3D3CE;
   --color-black: #140A0F;
   --color-white: #FFFFFA;
+  --border-width: 12px;
 }
 
 html {
@@ -52,9 +53,9 @@ body {
   -webkit-hyphens: none;
 	  	-ms-hyphens: none;
 		  		hyphens: none;
-  border-left: 12px solid var(--color-white);
-  border-right: 12px solid var(--color-white);
-  border-bottom: 12px solid var(--color-white);
+  border-left: var(--border-width) solid var(--color-white);
+  border-right: var(--border-width) solid var(--color-white);
+  border-bottom: var(--border-width) solid var(--color-white);
   line-height: 1.4;
 }
 
@@ -435,6 +436,7 @@ a.linkedin {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 3rem;
+  color: var(--color-white);
 }
 @media screen and (orientation:landscape) {
   .hero-title {
@@ -462,6 +464,7 @@ a.linkedin {
   font-family: var(--font-family-head);
   font-weight: 900;
   font-size: 1.6rem;
+  line-height: 1.4;
   color: var(--color-white);
 }
 @media screen and (orientation:landscape) {
@@ -541,6 +544,19 @@ a.linkedin {
 }
 
 /* sections */
+.panel {
+  height: 100%;
+  width: calc(100% - (var(--border-width) * 2));
+  position: fixed;
+  visibility: hidden;
+}
+.outer,
+.inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
 .intro {
   margin: 5rem auto 3rem;
 }
