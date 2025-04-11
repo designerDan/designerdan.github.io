@@ -20,6 +20,10 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;900&display=swap">
   <link rel="stylesheet" href="./css/base.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <header class="site-head">
@@ -50,240 +54,257 @@
     </nav>
   </header>
   <main>
-    <!--<section class="hero -gy">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <img src="./imgs/zx-hero.webp"
-                width="1458"
-                height="1136"
-                srcset="./imgs/zx-hero.webp 292w,
-                        ./imgs/zx-hero@2x.webp 584w"
-                sizes="(max-width: 768px) 100vw, 729px"
-                alt="Web interface showing a customer management dashboard with filters, list of customers, and admin controls."
-                loading="lazy">
+    <section class="panel">
+      <div class="outer">
+        <div class="inner">
+          <div class="hero -br">
+            <div class="hero-imgs">
+              <div class="img-container -lg">
+                <img src="./imgs/zx-hero.webp"
+                      width="1458"
+                      height="1136"
+                      srcset="./imgs/zx-hero.webp 292w,
+                              ./imgs/zx-hero@2x.webp 584w"
+                      sizes="(max-width: 768px) 100vw, 729px"
+                      alt="Web interface showing a customer management dashboard with filters, list of customers, and admin controls."
+                      loading="lazy">
+              </div>
+              <div class="img-container -sm">
+                <img src="./imgs/zx-sup.webp"
+                      width="584"
+                      height="488"
+                      srcset="./imgs/zx-sup.webp 292w,
+                              ./imgs/zx-sup@2x.webp 584w"
+                      alt="Screenshot of a domain protection interface with settings, alerts, and navigation options."
+                      loading="lazy">
+              </div>
+            </div>
+            <div class="hero-text">
+              <ul class="hero-taglist">
+                <li class="hero-tag">Feature Development</li>
+                <li class="hero-tag">B2B</li>
+                <li class="hero-tag">Responsive Web</li>
+              </ul>
+              <a href="./zix" class="hero-title">Zix</a>
+            </div>
+          </div>
         </div>
-        <div class="img-container -sm">
-          <img src="./imgs/zx-sup.webp"
-                width="584"
-                height="488"
-                srcset="./imgs/zx-sup.webp 292w,
-                        ./imgs/zx-sup@2x.webp 584w"
-                alt="Screenshot of a domain protection interface with settings, alerts, and navigation options."
-                loading="lazy">
-        </div>
-      </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">AI</li>
-          <li class="hero-tag">B2B</li>
-          <li class="hero-tag">Web & Mobile</li>
-        </ul>
-        <a href="./pixly" class="hero-title">Pixly</a>
-      </div>
-    </section>-->
-    <section class="hero -br">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <img src="./imgs/zx-hero.webp"
-                width="1458"
-                height="1136"
-                srcset="./imgs/zx-hero.webp 292w,
-                        ./imgs/zx-hero@2x.webp 584w"
-                sizes="(max-width: 768px) 100vw, 729px"
-                alt="Web interface showing a customer management dashboard with filters, list of customers, and admin controls."
-                loading="lazy">
-        </div>
-        <div class="img-container -sm">
-          <img src="./imgs/zx-sup.webp"
-                width="584"
-                height="488"
-                srcset="./imgs/zx-sup.webp 292w,
-                        ./imgs/zx-sup@2x.webp 584w"
-                alt="Screenshot of a domain protection interface with settings, alerts, and navigation options."
-                loading="lazy">
-        </div>
-      </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">Feature Development</li>
-          <li class="hero-tag">B2B</li>
-          <li class="hero-tag">Responsive Web</li>
-        </ul>
-        <a href="./zix" class="hero-title">Zix</a>
       </div>
     </section>
-    <section class="hero -y">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <video width="1920" height="1080" preload="none" controls poster="./imgs/oc-cover.webp" loading="lazy">
-            <source src="./vids/oc-main.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
+    <section class="panel">
+      <div class="outer">
+        <div class="inner">
+          <div class="hero -y">
+            <div class="hero-imgs">
+              <div class="img-container -lg">
+                <video width="1920" height="1080" preload="none" controls poster="./imgs/oc-cover.webp" loading="lazy">
+                  <source src="https://github.com/designerDan/designerdan.github.io/raw/main/vids/oc-main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="img-container -sm">
+                <img src="./imgs/oc-sup@2x.webp"
+                      width="2274"      
+                      height="4896"
+                      srcset="./imgs/oc-sup.webp 292w,
+                              ./imgs/oc-sup@2x.webp 584w"
+                      alt="A screenshot of a community event app showing a farmers' market with stalls and people browsing."
+                      loading="lazy">
+              </div>
+            </div>
+            <div class="hero-text">
+              <ul class="hero-taglist">
+                <li class="hero-tag">Product Development</li>
+                <li class="hero-tag">B2C</li>
+                <li class="hero-tag">Mobile App</li>
+              </ul>
+              <a href="./our-community" class="hero-title">Our Community</a>
+            </div>
+          </div>
         </div>
-        <div class="img-container -sm">
-          <img src="./imgs/oc-sup@2x.webp"
-                width="2274"      
-                height="4896"
-                srcset="./imgs/oc-sup.webp 292w,
-                        ./imgs/oc-sup@2x.webp 584w"
-                alt="A screenshot of a community event app showing a farmers' market with stalls and people browsing."
-                loading="lazy">
-        </div>
-      </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">Product Development</li>
-          <li class="hero-tag">B2C</li>
-          <li class="hero-tag">Mobile App</li>
-        </ul>
-        <a href="./our-community" class="hero-title">Our Community</a>
       </div>
     </section>
-    <section class="hero -yt">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <video width="1920" height="1080" preload controls poster="./imgs/nv-cover.webp" loading="lazy">
-            <source src="./vids/nv-main.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
+    <section class="panel">
+      <div class="outer">
+        <div class="inner">
+          <div class="hero -yt">
+            <div class="hero-imgs">
+              <div class="img-container -lg">
+                <video width="1920" height="1080" preload controls poster="./imgs/nv-cover.webp" loading="lazy">
+                  <source src="https://github.com/designerDan/designerdan.github.io/raw/main/vids/nv-main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="img-container -sm">
+                  <img src="./imgs/nv-sup@2x.webp"
+                        width="2372"
+                        height="1286"
+                        srcset="./imgs/nv-sup.webp 292w,
+                                ./imgs/nv-sup@2x.webp 584w"
+                        alt="A screenshot of a voter registration drive webpage with progress indicators, contact info, and links."
+                        loading="lazy">
+              </div>
+            </div>
+            <div class="hero-text">
+              <ul class="hero-taglist">
+                <li class="hero-tag">Product Development</li>
+                <li class="hero-tag">B2C</li>
+                <li class="hero-tag">Desktop Web</li>
+              </ul>
+              <a href="./new-voters" class="hero-title">New-Voters</a>
+            </div>
+          </div>
         </div>
-        <div class="img-container -sm">
-            <img src="./imgs/nv-sup@2x.webp"
-                  width="2372"
-                  height="1286"
-                  srcset="./imgs/nv-sup.webp 292w,
-                          ./imgs/nv-sup@2x.webp 584w"
-                  alt="A screenshot of a voter registration drive webpage with progress indicators, contact info, and links."
-                  loading="lazy">
-        </div>
-      </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">Product Development</li>
-          <li class="hero-tag">B2C</li>
-          <li class="hero-tag">Desktop Web</li>
-        </ul>
-        <a href="./new-voters" class="hero-title">New-Voters</a>
       </div>
     </section>
-    <section class="hero -gr">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <video width="1920" height="1080" preload controls poster="./imgs/121-cover.webp" loading="lazy">
-            <source src="./vids/121-main.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
+    <section class="panel">
+      <div class="outer">
+        <div class="inner">
+          <div class="hero -gr">
+            <div class="hero-imgs">
+              <div class="img-container -lg">
+                <video width="1920" height="1080" preload controls poster="./imgs/121-cover.webp" loading="lazy">
+                  <source src="https://github.com/designerDan/designerdan.github.io/raw/main/vids/121-main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="img-container -sm">
+                <img src="./imgs/121-sup@2x.webp"
+                      width="1532"
+                      height="4284"
+                      srcset="./imgs/121-sup.webp 292w,
+                              ./imgs/121-sup@2x.webp 584w"
+                      alt="Screenshot of a crowdfunding campaign page titled Halloween For Three with donation options and progress."
+                      loading="lazy">
+              </div>
+            </div>
+            <div class="hero-text">
+              <ul class="hero-taglist">
+                <li class="hero-tag">Feature Development</li>
+                <li class="hero-tag">B2C</li>
+                <li class="hero-tag">Mobile App</li>
+              </ul>
+              <a href="./121-giving" class="hero-title">121Giving</a>
+            </div>
+          </div>
         </div>
-        <div class="img-container -sm">
-          <img src="./imgs/121-sup@2x.webp"
-                width="1532"
-                height="4284"
-                srcset="./imgs/121-sup.webp 292w,
-                        ./imgs/121-sup@2x.webp 584w"
-                alt="Screenshot of a crowdfunding campaign page titled Halloween For Three with donation options and progress."
-                loading="lazy">
-        </div>
-      </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">Feature Development</li>
-          <li class="hero-tag">B2C</li>
-          <li class="hero-tag">Mobile App</li>
-        </ul>
-        <a href="./121-giving" class="hero-title">121Giving</a>
       </div>
     </section>
-    <section class="hero -bk">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <video width="1920" height="1080" preload controls poster="./imgs/kepler-cover.webp" loading="lazy">
-            <source src="./vids/kepler-main.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
+    <section class="panel">
+      <div class="outer">
+        <div class="inner">
+          <div class="hero -bk">
+            <div class="hero-imgs">
+              <div class="img-container -lg">
+                <video width="1920" height="1080" preload controls poster="./imgs/kepler-cover.webp" loading="lazy">
+                  <source src="https://github.com/designerDan/designerdan.github.io/raw/main/vids/kepler-main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="img-container -sm">
+                  <img src="./imgs/kepler-sup@2x.webp"
+                        width="8192"
+                        height="4622"
+                        srcset="./imgs/kepler-sup.webp 292w,
+                                ./imgs/kepler-sup@2x.webp 584w"
+                        alt="A map visualization of earthquake data with magnitude indicators over California."
+                        loading="lazy">
+              </div>
+            </div>
+            <div class="hero-text">
+              <ul class="hero-taglist">
+                <li class="hero-tag">Feature Development</li>
+                <li class="hero-tag">B2C</li>
+                <li class="hero-tag">Desktop Web</li>
+              </ul>
+              <a href="./kepler" class="hero-title">Kepler.gl</a>
+            </div>
+          </div>
         </div>
-        <div class="img-container -sm">
-            <img src="./imgs/kepler-sup@2x.webp"
-                  width="8192"
-                  height="4622"
-                  srcset="./imgs/kepler-sup.webp 292w,
-                          ./imgs/kepler-sup@2x.webp 584w"
-                  alt="A map visualization of earthquake data with magnitude indicators over California."
-                  loading="lazy">
-        </div>
-      </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">Feature Development</li>
-          <li class="hero-tag">B2C</li>
-          <li class="hero-tag">Desktop Web</li>
-        </ul>
-        <a href="./kepler" class="hero-title">Kepler.gl</a>
       </div>
     </section>
-    <section class="hero -gy">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <video width="1920" height="1080" preload controls poster="./imgs/odl-cover.webp" loading="lazy">
-            <source src="./vids/odl-main.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
+    <section class="panel">
+      <div class="outer">
+        <div class="inner">
+          <div class="hero -gy">
+            <div class="hero-imgs">
+              <div class="img-container -lg">
+                <video width="1920" height="1080" preload controls poster="./imgs/odl-cover.webp" loading="lazy">
+                  <source src="https://github.com/designerDan/designerdan.github.io/raw/main/vids/odl-main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="img-container -sm">
+                  <img src="./imgs/odl-sup@2x.webp"
+                        width="2542"
+                        height="1282"
+                        srcset="./imgs/odl-sup.webp 292w,
+                                ./imgs/odl-sup@2x.webp 584w"
+                        alt="Screenshot of a referral system interface with sections for creating, sending, and tracking referrals."
+                        loading="lazy">
+              </div>
+            </div>
+            <div class="hero-text">
+              <ul class="hero-taglist">
+                <li class="hero-tag">Feature Development</li>
+                <li class="hero-tag">B2B</li>
+                <li class="hero-tag">Salesforce</li>
+              </ul>
+              <a href="./open-door-legal" class="hero-title">Open Door Legal</a>
+            </div>
+          </div>
         </div>
-        <div class="img-container -sm">
-            <img src="./imgs/odl-sup@2x.webp"
-                  width="2542"
-                  height="1282"
-                  srcset="./imgs/odl-sup.webp 292w,
-                          ./imgs/odl-sup@2x.webp 584w"
-                  alt="Screenshot of a referral system interface with sections for creating, sending, and tracking referrals."
-                  loading="lazy">
-        </div>
-      </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">Feature Development</li>
-          <li class="hero-tag">B2B</li>
-          <li class="hero-tag">Salesforce</li>
-        </ul>
-        <a href="./open-door-legal" class="hero-title">Open Door Legal</a>
       </div>
     </section>
-    <section class="hero -bn">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <video width="1920" height="1080" preload controls poster="./imgs/mb-cover.webp" loading="lazy">
-            <source src="./vids/mb-main.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
+    <section class="panel">
+      <div class="outer">
+        <div class="inner">
+          <div class="hero -bn">
+            <div class="hero-imgs">
+              <div class="img-container -lg">
+                <video width="1920" height="1080" preload controls poster="./imgs/mb-cover.webp" loading="lazy">
+                  <source src="https://github.com/designerDan/designerdan.github.io/raw/main/vids/mb-main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="img-container -sm">
+                  <img src="./imgs/mb-sup.webp"
+                        width="780"
+                        height="1688"
+                        srcset="./imgs/mb-sup.webp 292w,
+                                ./imgs/mb-sup@2x.webp 584w"
+                        alt="Screenshot of a health app showing a Near optimal health status, a vertical bar graph, and medication reminders."
+                        loading="lazy">
+              </div>
+            </div>
+            <div class="hero-text">
+              <ul class="hero-taglist">
+                <li class="hero-tag">Product Development</li>
+                <li class="hero-tag">B2C</li>
+                <li class="hero-tag">Mobile App</li>
+              </ul>
+              <a href="./medbay" class="hero-title">Medbay</a>
+            </div>
+          </div>
         </div>
-        <div class="img-container -sm">
-            <img src="./imgs/mb-sup.webp"
-                  width="780"
-                  height="1688"
-                  srcset="./imgs/mb-sup.webp 292w,
-                          ./imgs/mb-sup@2x.webp 584w"
-                  alt="Screenshot of a health app showing a Near optimal health status, a vertical bar graph, and medication reminders."
-                  loading="lazy">
-        </div>
-      </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">Product Development</li>
-          <li class="hero-tag">B2C</li>
-          <li class="hero-tag">Mobile App</li>
-        </ul>
-        <a href="./medbay" class="hero-title">Medbay</a>
       </div>
     </section>
-    <section class="hero -br">
-      <p class="hero-services">Are you providing your customers with the product experience they deserve?
-      <a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="hero-services">https://forms.gle/cHUEEu3JhBvc7hF57</a></p>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">I can help</li>
-        </ul>
-        <p class="hero-title">Contact</p>
+    <section class="panel">
+      <div class="outer">
+        <div class="inner">
+          <div class="hero -br">
+            <p class="hero-services">Are you providing your customers with the product experience they deserve?</p>
+              <div class="hero-text">
+                <ul class="hero-taglist">
+                  <li class="hero-tag">I can help</li>
+                </ul>
+                <a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="hero-title">Contact</a>
+              </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+  <script src="./js/anim.js"></script>
 </body>
 </html>
