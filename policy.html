@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Mason — Policy Work Sample</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0e0e0e;
+    --paper: #f5f2eb;
+    --accent: #c94a1e;
+    --accent2: #1a3a5c;
+    --muted: #6b6659;
+    --rule: #d4cfc4;
+    --card-bg: #fff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  nav .nav-links a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 64px;
+  }
+
+  .hero-left {
+    background: var(--accent2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left::before {
+    content: 'POLICY';
+    position: absolute;
+    top: -0.1em;
+    left: -0.05em;
+    font-family: 'Playfair Display', serif;
+    font-size: 18vw;
+    font-weight: 900;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    width: fit-content;
+    transition: opacity 0.2s;
+  }
+
+  .hero-cta:hover { opacity: 0.85; }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 4rem;
+  }
+
+  .work-sample-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .work-sample-label::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero-right h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+  }
+
+  .hero-right p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 42ch;
+  }
+
+  /* CONTEXT BAND */
+  .context-band {
+    background: var(--accent);
+    padding: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .context-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .context-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .context-value {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  /* THINKING SECTION */
+  .thinking {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .thinking-label {
+    padding: 4rem 3rem;
+    background: var(--ink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .thinking-label span {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .thinking-label h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .thinking-content {
+    padding: 4rem;
+    border-left: 1px solid var(--rule);
+  }
+
+  .thinking-content p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--muted);
+    max-width: 60ch;
+  }
+
+  .thinking-content p + p { margin-top: 1.25rem; }
+
+  .thinking-content strong { color: var(--ink); font-weight: 500; }
+
+  /* POLICY SECTIONS */
+  .policy-wrapper {
+    padding: 5rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .policy-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .policy-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  .policy-header span {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .policy-card {
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    padding: 2rem 1.75rem;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .policy-card:hover { border-color: var(--accent2); }
+
+  .card-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--rule);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .card-body ul {
+    list-style: none;
+    margin-top: 0.75rem;
+  }
+
+  .card-body ul li {
+    padding: 0.35rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.83rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .card-body ul li::before {
+    content: '→';
+    color: var(--accent);
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+  }
+
+  /* FULL WIDTH CARD */
+  .card-wide {
+    grid-column: span 3;
+    background: var(--accent2);
+    border: none;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .card-wide .card-num { color: rgba(255,255,255,0.12); }
+  .card-wide .card-title { color: rgba(255,255,255,0.5); }
+  .card-wide .card-body { color: rgba(255,255,255,0.75); }
+  .card-wide .card-body ul li { border-color: rgba(255,255,255,0.1); }
+  .card-wide .card-body ul li::before { color: rgba(255,255,255,0.4); }
+
+  /* STOP LOSS */
+  .stop-loss {
+    background: #1a0a06;
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+
+  .stop-loss-icon {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .stop-loss h4 {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0.75rem;
+  }
+
+  .stop-loss p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .stop-loss-triggers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .trigger-pill {
+    background: rgba(201, 74, 30, 0.15);
+    border: 1px solid rgba(201, 74, 30, 0.3);
+    color: #e8896a;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    font-weight: 500;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    padding: 4rem 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+  }
+
+  footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    max-width: 40ch;
+    line-height: 1.75;
+  }
+
+  footer .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-end;
+  }
+
+  footer .contact-links a {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+
+  footer .contact-links a:hover { color: var(--accent); }
+
+  footer .contact-links .email-btn {
+    margin-top: 1rem;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  footer .contact-links .email-btn:hover { opacity: 0.85; color: #fff; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { min-height: 60vh; padding: 3rem 2rem; }
+    .hero-right { padding: 3rem 2rem; }
+    .thinking { grid-template-columns: 1fr; }
+    .thinking-label { padding: 2.5rem 2rem; }
+    .thinking-content { padding: 2.5rem 2rem; border-left: none; border-top: 1px solid var(--rule); }
+    .policy-grid { grid-template-columns: 1fr; }
+    .card-wide { grid-column: span 1; grid-template-columns: 1fr; gap: 1.5rem; }
+    .stop-loss { padding: 2rem; grid-template-columns: 1fr; gap: 1rem; }
+    footer { grid-template-columns: 1fr; gap: 2rem; }
+    footer .contact-links { align-items: flex-start; }
+    nav .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">Daniel Mason</a>
+  <ul class="nav-links">
+    <li><a href="#thinking">Thinking</a></li>
+    <li><a href="#policy">Policy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Work Sample — Bay Area Council</div>
+    <div class="hero-name">Daniel<br>Mason</div>
+    <div class="hero-title">Communications · Policy · Systems Design</div>
+    <a href="#contact" class="hero-cta">Get in touch →</a>
+  </div>
+  <div class="hero-right">
+    <div class="work-sample-label">Policy work sample</div>
+    <h2>AI-Augmented Care Operations Apprenticeship Program</h2>
+    <p>A legislative and implementing policy framework for a new non-clinical healthcare workforce classification — designed to expand access, reduce clinician burnout, and ensure AI tools augment rather than replace human judgment.</p>
+  </div>
+</section>
+
+<!-- CONTEXT BAND -->
+<div class="context-band">
+  <div class="context-item">
+    <span class="context-label">Submitted for</span>
+    <span class="context-value">Policy Associate, Workforce of the Future</span>
+  </div>
+  <div class="context-item">
+    <span class="context-label">Organization</span>
+    <span class="context-value">Bay Area Council</span>
+  </div>
+  <div class="context-item">
+    <span class="context-label">Document type</span>
+    <span class="context-value">Legislative & Implementing Policy Framework</span>
+  </div>
+  <div class="context-item">
+    <span class="context-label">Role proposed</span>
+    <span class="context-value">ACO Apprentice — Non-Clinical Healthcare Worker</span>
+  </div>
+</div>
+
+<!-- THINKING -->
+<section class="thinking" id="thinking">
+  <div class="thinking-label">
+    <span>Behind the work</span>
+    <h3>Why I wrote this policy</h3>
+  </div>
+  <div class="thinking-content">
+    <p>I currently coordinate medical referrals at HealthRIGHT 360, a primary care clinic serving people living with substance use disorders, mental health challenges, and housing instability. Every day I do work that is <strong>clearly valuable, clearly non-clinical, and clearly enabled by AI</strong> — insurance authorization, referral tracking, care coordination across systems.</p>
+    <p>There's no defined workforce classification for what I do. No credential pathway. No policy framework that acknowledges this labor category exists. That's a problem — not just for workers like me, but for the millions of patients whose care depends on this work being done well.</p>
+    <p>This policy is my attempt to <strong>define the lane</strong>: what ACO Apprentices can do, what they can't, how AI tools get governed, and how we prevent this from becoming a new exploitable tier of healthcare labor. The framework is explicitly designed to protect clinical scope of practice while creating real advancement pathways for workers entering through apprenticeship.</p>
+    <p>I built this because I've lived both sides of the workforce development problem — I found my way back into employment through an OEWD apprenticeship after being displaced by the same AI wave this policy is designed to govern. That's the perspective I'd bring to this committee.</p>
+  </div>
+</section>
+
+<!-- POLICY -->
+<div class="policy-wrapper" id="policy">
+
+  <div class="policy-header">
+    <h2>Policy Framework</h2>
+    <span>8 sections · ACO Apprentice Classification</span>
+  </div>
+
+  <div class="policy-grid">
+
+    <div class="policy-card">
+      <div class="card-num">I</div>
+      <div class="card-title">Purpose & Legislative Intent</div>
+      <div class="card-body">
+        Establishes a regulated non-clinical workforce classification to expand patient access and reduce licensed staff burnout — without substituting technology for clinical judgment.
+      </div>
+    </div>
+
+    <div class="policy-card">
+      <div class="card-num">II</div>
+      <div class="card-title">Authorized Classification</div>
+      <div class="card-body">
+        <strong>Role: AI-Augmented Care Operations Apprentice (ACO Apprentice)</strong>
+        <ul>
+          <li>Non-clinical healthcare employee</li>
+          <li>Registered or employer-sponsored apprenticeship</li>
+          <li>W-2 employee status required — no independent contractor classification</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="policy-card">
+      <div class="card-num">III</div>
+      <div class="card-title">Scope of Work</div>
+      <div class="card-body">
+        <strong>Permitted:</strong>
+        <ul>
+          <li>Insurance eligibility & authorization follow-up</li>
+          <li>Billing & coding prep (pre-submission only)</li>
+          <li>Documentation drafting — factual transcription only</li>
+          <li>Scheduling coordination & care logistics</li>
+          <li>Navigation between EHR, payer portals, and scheduling systems</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card-wide policy-card">
+      <div>
+        <div class="card-num">IV</div>
+        <div class="card-title">Supervision, Accountability & Liability</div>
+        <div class="card-body">
+          All AI-assisted outputs tied to patient records must be reviewed and approved by a licensed professional before final use. Legal and financial liability rests with the employing healthcare organization — not the apprentice.
+          <ul>
+            <li>Mandatory human oversight on all AI-assisted outputs</li>
+            <li>AI tools treated as internal productivity aids, not clinical decision-support systems</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card-num">V</div>
+        <div class="card-title">AI Tool Governance & Data Protection</div>
+        <div class="card-body">
+          Only HIPAA-compliant, auditable, state-approved AI tools permitted. All AI interactions must be logged, time-stamped, and user-attributed.
+          <ul>
+            <li>Patient data may not be used for AI model training</li>
+            <li>Vendors prohibited from retaining or exporting identifiable data</li>
+            <li>Cross-border data processing prohibited unless explicitly authorized</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="policy-card">
+      <div class="card-num">VI</div>
+      <div class="card-title">Labor Standards & Worker Protections</div>
+      <div class="card-body">
+        <ul>
+          <li>Wages must meet or exceed local living-wage benchmarks</li>
+          <li>Completion maps to recognized credentials or advancement pathways</li>
+          <li>Role may not be used to replace licensed staff or suppress wages</li>
+          <li>Employers must track demographic participation and advancement</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="policy-card">
+      <div class="card-num">VII</div>
+      <div class="card-title">Pilot Structure & Evaluation</div>
+      <div class="card-body">
+        Initial pilots limited to 90–180 days per site. Authorization expires unless explicitly renewed based on demonstrated improvements.
+        <ul>
+          <li>Patient access and wait times</li>
+          <li>Licensed staff time allocation</li>
+          <li>Documentation backlog and claim denial rates</li>
+          <li>Apprentice retention and advancement rates</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="policy-card">
+      <div class="card-num">VIII</div>
+      <div class="card-title">Legal Interpretation Rule</div>
+      <div class="card-body">
+        This policy shall be interpreted narrowly. Nothing may be construed to expand clinical scope of practice, delegate clinical judgment, weaken licensure requirements, or authorize unsupervised use of AI in patient care.
+        <br><br>
+        <strong>Any ambiguity in task scope defaults to prohibition, not authorization.</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STOP LOSS -->
+  <div class="stop-loss">
+    <div class="stop-loss-icon">⚠</div>
+    <div>
+      <h4>Automatic Stop-Loss Triggers</h4>
+      <p>Program is immediately suspended if any of the following occur:</p>
+      <div class="stop-loss-triggers">
+        <span class="trigger-pill">Patient safety events increase beyond baseline</span>
+        <span class="trigger-pill">Compliance or privacy breach</span>
+        <span class="trigger-pill">Task scope expands beyond authorization</span>
+        <span class="trigger-pill">Workforce displacement identified</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div>
+    <h3>Let's talk about the future of work.</h3>
+    <p>I'm applying for the Policy Associate role at Bay Area Council. This policy is a work sample — a demonstration of how I think about workforce systems, AI governance, and equitable program design.</p>
+  </div>
+  <div class="contact-links">
+    <a href="mailto:daniel.g.mason@gmail.com">daniel.g.mason@gmail.com</a>
+    <a href="https://linkedin.com/in/designemissary/" target="_blank">linkedin.com/in/designemissary</a>
+    <a href="https://designerdan.github.io" target="_blank">designerdan.github.io</a>
+    <a href="mailto:daniel.g.mason@gmail.com" class="email-btn">Send a note →</a>
+  </div>
+</footer>
+
+</body>
+</html>
