@@ -2977,30 +2977,55 @@ body.landing-page {
   z-index: 20;
   display: flex;
   justify-content: center;
-  gap: 0.45rem;
+  align-items: center;
+  gap: 0.22rem;
   pointer-events: none;
 }
 
 .carousel-dot {
-  width: 0.5rem;
-  height: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  min-height: 2.75rem;
   padding: 0;
-  border: none;
-  border-radius: 50%;
-  background: var(--color-black);
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+  background: transparent;
+  color: var(--color-black);
   cursor: pointer;
   pointer-events: auto;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.carousel-dot::before {
+  content: "";
+  display: block;
+  width: 1.15rem;
+  height: 2px;
+  background: currentcolor;
+  opacity: 0.34;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
 }
 
 .carousel-dot:focus-visible {
-  outline: 2px solid var(--color-black);
-  outline-offset: 3px;
+  outline: none;
 }
 
-.carousel-dot[aria-current="true"] {
-  background: var(--color-black);
-  transform: scale(1.35);
+.carousel-dot:focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 0.4rem 0;
+  outline: 1px solid currentcolor;
+  outline-offset: 2px;
+  opacity: 0.45;
+}
+
+.carousel-dot[aria-current="true"]::before {
+  width: 2.4rem;
+  opacity: 1;
 }
 
 @media (width <= 47.99rem) {
@@ -3069,28 +3094,46 @@ body.landing-page {
     right: auto;
     bottom: max(0.85rem, env(safe-area-inset-bottom, 0px));
     transform: translateX(-50%);
-    gap: 0.35rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 999px;
-    background: rgb(20 10 15 / 28%);
-    backdrop-filter: blur(8px);
+    gap: 0.22rem;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    backdrop-filter: none;
+  }
+
+  .projects-wrap::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 15;
+    width: 100vw;
+    height: clamp(4rem, 16vw, 6rem);
+    background: linear-gradient(to top, rgb(12 8 10 / 56%), rgb(12 8 10 / 0%) 78%);
+    pointer-events: none;
+    transform: translateX(-50%);
   }
 
   .carousel-dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    padding: 0.55rem;
-    background-clip: content-box;
-    background-color: rgb(255 255 255 / 45%);
+    min-width: 2rem;
+    min-height: 2.5rem;
+    color: var(--color-paper);
   }
 
-  .carousel-dot:focus-visible {
+  .carousel-dot::before {
+    width: 1.15rem;
+    height: 2px;
+    opacity: 0.62;
+  }
+
+  .carousel-dot:focus-visible::after {
     outline-color: var(--color-paper);
+    opacity: 0.55;
   }
 
-  .carousel-dot[aria-current="true"] {
-    background-color: var(--color-paper);
-    transform: scale(1.2);
+  .carousel-dot[aria-current="true"]::before {
+    width: 2.55rem;
+    opacity: 1;
   }
 }
 
@@ -3243,7 +3286,7 @@ body.landing-page {
     scroll-behavior: auto;
   }
 
-  .carousel-dot {
+  .carousel-dot::before {
     transition: none;
   }
 

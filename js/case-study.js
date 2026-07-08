@@ -533,9 +533,13 @@ function initProjectHandoff(reduced) {
 
   const handoff = document.querySelector(".project-handoff");
   const progressBar = handoff?.querySelector(".project-handoff__progress-bar");
-  const THRESHOLD = 420;
-  const WHEEL_GAIN = 0.45;
-  const TOUCH_GAIN = 0.28;
+  const isMobileLike = window.matchMedia("(max-width: 47.99rem), (pointer: coarse)").matches;
+  const THRESHOLD = isMobileLike ? 250 : 420;
+  const WHEEL_GAIN = isMobileLike ? 0.65 : 0.45;
+  const TOUCH_GAIN = isMobileLike ? 0.6 : 0.28;
+  const BACKTRACK_GAIN = isMobileLike ? 1 : 1.3;
+  const DECAY_DELAY = isMobileLike ? 280 : 180;
+  const DECAY_FACTOR = isMobileLike ? 0.08 : 0.18;
   let budget = 0;
   let touchStartY = 0;
   let decayTimer;
@@ -565,10 +569,10 @@ function initProjectHandoff(reduced) {
     clearTimeout(decayTimer);
     decayTimer = setTimeout(() => {
       if (budget > 0) {
-        budget = Math.max(0, budget - THRESHOLD * 0.18);
+        budget = Math.max(0, budget - THRESHOLD * DECAY_FACTOR);
         updateProgress(budget / THRESHOLD);
       }
-    }, 180);
+    }, DECAY_DELAY);
   }
 
   function navigateNext() {
@@ -586,7 +590,7 @@ function initProjectHandoff(reduced) {
       }
 
       if (e.deltaY < 0) {
-        budget = Math.max(0, budget + e.deltaY * 1.4);
+        budget = Math.max(0, budget + e.deltaY * BACKTRACK_GAIN);
         updateProgress(budget / THRESHOLD);
         scheduleDecay();
         return;
@@ -624,7 +628,7 @@ function initProjectHandoff(reduced) {
       touchStartY = e.touches[0].clientY;
 
       if (deltaY < 0) {
-        budget = Math.max(0, budget + deltaY * 1.2);
+        budget = Math.max(0, budget + deltaY * BACKTRACK_GAIN);
         updateProgress(budget / THRESHOLD);
         scheduleDecay();
         return;
