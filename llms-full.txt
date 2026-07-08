@@ -1,0 +1,466 @@
+# Daniel Mason — Full site content
+
+> Complete text export of danielgmason.com for LLM ingestion. Companion to [llms.txt](https://www.danielgmason.com/llms.txt). Generated from public HTML pages. Images are omitted; captions are preserved where present.
+
+**Contact:** https://forms.gle/cHUEEu3JhBvc7hF57 · **LinkedIn:** https://linkedin.com/in/designemissary · **Location:** San Francisco, remote available
+
+---
+
+# Home
+
+Source: https://www.danielgmason.com/
+
+## Designer of software worth millions. $860M to be exact.
+
+Available for senior IC and lead roles in SF and remote.
+
+### Enterprise Email Security
+
+4 softwares. 1 design system. $860M exit.
+
+Contributions: Design System, UX Ops, Accessibility
+
+### Construction AI
+
+3 weeks. 1 AI POC. Kiewit.
+
+Contributions: Product Strategy, IA, Rapid Prototyping
+
+### Legal Nonprofit SaaS
+
+Ethics review. Salesforce. 80 NPS.
+
+Contributions: Discovery, Workflows, Exec Buy-in
+
+
+---
+
+# About
+
+Source: https://www.danielgmason.com/about
+
+## 12 years in. More whiteboard than mockup. Why before how.
+
+**The work, by the numbers**
+
+- **$860M** — Zix acquisition by OpenText
+- **+21%** — Zix ARR increase post-launch
+- **~40k** — Net new users at Zix
+- **$1M+** — Pixly AI pipeline
+- **90%+** — Pixly tag precision in testing
+- **80** — Open Door Legal NPS
+
+### Who I am
+
+Build-forward. Upstream of the interface.
+
+I’m a build-forward person — focused on where you are, where you want to go, and the most direct path between the two. I don’t default to complexity when simplicity will do, and I don’t decorate problems. I try to understand them.
+
+My best work happens upstream of the interface: data models, requirements, taxonomy decisions — the choices that determine whether the UI has a fighting chance before anyone opens Figma. A beautiful screen on top of a broken system is just an expensive distraction.
+
+I care about craft in the functional sense — that the grid works, the interaction holds up at edge cases, and the thing actually ships. And I’m suspicious of buzzwords: if you can’t explain why a decision was made, it wasn’t a decision. It was just a thing that happened.
+
+### My approach
+
+Three products where the thinking shows up.
+
+### How I work
+
+#### Work upstream of the interface.
+
+Open Door Legal’s grant data model couldn’t relate one client to multiple grants. I defined a Beneficiary junction object as a requirement — the interface was the last thing designed, not the first.
+
+#### Scale judgment, not control.
+
+At a 70:1 engineer-to-designer ratio, owning every decision is a trap. I invested in a governed design system and engineering relationships so the right call got made without me in the room.
+
+#### Treat constraints as the brief.
+
+A California ethics attorney had to approve ODL’s referral flows; Pixly’s AI needed an 80% confidence threshold to earn trust. The limits told me exactly what the design had to do.
+
+#### Sequence beats scope.
+
+On Pixly I rejected AI branding and scoped provenance out of the POC — answering “does this work at all?” first. A validated proof of concept shipped in three weeks.
+
+#### Consideration
+
+> Like someone charged with an ecosystem, I consider the parts for the whole.
+
+Holistic design strategy — data, research, systems thinking, and craft working as one product decision, not separate deliverables.
+
+#### Style
+
+> I’ll get you to stand out where standing out matters.
+
+Differentiation as an empathetic advantage — doing what’s different, filling the hole in the whole, for the people who need you.
+
+#### Craft
+
+> I elevate products beyond a means and into an experience.
+
+Every element — color, typography, layout, interaction — considered so the product connects with people on a deeper level.
+
+### Testimonial
+
+> “Your perspective is intriguing and I enjoy the playfulness with which you seem to approach both life and work. When you ask questions and dig at the ‘why’ of what we are doing, you move us in a better direction.”
+
+— President Improving Enterprises
+
+### What I’m looking for
+
+> Seeking high-trust, high-performant builder environments with direct outcomes.
+
+Based in San Francisco. Available for the right role, remote or in-person.
+
+### Good-natured people with a sense of humor welcome.
+
+If you value style, craft, and consideration from the people you work with — we’ll probably get along fine.
+
+
+---
+
+# Zix — Unifying apps across a merger
+
+Source: https://www.danielgmason.com/zix
+
+## Unifying apps across a merger
+
+**Key metrics**
+
+- **$860M** — OpenText acquisition, Nov 2021
+- **21%** — ARR increase post-launch
+- **~40k** — net new users
+- **4** — sotwares merged
+
+**Project details**
+
+- **Project:** Design system and UX unification across 4 enterprise applications.
+- **Contributions:** Design System, UX Ops, Interaction Design
+- **Team:** UX Director, Engineering, Product Management
+- **Client:** Zix
+- **Timeline:** 12 months
+
+### The business problem
+
+Zix was operating separate softwares, neither of them sharing a design language, interaction patterns, or information architecture.
+
+For enterprise buyers, this is a problem. A CISO or IT director sees integration risks, training overhead, and evidence of organizational fragmentation. A unified product signals maturity and reduces perceived vendor risk. A fragmented one raises it.
+
+### Product showcase
+
+The brief: audit the product surface, establish a governed design system, and unify the experience across apps—without halting product development or triggering a full rebuild.
+
+- Research
+- Audit
+- Patterns
+- System
+
+### What I owned
+
+I was the sole hands-on designer.
+
+The UX Director provided strategic oversight; execution was mine. I owned the audit and research methodology, the design system end-to-end, and all interaction design across the engagement. The ratio of UX to engineering at Zix was approximately 70:1. That constraint shaped every decision I made about how to work.
+
+### Understanding the problem
+
+I conducted a Top Tasks analysis across the product suite.
+
+My work identified the most critical functions users performed, mapped them to existing workflows, and validated which tasks recurred across multiple apps. The finding that mattered most: the same tasks were being accomplished in structurally different ways depending on which app a user was in.
+
+I also ran an extensive audit of design patterns across all 21 applications. The dominant interaction pattern, by a wide margin, was the table. But every team had implemented tables differently — different column structures, sort behaviors, action patterns, and visual treatment. The audit made the scope undeniable.
+
+### Design system
+
+The design system in practice.
+
+The system was built on Abstract + Sketch, with a single source of truth linked directly to engineering handoffs. Developers accessed the latest version at all times — no stale exports, no "which file is current" conversations.
+
+Prototypes were built against requirements, tested, and refined until releasable. Edge cases and failure states were system components — success messages, undo actions, and clear error states — not afterthoughts.
+
+Accessibility was addressed systematically: larger interaction targets, increased spacing, and simplified flows were properties of the system.
+
+### The three decisions that mattered
+
+#### Scale influence, not control.
+
+At a 70:1 designer-to-engineer ratio, the instinct to own every UX decision is a trap. I educated and empowered engineering teams to build correctly — documentation, making the right choice the easy choice, and trusted advisor relationships. The design system was a transfer of design judgment at scale.
+
+#### Don't redesign everything at once.
+
+I structured incremental unification: audit patterns, govern high-frequency interactions first (tables, forms, dashboards), then roll out across apps in priority order — always something concrete to ship.
+
+#### Work with the table pattern, not against it.
+
+I standardized and elevated the table pattern instead of replacing it. Consistent sort/filter, readable spacing, accessible targets — the existing paradigm done correctly and consistently everywhere.
+
+### Banner
+
+A fragmented product does not get acquired for $860M. A coherent one does.
+
+**Image captions**
+
+- Four products, four admin experiences — before anything could be unified.
+- Top Tasks became hundreds of admin stories; the hard calls happened in Slack.
+- 21 apps meant 21 ways to do the same admin task.
+- Same search-and-export flow, reflowed for three breakpoints.
+- High-traffic admin flows after the shared table and form patterns landed.
+- Directory-import testing had to stay readable on a phone.
+- Partner admins manage thousands of accounts — filters and bulk actions had to scale.
+- Quarantine — search 10,000 released messages, act on a page at a time.
+- Allowed-list requests — approve the domain, deny the IP, save the rest for later.
+- Domain protection — errors surfaced inline instead of after a failed save.
+- Mail logs — filter by type, scan 42 results, open one to inspect.
+- Default permissions — change once, confirm with toast and undo.
+- Partners run O365 audits from one dashboard — schedule, track, and hand off reports.
+
+### Results
+
+> At first [this software] was annoying to use, but in recent years they've made it much easier to deal with.
+
+— Customer review Zix product user
+
+In November 2021, OpenText acquired Zix for $860 million. In the year following the design system launch, Zix's ARR increased 21% per SEC filings, with approximately 40,000 net new users.
+
+### Next project
+
+3 weeks. 1 AI POC. Kiewit.
+
+AI vision for construction photos
+
+$1M+ pipeline
+
+
+---
+
+# Pixly — AI vision for construction photos
+
+Source: https://www.danielgmason.com/pixly
+
+## AI vision for construction photos
+
+**Key metrics**
+
+- **$1M+** — Pipeline with Kiewit, Granite, Kahua
+- **50%** — Of ENR 400 via SmartPM integration
+- **3,056** — Users · 29 customers at POC delivery
+- **90%+** — Tag precision validated in testing
+
+**Project details**
+
+- **Project:** AI-powered auto-tagging and content-indexed search for construction photo documentation.
+- **Contributions:** UX Research, Interaction Design, Tag Taxonomy
+- **Partners:** SnapSoft (AI/ML), Carnera (UI), Pixly
+- **Client:** Pixly.ai
+- **Timeline:** 3 weeks
+
+### The business problem
+
+Pixly was capturing photos well. The problem was retrieval—and it was eroding their competitive position.
+
+Construction teams generated hundreds of geo-tagged photos per project, but nobody could find them. Manual tags failed in the field. The brief: auto-tag at capture with computer vision, then redesign search to feel native—not bolted on.
+
+### Product showcase
+
+Mobile-first capture and search across iOS, Android, and web—designed for field conditions and desktop reporting.
+
+- Capture
+- Albums
+- Tags
+- Search
+
+### What I owned
+
+Scope clarity on a three-partner engagement.
+
+I led research and contextual inquiry, owned the tag taxonomy and vocabulary decisions, drove search interaction design and mobile-first direction, validated the AI confidence threshold model with users, and aligned SnapSoft and Carnera around a shared UX direction throughout.
+
+SnapSoft owned the ML pipeline. Carnera executed visual UI. The decisions about what the system should communicate to users—and what it should stay quiet about—were mine.
+
+### Research
+
+How field teams actually search.
+
+I conducted contextual inquiry with 8 field users across 3 construction firms. Users think in terms of content, not chronology—materials, equipment, site conditions—not when or where a photo was taken. Average time to find a specific photo by scrolling: 4.2 minutes.
+
+Field adoption of manual tags sat at 15%. Meanwhile, 92% of photos were captured on mobile, but 40% of retrieval happened on desktop during reporting. Search sessions broke into specific recall and categorical browse—both requiring content-indexed search, surfaced differently in the UI.
+
+### Users
+
+Two distinct needs, one shared frustration.
+
+Marcus — Site Superintendent. Takes 30–50 photos daily across subcontractor documentation, safety records, and progress updates. Primary device: phone, often in low-connectivity conditions. “By Friday I've taken 200 photos. Finding one from Tuesday? Forget it.”
+
+Sarah — Project Manager. Assembles weekly reports and compliance audits from photos across the whole team. Works on desktop. “I need all concrete pour photos from the east wing, from anyone on the team.”
+
+### Technical integration
+
+The vocabulary problem I had to own.
+
+AWS Rekognition produces generic object labels. SageMaker custom models produce domain labels—rebar types, concrete conditions, equipment models. The taxonomy had to merge both into one vocabulary that matched how field users actually spoke.
+
+SnapSoft's initial label set didn't map to field vocabulary. “Excavating equipment” isn't what Marcus says; “excavator” and “backhoe” are. Building the synonym map required sitting between ML output and user research—forcing an alignment neither party was initially scoping for.
+
+### The three decisions that mattered
+
+#### AI that doesn't announce itself.
+
+No AI iconography. Tags surface as passive metadata and match annotations—not badges on every thumbnail. Field teams trust the system when it demonstrates accuracy, not when it declares capability.
+
+#### Suppressing low-confidence tags.
+
+An 80% confidence floor calibrated trust. Tags below threshold stay in the index but out of results until users confirm or reject—building a feedback loop without exposing uncertain AI output.
+
+#### One search input, not a new surface.
+
+Natural language resolves intent—“excavator near Building C” maps date, location, and material tags. Filter chips remain for power users. Voice input is parity with text for gloved hands and bright sun.
+
+### What was validated and what wasn't
+
+#### Validated: tag accuracy.
+
+Exceeded 90% precision on high-confidence construction-specific tags, confirmed through user testing and manual audit. The taxonomy held up against real field vocabulary.
+
+#### Hypothesis: search adoption.
+
+Target of 60%+ engagement within the first month (up from 23% on date/location filters) requires production deployment to measure.
+
+#### Scoped out deliberately.
+
+Collaborative tagging provenance and faceted navigation for mature tag libraries were deferred to production. Co-locating AI and UX for the first sprint would have saved the week lost to async taxonomy back-and-forth.
+
+### Banner
+
+Search that speaks their language, not a bolt-on feature.
+
+**Image captions**
+
+- Tagging runs in the photo viewer — not a separate admin screen.
+- Same feed serves field capture and desktop retrieval workflows.
+- System photo picker for batch upload from the device camera roll.
+- Batch upload on desktop; tagging status shown per thumbnail.
+- Mobile album grid shows tag counts while batch tagging runs.
+- Tag names and counts after merging ML labels with field vocabulary.
+- Sidebar tag list matches numbered pins on the photo.
+- Tags appear as numbered pins on the photo.
+- Album grid after batch tagging finishes.
+- Tag search and placement use the same Tag Library sheet.
+- Search bar above feed accepts text and image input.
+- Issue tag count shown separately from other tag types.
+- General tag grid with edit and delete actions per row.
+- Issue filter applied in photo viewer sidebar.
+
+
+---
+
+# Open Door Legal — Infrastructure for Legal Tech
+
+Source: https://www.danielgmason.com/odl
+
+## Infrastructure for Legal Tech
+
+**Key metrics**
+
+- **80** — NPS (120-day target)
+- **-16%** — Referral redundancies
+- **90%** — Grant admin reduction target
+- **2** — Phases · client returned without RFP
+
+**Project details**
+
+- **Project:** Two-sided referral marketplace and grant management system in Salesforce.
+- **Contributions:** UX Design, Stakeholder Alignment
+- **Team:** Product Manager, Engineer, Me
+- **Client:** Open Door Legal
+- **Timeline:** 6 months
+
+### The client
+
+Poverty is dramatically reduced when everyone has access to legal representation.
+
+Open Door Legal is an award-winning San Francisco nonprofit running a high-volume intake and referral operation across housing, immigration, and family law. When they came to me, they had two problems. One they knew about. One they discovered once we started working.
+
+### Product showcase
+
+The brief: build a two-sided referral marketplace inside Salesforce—connecting ODL with partner legal organizations—so referrals could be created, sent, tracked, and received in one system.
+
+- Compliance
+- Onboarding
+- Management
+- Workflows
+
+### Phase 1 — The referral feature
+
+ODL's referral process was entirely manual.
+
+When a client's needs fell outside what ODL could directly serve, admins searched an external database, retrieved contact details, and manually reached out by phone, email, fax, or post. Every referral was logged by hand. I was the sole designer—I drove research, defined user flows for both sides of the marketplace, owned all interaction design, and managed the client relationship through reviews and testing.
+
+### The constraint nobody warned me about
+
+This wasn't just a workflow problem—it was a legal ethics problem.
+
+Attorneys are bound by the California Rules of Professional Conduct. Sharing client information across a network triggers obligations around confidentiality, informed consent, and the duty to prospective clients. A California attorney reviewed the proposed system and issued a formal ethics opinion before we could ship.
+
+Informed consent had to be built into referral creation. Data visible to receiving organizations required explicit scoping. The simplified conflict check was deliberately limited to three fields: first name, last name, and date of birth. The templated outbound client summary only auto-generates after a clean conflict check clears.
+
+### Phase 2 — Grant management
+
+Why this problem is existential for a nonprofit.
+
+ODL's funding comes from grants—each with unique reporting requirements. Grant administration was a convoluted, multi-step process: manual onboarding, monthly reconciliation across disconnected reports, and significant manual assembly for funder reports. The risk isn't inefficiency—it's reporting inaccuracy and compliance exposure on renewals.
+
+The brief: redesign grant management in Salesforce to reduce administrative overhead by 90%, with as little burden on line staff as possible. The Beneficiary junction object—connecting contacts, grant activities, intakes, cases, and time forecasts—was the architectural linchpin that unlocked per-funder reporting without manual reconciliation.
+
+### The decisions that mattered
+
+#### In-network and out-of-network as first-class concepts.
+
+Not every organization ODL refers to is in Salesforce. I designed in-network and out-of-network as explicit, equal designations at referral creation—keeping the manual path inside the product rather than beside it.
+
+#### The referral as a self-contained object.
+
+Everything needed to process, act on, or close a referral is present in a single view—a deliberate choice against Salesforce's default related-list navigation for a high-volume, context-switching operation.
+
+#### Designing for the end state.
+
+A closed referral still needs to communicate completeness and release attention. Staff should leave a closed referral and return to their queue without uncertainty about whether something was missed.
+
+### What this engagement required that most don't
+
+#### Ethics as a design constraint.
+
+The consequences of a wrong interaction state aren't a bad user experience—they're a professional conduct violation. That forced precision in consent flows, data visibility, and state communication I'd carry into any high-stakes domain work.
+
+#### Guiding line staff without burdening them.
+
+Case managers shouldn't need to think about grant compliance. Intake finalization and case close flows surface grant-relevant fields at the exact moment they're needed—and prevent progression unless required data is entered.
+
+#### Working upstream of the UI.
+
+The grant data model work required operating at the boundary of UX and systems design—defining what objects needed to exist and how they needed to relate before any screens could be meaningful.
+
+### Banner
+
+Phase 1 results: NPS hit the 120-day target of 80. They came back for Phase 2 without a competitive process.
+
+**Image captions**
+
+- Referral tab, Referral Engine; Cooperative Restraining Order Clinic listed with English and Español access details.
+- Flowchart of referral steps above numbered screen map for Referrer, Referring partner, and System rows.
+- Flowchart; Submit Referral leads to Available Referral Partners decision, then self-serve, share client information, or Simplified conflict check.
+- Referral Client info; Check for conflicts fields filled; message Conflicts with the listed parties were found; Declined referral button shown.
+- Create a new grant, Activities and outcomes step; Upload Files area; table columns Activity ID, Activity Name, Outcome, and Area of Law.
+- Close Intake tab; Case status step active; Will you be opening a case, case estimate, subject, description, and area of law fields; Grant selection and Finalized steps ahead.
+- Close Intake tab; all progress steps complete; banner reads This intake has been finalized and submitted for review. A case has been opened.
+- Close Case Resolution step; Type of resolution and Case resolution explained fields; banner Please update the case description to reflect how the case was resolved.
+- Grant selection step; one funding source row checked and labeled Grant selected; Grant activity and State bar activity dropdowns required.
+- Close Case HUD step; emergency rental assistance Yes applied for assistance; federal housing program Yes but unsure which program; Very Low Income selected.
+- Demographics verification step; Mailing Street validation error; Age 34; At risk of homelessness, Disability, Indigent, and Prior Incarceration checked.
+- Update Time cards search dialog; Demographics filters expanded; Indigent and Prior Incarceration checked; Search button.
+- Update Time cards dialog; toast Grant activities successfully updated; Available 192.35 hours and Reassigned 82 hours; Update button.
+- Referral status Closed; Referral info table columns To, Referral sent, Interest expressed, and Case opened; four activity entries dated 3/20/17.
+- Close Case Outcomes step; Degree of resolution Positive; Standard outcomes and State bar outcomes Available and Chosen lists.
+- Checklist confirmation step; Conflict Check Correct and Guest Accommodations Correct checked; Client Parties and Adverse Parties tables.
+
+
+---
+
