@@ -1,300 +1,552 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Daniel's web page">
-	<title>Zix</title>
-	<link rel="canonical" href="https://www.danielgmason.com">
-
-  <!-- Add preconnect for external resources -->
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zix case study — unifying 4 enterprise softwares across a merger by Daniel Mason">
+  <title>Zix — Unifying Apps Across a Merger</title>
+  <link rel="canonical" href="https://www.danielgmason.com/zix">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Daniel Mason">
+  <meta property="og:title" content="Zix — Unifying Apps Across a Merger">
+  <meta property="og:description" content="Design system and UX unification across 4 enterprise softwares. OpenText acquired Zix for $860M.">
+  <meta property="og:url" content="https://www.danielgmason.com/zix">
+  <meta property="og:image" content="https://www.danielgmason.com/imgs/zix/showcase-01.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Zix — Unifying Apps Across a Merger",
+    "description": "Design system and UX unification across 2 enterprise softwares. OpenText acquired Zix for $860M.",
+    "url": "https://www.danielgmason.com/zix",
+    "image": "https://www.danielgmason.com/imgs/zix/showcase-01.webp",
+    "author": { "@type": "Person", "name": "Daniel Mason", "url": "https://www.danielgmason.com/" }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Preload critical assets -->
-  <link rel="preload" href="./imgs/zx-hero@2x.webp" as="image">
-  <link rel="preload" href="./imgs/zx-sup@2x.webp" as="image">
-  
-  <!-- Existing links -->
+  <link rel="preload" href="./imgs/zix/showcase-01.webp" as="image">
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;900&display=swap">
   <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
 </head>
-<body>
+<body class="case-page" data-next-project="./pixly">
+  <a href="#main" class="skip-link">Skip to main content</a>
   <header class="site-head">
-    <div class="logo-bug">
-      <a href="/" class="logo">
-        <svg viewBox="0 0 33 25" fill="none" xmlns="http://www.w3.org/2000/svg" lang="en" aria-label="Daniel Mason logo" class="logo">
-            <path d="M14.083 10.234c-.34.034-2.383-.476-3.54-.238-.789.162-1.926.562-2.58 1.155-1.242 1.126-1.59.386-1.72.193-.128-.193-.577-2.57-.256-3.149.32-.578 4.419-1.021 9.961-1.285 3.22-.154 8.612-.771 9.961.257 1.35 1.028 1.029 5.462-.193 6.62-1.22 1.156-2.313 1.863-5.077 2.698-2.763.836-3.884.607-3.97 1.029-.195.962 5.21 3.03 5.577 3.599.619.96 9.223-1.002 9.318-1.157 1.543-.671.514-17.93-.385-18.38-.9-.45-7.198-1.286-14.974-.772-7.776.515-12.403.322-13.817 1.157-1.414.836-1.66 5.562-1.736 9.19-.105 5.12.652 8.028 1.736 8.648 1.084.62 6.426-.273 6.62-.357.193-.085.952-.085 1.16.084.288.234 2.255.964 4.272 1.89 2.4 1.1 5.582 2.331 7.03 2.331 1.446 0 1.873-.545 1.752-.987-.102-.374-2.995-1.923-4.561-2.961-1.566-1.038-4.046-2.116-3.966-2.757.017-.136 1.111-.13 1.975-.273 3.115-.513 6.451-1.437 8.85-3.557.732-.646.336-2.194-.307-3.216-.748-1.192-1.565-1.021-1.906-1.021-.34 0-1.736.714-2.314.714-.58 0-1.634-.714-3.404-.714-2.28 0-3.166 1.225-3.506 1.259z" fill="#D01156"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.704 9.401c-.692-.092-1.593-.178-2.29-.035-.83.171-2.101.6-2.883 1.31-.393.356-.6.425-.67.438a.378.378 0 01-.03-.044c-.004-.008-.01-.018-.02-.031a4.63 4.63 0 01-.079-.32 11.281 11.281 0 01-.148-.886 7.467 7.467 0 01-.068-.927 2.292 2.292 0 01.022-.333h.002a3.28 3.28 0 01.513-.162c.479-.117 1.165-.232 2.035-.339 1.734-.213 4.126-.388 6.89-.52.633-.03 1.328-.077 2.052-.125 1.175-.078 2.427-.161 3.615-.19.949-.022 1.816-.007 2.519.073.737.083 1.17.226 1.356.368.163.124.348.42.476.946.12.497.167 1.109.14 1.745a5.584 5.584 0 00-.379-.715c-.443-.706-.951-1.07-1.458-1.229-.402-.126-.798-.103-.944-.095l-.048.002c-.132 0-.26.03-.342.053-.095.026-.197.06-.298.096-.147.053-.318.12-.487.185l-.172.066c-.23.09-.452.172-.647.232-.21.064-.327.083-.368.083-.034 0-.123-.014-.33-.08l-.294-.1-.031-.011a18.425 18.425 0 00-.404-.136 7.49 7.49 0 00-2.345-.388c-1.267 0-2.166.343-2.797.7-.29.165-.521.33-.683.447a9.606 9.606 0 01-.15.107h-.006a8.54 8.54 0 01-.307-.044l-.2-.03a33.926 33.926 0 00-.742-.11zm1.184.228s.003 0 .009-.004a.063.063 0 00-.009.004zm12.019 2.34c-.048-.654-.331-1.397-.694-1.973-.674-1.073-1.404-1.042-1.791-1.025a2.77 2.77 0 01-.115.004c-.148 0-.494.134-.886.287-.512.199-1.1.427-1.428.427-.211 0-.484-.094-.833-.214-.608-.211-1.445-.5-2.571-.5-1.68 0-2.602.664-3.107 1.028-.182.13-.31.222-.4.231-.106.01-.38-.032-.74-.088-.793-.124-2.005-.314-2.8-.15-.788.162-1.925.562-2.58 1.155-1.17 1.062-1.547.464-1.694.23l-.024-.037c-.129-.193-.578-2.57-.257-3.149.32-.578 4.419-1.021 9.961-1.285.607-.03 1.291-.075 2.01-.122 3.1-.206 6.856-.456 7.951.379.943.718 1.07 3.1.645 4.865-.157.648-.388 1.213-.68 1.581-.05.064-.103.122-.158.173-.323.306-.637.58-.975.835-.693.52-1.488.952-2.671 1.39a24.88 24.88 0 01-1.43.474c-1.377.416-2.345.569-2.982.669-.462.072-.749.117-.89.216a.284.284 0 00-.048.042.212.212 0 00-.05.102c-.032.154.081.337.295.538.408.384 1.18.831 2.013 1.269.216.113.436.226.655.337l.627.315c.997.5 1.848.925 1.986 1.14.619.96 9.223-1.002 9.318-1.157 1.543-.671.514-17.93-.385-18.38-.9-.45-7.198-1.286-14.974-.771-2.578.17-4.81.263-6.692.34-3.799.159-6.18.258-7.125.816-1.414.836-1.66 5.562-1.736 9.19-.105 5.12.652 8.028 1.736 8.648 1.084.62 6.426-.272 6.62-.357.193-.085.952-.085 1.16.085.157.126.808.4 1.695.771.745.313 1.656.695 2.577 1.118 2.4 1.101 5.582 2.331 7.029 2.331s1.873-.545 1.753-.987c-.065-.238-1.258-.95-2.52-1.705-.47-.28-.949-.566-1.383-.836a26.502 26.502 0 01-.658-.42 28.643 28.643 0 00-1.674-.995l-.401-.228c-.625-.356-1.19-.693-1.537-.989l-.017-.014c-.227-.198-.356-.377-.337-.531.01-.08.383-.11.863-.15.284-.024.605-.05.911-.093.068-.009.135-.019.2-.03 1.254-.206 2.543-.48 3.793-.87.465-.145.925-.307 1.375-.488.892-.357 1.746-.79 2.534-1.316a10.904 10.904 0 001.149-.883c.319-.282.424-.735.387-1.242zm-10.601 4.965zm8.1 5.084c.185 0 .38-.006.58-.018.932-.053 2.097-.218 3.226-.415a60.92 60.92 0 003.087-.622c.42-.096.775-.184 1.031-.253.127-.035.238-.067.323-.095.04-.014.088-.03.133-.05a.853.853 0 00.095-.047l.001-.001a.449.449 0 00.02-.012c.267-.149.417-.405.503-.587.107-.226.187-.498.25-.789.128-.584.214-1.354.268-2.225.108-1.75.095-4.009.006-6.247-.088-2.24-.254-4.477-.455-6.189a24.13 24.13 0 00-.329-2.136 5.265 5.265 0 00-.195-.708 1.695 1.695 0 00-.14-.295.868.868 0 00-.344-.328 3.553 3.553 0 00-.722-.234c-.293-.07-.66-.14-1.09-.209-.86-.136-1.992-.269-3.335-.37A73.4 73.4 0 0016.163.163c-2.572.17-4.784.262-6.663.34-.96.04-1.834.076-2.623.118-1.155.06-2.134.131-2.918.243-.765.11-1.428.266-1.898.544-.555.328-.9.964-1.135 1.613-.244.677-.418 1.508-.544 2.397C.128 7.2.047 9.322.01 11.138c-.053 2.588.11 4.65.436 6.16.163.755.37 1.393.625 1.898.25.496.573.918.998 1.16.243.14.544.207.818.245.29.04.619.057.963.058.69.002 1.49-.056 2.249-.135a40.53 40.53 0 002.045-.269c.277-.043.512-.084.687-.117a7.42 7.42 0 00.221-.044l.006-.001c.03-.007.104-.023.174-.05a1.944 1.944 0 01.576.018l.005.003c.081.057.171.106.243.144.1.051.22.108.353.168.265.12.61.265.998.428l.206.087A83.69 83.69 0 0114.173 22 46.79 46.79 0 0018.1 23.6c1.27.444 2.523.79 3.368.79.785 0 1.407-.146 1.834-.446.461-.324.68-.835.54-1.354a.872.872 0 00-.18-.33 1.694 1.694 0 00-.257-.243zM9.833 20.07zm-.612-.024h.003-.003zM6.461 8.613l.005-.003a.032.032 0 00-.005.003z" fill="#140A0F"/><path d="M23.697 19.277c.102.595-.29 2.536-.494 2.655-.1.059-1.352-.784-2.638-1.617-1.319-.855-2.57-1.48-2.62-1.6-.052-.119.39-.8.527-.749.136.051.425.409.68.562.256.153.681.153 1.038.323.358.17.545.386.75.579.187.164.605.51.782.579.222.085.92-1.005 1.14-1.158.222-.153.732-.17.835.426zM25.777 16.867c.323-.477.102-3.098 0-3.098s-.8.732-1.191.987c-.392.256-1.277.698-1.277.783 0 .085.596.12.766.392.17.272.29.561.323.783.035.22.307.834.51.834.205 0 .546-.205.869-.681z" fill="#fff"/><path d="M27.505 17.865c-.796.591-8.638-.351-10.722-.351 0 0-.128 0-.064.192a.445.445 0 00.193.258c3.616.235 10.103.803 11.513.607 1.41-.197.735-3.848.92-4.874.183-1.026-.369-9.234-1.35-9.875-.439-.287-5.264-.011-10.357.128-6.282.173-12.81.77-13.24 1.026-.428.257-.326 1.945-.673 3.655-.164 1.71-.307 4.553 0 5.643.306 1.09.674 1.283.98 1.347.828.173 3.274-1.064 3.595-1.192.321-.129.93-.944 1.24-1.208.392-.332 1.465-.564 2.06-.544 1.566.05 2.791 1.14 3.455 1.344.664.204 1.106-.017 1.09-.085-.018-.068-.495 0-.8-.12-.307-.118-.818-.527-1.311-1.02-.494-.494-1.43-.766-2.23-.834-.8-.068-1.858.092-2.263.476-.405.384-.947 1.115-1.498 1.477-.865.568-2.12 1.03-3.154 1.129-.674.064-.662-.372-.858-1.347-.123-.615-.212-4.256.307-6.348.51-2.055.429-1.475.735-1.731.306-.257 6.092-.99 11.707-1.09 5.221-.093 10.134-.065 10.725-.065 1.226 0 .552 4.81 1.165 7.823.613 3.014.04 4.686-1.165 5.58z" fill="#fff"/><path d="M19.599 15.332c3.387-.8 5.684-3.081 5.752-3.183 0 0 .12-.068.154.017s-.188.783-1.634 1.787c-1.447 1.004-5.106 2.314-8.612 2.502-.374.02-1.123.29-1.157.646-.034.358 1.583 1.342 1.77 1.447.187.106 4.56 2.825 4.85 2.979.29.153 2.077 1.82 2.128 1.906.044.074-.426.22-.51.22-.086 0-.512-.935-2.077-1.922-1.566-.987-2.349-1.498-3.864-2.332-1.514-.834-3.2-2.076-3.267-2.723-.068-.647.544-.698.834-.698.289 0 2.246.153 5.633-.646z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M18.968 12.822c0-.518-.484-.9-1.028-.9s-1.028.381-1.028.9.484.9 1.028.9 1.028-.381 1.028-.9z" fill="#FEE65A"/><path d="M14.493 11.451c-.034 1.106 1.634 1.515 1.923 1.515.29 0 0-1.021.426-1.243.425-.22 1.065-.34 1.515-.272.496.074.89.338.97.579.153.46 0 .766 0 .936 0 .06 0 .544.238.493.238-.05.442-.101.698-.323.085-.075.39-.55.731-.953.172-.203 1.447-.766 2.06-1.021.613-.256 1.095-.352 1.447-.613.085-.136.066-.364-.052-.34-.472.095-2.23.953-2.757 1.174-.405.17-.706.365-.806.404.019-.08.053-.225.108-.472.233-1.021-1.701-2.162-3.2-2.06-1.497.103-3.246.41-3.3 2.196zM22.203 16.635c.1-.12.416-.821.348-.855-.069-.033-1.12.437-2.204.756-1.005.295-1.98.474-2.004.498-.05.052.328.337.498.387.171.049.782-.145.883-.214.101-.07-.004-.34.132-.342.137-.002.446.318.752.196.305-.122.37-.413.489-.414.119-.001.206.168.308.201.103.033.697-.093.798-.213z" fill="#fff"/>
-        </svg>
-        Home
+    <div class="site-head__lockup">
+      <a href="/" class="site-head__brand" aria-label="Daniel Mason — Home">
+        <img src="./imgs/logo.svg" width="33" height="25" alt="" class="site-head__logo" aria-hidden="true">
       </a>
-      <p class="logo-text">Designer of the product experience</br>your customers deserve.</p>
+      <div class="site-head__identity">
+        <p class="site-head__name">Daniel Mason</p>
+        <p class="site-head__role">Lead UX Designer · Enterprise SaaS · AI/ML</p>
+      </div>
     </div>
-    <nav aria-label="Primary">
-      <ul class="nav-list">
-        <li>
-          <a href="./work" class="nav-link">Work</a>
-        </li>
-        <li>
-          <a href="./about" class="nav-link">About</a>
-        </li>
-        <li>
-          <a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="nav-link">Contact</a>
-        </li>
-        <li>
-          <a href="http://linkedin.com/in/designemissary" class="linkedin">LinkedIn</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="site-head__end">
+      <a href="https://linkedin.com/in/designemissary" class="site-head__linkedin linkedin" aria-label="LinkedIn profile">LinkedIn</a>
+      <nav class="site-head__nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./about" class="nav-link">About</a></li>
+          <li><a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="hero -br">
-      <div class="hero-imgs">
-        <div class="img-container -lg">
-          <img src="./imgs/zx-hero.webp"
-                width="1458"
-                height="1136"
-                srcset="./imgs/zx-hero.webp 292w,
-                        ./imgs/zx-hero@2x.webp 584w"
-                sizes="(max-width: 768px) 100vw, 729px"
-                alt="Web interface showing a customer management dashboard with filters, list of customers, and admin controls."
-                loading="lazy">
+
+  <main id="main">
+    <section class="project-hero project-hero--fold" data-nav-link-tone="light" aria-labelledby="project-title">
+      <div class="project-hero__stage">
+        <header class="project-hero__header cs-wrap">
+          <h1 id="project-title" class="project-hero__title">Unifying apps across a merger</h1>
+          <div class="project-hero__stats">
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">$860M</p>
+              <p class="project-hero__stat-label">OpenText acquisition, Nov 2021</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">21%</p>
+              <p class="project-hero__stat-label"><abbr title="Annual recurring revenue">ARR</abbr> increase post-launch</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">~40k</p>
+              <p class="project-hero__stat-label">net new users</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">4</p>
+              <p class="project-hero__stat-label">sotwares merged</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="project-hero__gallery" data-hero-gallery>
+          <div class="project-hero__gallery-viewport" aria-label="Zix product screenshots — scroll horizontally">
+            <div class="project-hero__gallery-track">
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/zix/showcase-00.webp"
+                     srcset="./imgs/zix/showcase-00@0.5x.webp 958w, ./imgs/zix/showcase-00.webp 1916w, ./imgs/zix/showcase-00@2x.webp 3832w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1916" height="1491"
+                     alt="Customers admin: filter dropdowns and a 10,000-row account table with status badges." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/zix/showcase-01.webp"
+                     srcset="./imgs/zix/showcase-01@0.5x.webp 958w, ./imgs/zix/showcase-01.webp 1916w, ./imgs/zix/showcase-01@2x.webp 3832w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1916" height="1491"
+                     alt="Allowed-list requests: three cards to approve or deny senders, domains, and IPs." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/zix/showcase-02.webp"
+     srcset="./imgs/zix/showcase-02@0.5x.webp 958w, ./imgs/zix/showcase-02.webp 1916w, ./imgs/zix/showcase-02@2x.webp 3832w"
+     sizes="(max-width: 600px) 100vw, 85vw"
+     width="1916" height="1491"
+     alt="Test LDAP query page showing two imported users and expandable raw directory data." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/zix/showcase-03.webp"
+     srcset="./imgs/zix/showcase-03@0.5x.webp 958w, ./imgs/zix/showcase-03.webp 1916w, ./imgs/zix/showcase-03@2x.webp 3832w"
+     sizes="(max-width: 600px) 100vw, 85vw"
+     width="1916" height="1491"
+     alt="Default permissions screen with a success toast, undo action, and 125-user table." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/zix/showcase-04.webp"
+     srcset="./imgs/zix/showcase-04@0.5x.webp 958w, ./imgs/zix/showcase-04.webp 1916w, ./imgs/zix/showcase-04@2x.webp 3832w"
+     sizes="(max-width: 600px) 100vw, 85vw"
+     width="1916" height="1491"
+     alt="Domain protection table flagged for errors and an allowed/blocked-list conflict." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/zix/showcase-05.webp"
+     srcset="./imgs/zix/showcase-05@0.5x.webp 958w, ./imgs/zix/showcase-05.webp 1916w, ./imgs/zix/showcase-05@2x.webp 3832w"
+     sizes="(max-width: 600px) 100vw, 85vw"
+     width="1916" height="1491"
+     alt="Mail logs filtered by type, with rows labeled Naughty, Nice, and Spam." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/zix/showcase-06.webp"
+     srcset="./imgs/zix/showcase-06@0.5x.webp 958w, ./imgs/zix/showcase-06.webp 1916w, ./imgs/zix/showcase-06@2x.webp 3832w"
+     sizes="(max-width: 600px) 100vw, 85vw"
+     width="1916" height="1491"
+     alt="Office 365 security audit dashboard with audit counts and partner workflow shortcuts." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/zix/showcase-07.webp"
+     srcset="./imgs/zix/showcase-07@0.5x.webp 958w, ./imgs/zix/showcase-07.webp 1916w, ./imgs/zix/showcase-07@2x.webp 3832w"
+     sizes="(max-width: 600px) 100vw, 85vw"
+     width="1916" height="1491"
+     alt="Quarantine released-mail screen with search filters and bulk release or delete actions." loading="lazy" draggable="false">
+              </figure>
+            </div>
+          </div>
         </div>
-        <div class="img-container -sm">
-          <img src="./imgs/zx-sup.webp"
-                width="584"
-                height="488"
-                srcset="./imgs/zx-sup.webp 292w,
-                        ./imgs/zx-sup@2x.webp 584w"
-                alt="Screenshot of a domain protection interface with settings, alerts, and navigation options."
-                loading="lazy">
-        </div>
+
+        <footer class="project-hero__footer cs-wrap">
+          <dl class="project-hero__meta">
+            <div>
+              <dt>Project</dt>
+              <dd>Design system and UX unification across 4 enterprise applications.</dd>
+            </div>
+            <div>
+              <dt>Contributions</dt>
+              <dd>Design System, UX Ops, Interaction Design</dd>
+            </div>
+            <div>
+              <dt>Team</dt>
+              <dd>UX Director, Engineering, Product Management</dd>
+            </div>
+            <div>
+              <dt>Client</dt>
+              <dd>Zix</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>12 months</dd>
+            </div>
+          </dl>
+        </footer>
       </div>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">Feature Development</li>
-          <li class="hero-tag">B2B</li>
-          <li class="hero-tag">Responsive Web</li>
-        </ul>
-        <h1 class="hero-title">Zix</h1>
+    </section>
+
+    <section class="text-cta">
+      <div class="cs-wrap text-cta__wrap">
+        <h2 class="text-cta__eyebrow">The business problem</h2>
+        <p class="text-cta__headline">
+          <span class="cs-line-mask"><span class="cs-line">Zix was operating separate softwares,</span></span>
+          <span class="cs-line-mask"><span class="cs-line">neither of them sharing</span></span>
+          <span class="cs-line-mask"><span class="cs-line">a design language, interaction</span></span>
+          <span class="cs-line-mask"><span class="cs-line">patterns, or information architecture.</span></span>
+        </p>
+        <p class="text-cta__body">For enterprise buyers, this is a problem. A CISO or IT director sees integration risks, training overhead, and evidence of organizational fragmentation. A unified product signals maturity and reduces perceived vendor risk. A fragmented one raises it.</p>
       </div>
     </section>
-    <section class="intro">
-        <h2>Zix is an enterprise solution for email encryption, threat protection and email archiving.</h2>
-        <p class="embiggen">The company was overhauling their infrastructure to build a cloud-based <abbr title="platform as a service">PaaS</abbr>. They had over 21 apps they wanted to unify and improve.</p>
-        <p class="tag">Contributions</p>
-        <p>UX Design, Design System, Front-end, Strategy, Visual Design</p>
-        <p class="tag">Team</p>
-        <p>UX Director, UX Designer, Engineering, Product Management, Me</p>
-        <p class="tag">Timeline</p>
-        <p>2019-2020</p>
-    </section>
-    <section class="img-break">
-      <img src="./imgs/zx-results.webp"
-              width="1920"
-              height="1080"
-              alt="Screenshot of a web-based customer management interface with filters and account information."
-              loading="lazy">
-    </section>
-    <section class="research">        
-      <p class="hero-tag">Research</p>
-      <img src="./imgs/zx-research.webp"
-            width="1920"
-            height="1080"
-            alt="Collage of text snippets on analyzing tasks and instant messaging exchanges, overlaid with Analyzing tasks and Interviewing experts labels."
-            loading="lazy">
-      <div class="grid">
-        <div class="col2">
-          <h3>My design improvements were driven by data, using user feedback and insights to refine and validate solutions.</h3>
-          <p class="padded-dn">One of the key exercises I rely on is the Top Tasks analysis. This practice has been instrumental in identifying the most critical functions within the software, allowing me to map out clear user journeys and validate task completion. Through this research, I uncovered recurring tasks that spanned across different sections of the software, revealing areas for simplification. Furthermore, I realized that while the focus had been on growth, sustainability in design was often overlooked, highlighting the need for a more balanced approach moving forward.</p>
+
+    <section class="product-showcase">
+      <div class="cs-wrap product-showcase__wrap">
+        <h2 class="product-showcase__eyebrow">Product showcase</h2>
+        <div class="product-showcase__intro">
+          <p>The brief: audit the product surface, establish a governed design system, and unify the experience across apps—without halting product development or triggering a full rebuild.</p>
         </div>
-      </div>
-      <img src="./imgs/zx-process02.webp"
-            width="1920"
-            height="1080"
-            alt="Collage showing various software interface dashboards with tables, data, and settings."
-            loading="lazy">
-      <div class="grid">
-        <div class="col2">
-          <h3>As part of my research I also conducted an extensive audit of design patterns across the software.</h3>
-          <p>What you're seeing is an audit of the table pattern. With this software being primarily designed by engineers the table pattern was the dominant interaction pattern. This gives you a broad view of the various ways the different tables look and behave in context. Note the visual and structural disimilarities.</p>
-        </div>
-      </div>
-    </section>
-    <section class="process">
-      <p class="hero-tag">Process</p>
-      <img src="./imgs/zx-process.webp"
-            width="1920"
-            height="1080"
-            alt="User interface design with multiple desktop views for prototyping flows."
-            loading="lazy">
-      <div class="grid">
-        <div class="col2">
-          <h3>Work was structured in Agile fashion. Prototypes were built from requirements then tested and refined until releasable.</h3>
-          <p>Mockups and prototypes were the expected deliverables. The UX team was smart and instead of providing files upon files and versions of versions we had an Abstract + Sketch setup that we'd link to. This meant devs were always accessing the latest version and there were less files to manage, we had better security and version control.</p>
-        </div>
-      </div>
-    </section>
-    <section class="img-break">
-      <img src="./imgs/zx-results02.webp"
-              width="1920"
-              height="1080"
-              alt="Screenshot of a software interface with LDAP query results and settings displayed."
-              loading="lazy">
-    </section>
-    <section class="results">
-        <p class="hero-tag">Results</p>
-        <img src="./imgs/zx-results03.webp"
-            width="1920"
-            height="1080"
-            alt="Nine screenshots of a web-based user interface for email and domain management tools."
-            loading="lazy">
-        <div class="grid">
-          <div class="col2">
-            <p class="padded">This is a small part of the unifying work done for tables. This is in direct response to the audit previously shown. There were many other table uses and variations not shown.</p>
+        <div class="product-showcase__grid">
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Research</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/zix/research.webp"
+     srcset="./imgs/zix/research@0.5x.webp 443w, ./imgs/zix/research.webp 885w, ./imgs/zix/research@2x.webp 1769w"
+     sizes="(max-width: 600px) 100vw, 50vw"
+     width="885" height="991"
+     alt="Long list of admin user stories: add or remove users, domains, and services." loading="lazy">
+              </div>
+            </div>
           </div>
-        </div>
-        <img src="./imgs/zx-results04.webp"
-              width="1920"
-              height="1080"
-              alt="Interface comparison labeled 'Before and After' showing a redesign of a request form with toggles for approval status."
-              loading="lazy">
-        <div class="grid">
-          <div class="col2">
-            <p class="padded">Consider the parable of the before state. Is it clear? Is it communicative? Is it approachable? Contrast it with the parable of the after state. Any confusion is gone and a new kind of clarity is achieved.</p>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Audit</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/zix/audit.webp"
+     srcset="./imgs/zix/audit@0.5x.webp 960w, ./imgs/zix/audit.webp 1920w, ./imgs/zix/audit@2x.webp 3840w"
+     sizes="(max-width: 600px) 100vw, 50vw"
+     width="1920" height="1080"
+     alt="Whiteboard titled Anatomy of a Data Table, covered in wireframes and printed screenshots." loading="lazy">
+              </div>
+            </div>
           </div>
-        </div>
-        <img src="./imgs/zx-results05.webp"
-              width="1920"
-              height="1080"
-              alt="Software interface comparison: cluttered log screen 'Before' and organized, modern interface 'After'."
-              loading="lazy">
-        <div class="grid">
-          <div class="col2">
-            <p class="padded">Extra benefits are boosts in accessibility with the larger and more simple interactions and a wider spacing for readability.</p>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Patterns</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/zix/patterns.webp"
+     srcset="./imgs/zix/patterns@0.5x.webp 960w, ./imgs/zix/patterns.webp 1920w, ./imgs/zix/patterns@2x.webp 3840w"
+     sizes="(max-width: 600px) 100vw, 50vw"
+     width="1920" height="1072"
+     alt="Expanded table-row pattern doc with usage rules, accessibility notes, and a status-change example." loading="lazy">
+              </div>
+            </div>
           </div>
-        </div>
-        <img src="./imgs/zx-results06.webp"
-              width="1920"
-              height="1080"
-              alt="Screenshot of a CNAME records setup interface displaying a warning for missing autodiscover records, with input fields for data entry."
-              loading="lazy"
-              class="padded-dn">
-        <img src="./imgs/zx-results07.webp"
-              width="1920"
-              height="1080"
-              alt="Screenshot of a web interface displaying LDAP import configuration options and allowed list request reviews, with forms and settings."
-              loading="lazy">
-        <div class="grid">
-          <div class="col2">
-            <p class="padded">Liberal use of a gridded structure cleans up the interface, providing small pages than easily accommodate dense information. Exactly the type of pages you want in an e-mail security SaaS.</p>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">System</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/zix/system.webp"
+     srcset="./imgs/zix/system@0.5x.webp 960w, ./imgs/zix/system.webp 1920w, ./imgs/zix/system@2x.webp 3840w"
+     sizes="(max-width: 600px) 100vw, 50vw"
+     width="1920" height="1080"
+     alt="Nine admin screens: domain protection, message search, user permissions, and security audits." loading="lazy">
+              </div>
+            </div>
           </div>
-        </div>
-        <img src="./imgs/zx-results08.webp"
-              width="1920"
-              height="1080"
-              alt="Screenshot of an application displaying a Test LDAP Query interface, showing user records, and options for exporting data."
-              loading="lazy"
-              class="padded-dn">
-        <img src="./imgs/zx-results09.webp"
-              width="1920"
-              height="1080"
-              alt="User interface displaying default permissions settings, including filter options and lists of user permissions with customization options."
-              loading="lazy">
-        <div class="grid">
-          <div class="col2">
-            <p class="padded">Usability touches like success messages and clear undo actions create a flow-based experience keeping the user moving along their task and maintaining control at all times.</p>
-          </div>
-        </div>
-        <img src="./imgs/zx-results010.webp"
-              width="1920"
-              height="1080"
-              alt="A web interface for managing released emails, featuring search filters and options to release or delete messages in quarantine."
-              loading="lazy"
-              class="padded-dn">
-        <img src="./imgs/zx-results011.webp"
-              width="1920"
-              height="1080"
-              alt="Default permissions settings including options to block or customize permissions."
-              loading="lazy"
-              class="padded-dn">
-        <img src="./imgs/zx-results012.webp"
-              width="1920"
-              height="1080"
-              alt="Office 365 Security Audit interface showing a dashboard with audit stats."
-              loading="lazy">
-        <div class="grid">
-          <div class="col2">
-            <p class="padded">Dashboards are minimal, presenting only the information relevant to the task at hand, and always presenting that information in a clear, unabimiguous way.</p>
-          </div>
-        </div>
-    </section>
-    <section class="impact">
-      <p class="hero-tag">Impact</p>
-      <div class="stats">
-        <div class="stat">
-          <p class="stat-number">+40k</p>
-          <p class="stat-title">users added</p>
-        </div>
-        <div class="stat">
-          <p class="stat-number">+21%</p>
-          <p class="stat-title">increase in <abbr title="Annual recurring revenue">ARR</abbr></p>
-        </div> 
-        <div class="stat">       
-          <blockquote>
-            <p class="stat-text">At first [this software] was annoying to use, but in recent years they've made it much easier to deal with.</p>
-          </blockquote>
-          <p class="stat-title">Customer Review</p>
         </div>
       </div>
     </section>
-    <section class="next">
-      <h2>Other projects of note</h2>
-      <div class="grid2">
-        <a href="./open-door-legal" class="next-link">
-          <div class="next-link_img-container -gy">
-            <img src="./imgs/odl-sup@2x.webp"
-                    width="2542"
-                    height="1282"
-                    srcset="./imgs/odl-sup.webp 292w,
-                            ./imgs/odl-sup@2x.webp 584w"
-                    alt="Screenshot of a referral system interface with sections for creating, sending, and tracking referrals."
-                    loading="lazy"
-                    class="next-link_img">
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What I owned</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">I was the sole hands-on designer.</p>
+          <div class="text-section__prose">
+            <p>The UX Director provided strategic oversight; execution was mine. I owned the audit and research methodology, the design system end-to-end, and all interaction design across the engagement. The ratio of UX to engineering at Zix was approximately 70:1. That constraint shaped every decision I made about how to work.</p>
           </div>
-          <p class="next-link_title">Open Door Legal</p>
-          <p>Creating a two-sided marketplace in Salesforce.</p>
-          <p class="next-link_cta">View project</p>
-          </a>
-        <a href="./kepler" class="next-link">
-          <div class="next-link_img-container -bk">
-            <img src="./imgs/kepler-sup@2x.webp"
-                    width="2542"
-                    height="1282"
-                    srcset="./imgs/kepler-sup.webp 292w,
-                            ./imgs/kepler-sup@2x.webp 584w"
-                    alt="A map visualization of earthquake data with magnitude indicators over California."
-                    loading="lazy"
-                    class="next-link_img">
-          </div>
-          <p class="next-link_title">Kepler.gl</p>
-          <p>Adding rendering to a Geospatial visualizer.</p>
-          <p class="next-link_cta">View project</p>
-        </a>
+        </div>
       </div>
     </section>
-    <section class="hero -br">
-      <p class="hero-services">Are you ready to give your customers the product experience they deserve?
-      <a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="hero-services">https://forms.gle/cHUEEu3JhBvc7hF57</a></p>
-      <div class="hero-text">
-        <ul class="hero-taglist">
-          <li class="hero-tag">I can help</li>
-        </ul>
-        <p class="hero-title">Contact</p>
+
+    <section class="asset-section">
+      <div class="cs-wrap">
+        <figure class="asset-section__figure">
+        <img class="asset-section__image" src="./imgs/zix/z01.webp"
+     srcset="./imgs/zix/z01@0.5x.webp 960w, ./imgs/zix/z01.webp 1920w, ./imgs/zix/z01@2x.webp 3840w"
+     sizes="100vw"
+     width="1920" height="1080"
+     alt="Collage of pre-merger admin UIs from AppRiver, VIPRE, ConnectWise, and ZixPort." loading="lazy">
+        <figcaption class="asset-section__caption">Four products, four admin experiences — before anything could be unified.</figcaption>
+      </figure>
       </div>
+    </section>
+
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">Understanding the problem</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">I conducted a Top Tasks analysis across the product suite.</p>
+          <div class="text-section__prose">
+            <p>My work identified the most critical functions users performed, mapped them to existing workflows, and validated which tasks recurred across multiple apps. The finding that mattered most: the same tasks were being accomplished in structurally different ways depending on which app a user was in.</p>
+            <p>I also ran an extensive audit of design patterns across all 21 applications. The dominant interaction pattern, by a wide margin, was the table. But every team had implemented tables differently — different column structures, sort behaviors, action patterns, and visual treatment. The audit made the scope undeniable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asset-section">
+      <div class="cs-wrap">
+        <figure class="asset-section__figure">
+        <img class="asset-section__image" src="./imgs/zix/z02.webp"
+     srcset="./imgs/zix/z02@0.5x.webp 960w, ./imgs/zix/z02.webp 1920w, ./imgs/zix/z02@2x.webp 3840w"
+     sizes="100vw"
+     width="1920" height="1080"
+     alt="Admin user-story list beside Slack threads about display-name spoofing and customer parity." loading="lazy">
+        <figcaption class="asset-section__caption">Top Tasks became hundreds of admin stories; the hard calls happened in Slack.</figcaption>
+      </figure>
+      </div>
+    </section>
+
+
+    <section class="banner-showroom">
+      <figure class="banner-showroom__figure">
+        <img class="banner-showroom__image" src="./imgs/zix/z03.webp"
+     srcset="./imgs/zix/z03@0.5x.webp 960w, ./imgs/zix/z03.webp 1920w, ./imgs/zix/z03@2x.webp 3840w"
+     sizes="100vw"
+     width="1920" height="1080"
+     alt="Whiteboard session mapping table anatomy, row actions, filters, and a project timeline." loading="lazy">
+        <div class="banner-showroom__scrim" aria-hidden="true"></div>
+      </figure>
+      <div class="banner-showroom__stage">
+        <div class="cs-wrap banner-showroom__content">
+          <div class="banner-showroom__rule"></div>
+          <p class="banner-showroom__headline">
+            <span class="cs-line-mask"><span class="cs-line">A fragmented product does not get acquired for $860M.</span></span>
+            <span class="cs-line-mask"><span class="cs-line">A coherent one does.</span></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-blocks">
+      <div class="cs-wrap text-blocks__wrap">
+        <h2 class="text-blocks__eyebrow">The three decisions that mattered</h2>
+        <div class="text-blocks__list">
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Scale influence, not control.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>At a 70:1 designer-to-engineer ratio, the instinct to own every UX decision is a trap. I educated and empowered engineering teams to build correctly — documentation, making the right choice the easy choice, and trusted advisor relationships. The design system was a transfer of design judgment at scale.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Don't redesign everything at once.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>I structured incremental unification: audit patterns, govern high-frequency interactions first (tables, forms, dashboards), then roll out across apps in priority order — always something concrete to ship.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Work with the table pattern, not against it.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>I standardized and elevated the table pattern instead of replacing it. Consistent sort/filter, readable spacing, accessible targets — the existing paradigm done correctly and consistently everywhere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assets-duo">
+      <div class="cs-wrap assets-duo__wrap">
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/zix/z04.webp"
+            srcset="./imgs/zix/z04@0.5x.webp 960w, ./imgs/zix/z04.webp 1920w, ./imgs/zix/z04@2x.webp 3840w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="1920" height="1080"
+            alt="Nine admin screens: compliance policies, role profiles, message search, and user permissions." loading="lazy">
+          <figcaption class="assets-duo__caption">21 apps meant 21 ways to do the same admin task.</figcaption>
+        </figure>
+        <div class="assets-duo__item">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">Design system</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">The design system in practice.</p>
+          <div class="text-section__prose">
+            <p>The system was built on Abstract + Sketch, with a single source of truth linked directly to engineering handoffs. Developers accessed the latest version at all times — no stale exports, no "which file is current" conversations.</p>
+            <p>Prototypes were built against requirements, tested, and refined until releasable. Edge cases and failure states were system components — success messages, undo actions, and clear error states — not afterthoughts.</p>
+            <p>Accessibility was addressed systematically: larger interaction targets, increased spacing, and simplified flows were properties of the system.</p>
+            <a href="./design-system.html" class="btn">Browse the pattern gallery</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assets-duo is-rev">
+      <div class="cs-wrap assets-duo__wrap">
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/zix/z06.webp"
+            srcset="./imgs/zix/z06@0.5x.webp 960w, ./imgs/zix/z06.webp 1920w, ./imgs/zix/z06@2x.webp 3840w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="1920" height="880"
+            alt="Message search and bulk export at mobile, tablet, and desktop breakpoints." loading="lazy">
+          <figcaption class="assets-duo__caption">Same search-and-export flow, reflowed for three breakpoints.</figcaption>
+        </figure>
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/zix/z05.webp"
+            srcset="./imgs/zix/z05@0.5x.webp 960w, ./imgs/zix/z05.webp 1920w, ./imgs/zix/z05@2x.webp 3840w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="1920" height="1080"
+            alt="Nine admin panels: spoofing rules, message export, customer list, and forwarding-risk audit." loading="lazy">
+          <figcaption class="assets-duo__caption">High-traffic admin flows after the shared table and form patterns landed.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="asset-stack">
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/zix/z07.webp"
+      srcset="./imgs/zix/z07@0.5x.webp 960w, ./imgs/zix/z07.webp 1920w, ./imgs/zix/z07@2x.webp 3840w"
+      sizes="100vw"
+      width="1920" height="1080"
+      alt="LDAP query test results shown at mobile, tablet, and desktop widths." loading="lazy">
+          <figcaption class="asset-section__caption">Directory-import testing had to stay readable on a phone.</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/zix/z08.webp"
+      srcset="./imgs/zix/z08@0.5x.webp 960w, ./imgs/zix/z08.webp 1920w, ./imgs/zix/z08@2x.webp 3840w"
+      sizes="100vw"
+      width="1920" height="1080"
+      alt="Partner customer list with filters and guest-admin banner at three screen sizes." loading="lazy">
+          <figcaption class="asset-section__caption">Partner admins manage thousands of accounts — filters and bulk actions had to scale.</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="assets-duo is-even">
+        <div class="cs-wrap assets-duo__wrap">
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/zix/z09.webp"
+              srcset="./imgs/zix/z09@0.5x.webp 960w, ./imgs/zix/z09.webp 1920w, ./imgs/zix/z09@2x.webp 3840w"
+              sizes="(max-width: 600px) 100vw, 50vw"
+              width="1920" height="1080"
+              alt="Quarantine released-mail screen with date and subject search plus bulk release or delete." loading="lazy">
+            <figcaption class="assets-duo__caption">Quarantine — search 10,000 released messages, act on a page at a time.</figcaption>
+          </figure>
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/zix/z10.webp"
+              srcset="./imgs/zix/z10@0.5x.webp 960w, ./imgs/zix/z10.webp 1920w, ./imgs/zix/z10@2x.webp 3840w"
+              sizes="(max-width: 600px) 100vw, 50vw"
+              width="1920" height="1080"
+              alt="Allowed-list request cards with toggles to approve or deny each sender, domain, or IP." loading="lazy">
+            <figcaption class="assets-duo__caption">Allowed-list requests — approve the domain, deny the IP, save the rest for later.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/zix/z11.webp"
+      srcset="./imgs/zix/z11@0.5x.webp 960w, ./imgs/zix/z11.webp 1920w, ./imgs/zix/z11@2x.webp 3840w"
+      sizes="100vw"
+      width="1920" height="1080"
+      alt="Domain protection settings table with error banners and a conflict to resolve." loading="lazy">
+          <figcaption class="asset-section__caption">Domain protection — errors surfaced inline instead of after a failed save.</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="assets-duo is-even">
+        <div class="cs-wrap assets-duo__wrap">
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/zix/z12.webp"
+              srcset="./imgs/zix/z12@0.5x.webp 960w, ./imgs/zix/z12.webp 1920w, ./imgs/zix/z12@2x.webp 3840w"
+              sizes="(max-width: 600px) 100vw, 50vw"
+              width="1920" height="1080"
+              alt="Mail log search with rows tagged Naughty, Nice, or Spam and a view action per row." loading="lazy">
+            <figcaption class="assets-duo__caption">Mail logs — filter by type, scan 42 results, open one to inspect.</figcaption>
+          </figure>
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/zix/z13.webp"
+              srcset="./imgs/zix/z13@0.5x.webp 960w, ./imgs/zix/z13.webp 1920w, ./imgs/zix/z13@2x.webp 3840w"
+              sizes="(max-width: 600px) 100vw, 50vw"
+              width="1920" height="1080"
+              alt="Default permissions screen after a save, with a success toast, undo, and 125-user list." loading="lazy">
+            <figcaption class="assets-duo__caption">Default permissions — change once, confirm with toast and undo.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/zix/z14.webp"
+      srcset="./imgs/zix/z14@0.5x.webp 960w, ./imgs/zix/z14.webp 1920w, ./imgs/zix/z14@2x.webp 3840w"
+      sizes="100vw"
+      width="1920" height="1080"
+      alt="Office 365 security audit partner dashboard with start steps, metrics, and report shortcuts." loading="lazy">
+          <figcaption class="asset-section__caption">Partners run O365 audits from one dashboard — schedule, track, and hand off reports.</figcaption>
+        </figure>
+        </div>
+      </section>
+    </div>
+
+    
+    <section class="finish" data-nav-theme="paper" aria-label="Results and contact">
+      <div class="finish__track">
+        <div class="finish__sticky">
+          <div class="finish__bg" aria-hidden="true"></div>
+          <div class="finish__stage">
+            <div class="finish__act finish__act--proof">
+              <div class="cs-wrap results-section__wrap">
+                <h2 class="results-section__eyebrow">Results</h2>
+                <div class="results-section__quote">
+                  <blockquote class="results-section__pullquote">
+                    <span class="results-section__quote-text">“At first [this software] was annoying to use, but in recent years they've made it much easier to deal with.”</span>
+                  </blockquote>
+                  <p class="results-section__cite">
+                    <strong>Customer review</strong>
+                    <span class="results-section__cite-role">Zix product user</span>
+                  </p>
+                </div>
+                <p class="results-section__summary">In November 2021, OpenText acquired Zix for $860 million. In the year following the design system launch, Zix's ARR increased 21% per SEC filings, with approximately 40,000 net new users.</p>
+              </div>
+            </div>
+            <div class="finish__act finish__act--cta">
+              <div class="closing-cta__inner cs-wrap">
+                <p id="closing-cta-headline" class="closing-cta__headline">
+                  <span class="cs-line-mask"><span class="cs-line">Your rivals expect you to sleep on your UX.</span></span>
+                  <span class="cs-line-mask"><span class="cs-line">They thrive</span></span>
+                  <span class="cs-line-mask"><span class="cs-line">on what you ignore.</span></span>
+                  <span class="cs-line-mask"><span class="cs-line"><a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="btn btn--inverse">Prove them wrong</a></span></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-handoff" data-nav-theme="yellow" aria-label="Next project">
+      <a href="./pixly" class="project-handoff__target"><span class="sr-only">Continue to Pixly</span></a>
+      <p class="project-handoff__label">Next project</p>
+      <p class="project-handoff__title">3 weeks. 1 AI POC. Kiewit.</p>
+      <p class="project-handoff__lede">AI vision for construction photos</p>
+      <p class="project-handoff__stat">$1M+ pipeline</p>
+      <img class="project-handoff__image" src="./imgs/pixly/px-04.webp" alt="" aria-hidden="true" loading="lazy">
+      <p class="project-handoff__hint">Keep scrolling</p>
+      <div class="project-handoff__progress" aria-hidden="true">
+        <div class="project-handoff__progress-bar"></div>
+      </div>
+      <a href="./pixly" class="project-handoff__skip">Continue to Pixly</a>
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="./js/hero-gallery.js"></script>
+  <script src="./js/case-study.js"></script>
 </body>
 </html>

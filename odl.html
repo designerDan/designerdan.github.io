@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Open Door Legal case study — referral marketplace and grant management in Salesforce by Daniel Mason">
+  <title>Open Door Legal — Building Legal Infrastructure in Salesforce</title>
+  <link rel="canonical" href="https://www.danielgmason.com/odl">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Daniel Mason">
+  <meta property="og:title" content="Open Door Legal — Building Legal Infrastructure in Salesforce">
+  <meta property="og:description" content="Referral marketplace and grant management in Salesforce for a high-volume legal aid nonprofit.">
+  <meta property="og:url" content="https://www.danielgmason.com/odl">
+  <meta property="og:image" content="https://www.danielgmason.com/imgs/odl/showcase-01.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Open Door Legal — Building Legal Infrastructure in Salesforce",
+    "description": "Referral marketplace and grant management in Salesforce for a high-volume legal aid nonprofit.",
+    "url": "https://www.danielgmason.com/odl",
+    "image": "https://www.danielgmason.com/imgs/odl/showcase-01.webp",
+    "author": { "@type": "Person", "name": "Daniel Mason", "url": "https://www.danielgmason.com/" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="./imgs/odl/showcase-01.webp" as="image">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;900&display=swap">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+<body class="case-page" data-next-project="./zix">
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-head">
+    <div class="site-head__lockup">
+      <a href="/" class="site-head__brand" aria-label="Daniel Mason — Home">
+        <img src="./imgs/logo.svg" width="33" height="25" alt="" class="site-head__logo" aria-hidden="true">
+      </a>
+      <div class="site-head__identity">
+        <p class="site-head__name">Daniel Mason</p>
+        <p class="site-head__role">Lead UX Designer · Enterprise SaaS · AI/ML</p>
+      </div>
+    </div>
+    <div class="site-head__end">
+      <a href="https://linkedin.com/in/designemissary" class="site-head__linkedin linkedin" aria-label="LinkedIn profile">LinkedIn</a>
+      <nav class="site-head__nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./about" class="nav-link">About</a></li>
+          <li><a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="project-hero project-hero--fold project-hero--brown" data-nav-link-tone="light" aria-labelledby="project-title">
+      <div class="project-hero__stage">
+        <header class="project-hero__header cs-wrap">
+          <h1 id="project-title" class="project-hero__title">Infrastructure for Legal Tech</h1>
+          <div class="project-hero__stats">
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">80</p>
+              <p class="project-hero__stat-label">NPS (120-day target)</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">-16%</p>
+              <p class="project-hero__stat-label">Referral redundancies</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">90%</p>
+              <p class="project-hero__stat-label">Grant admin reduction target</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">2</p>
+              <p class="project-hero__stat-label">Phases · client returned without RFP</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="project-hero__gallery" data-hero-gallery>
+          <div class="project-hero__gallery-viewport" aria-label="Open Door Legal product screenshots — scroll horizontally">
+            <div class="project-hero__gallery-track">
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/odl/showcase-00.webp"
+                     srcset="./imgs/odl/showcase-00@0.5x.webp 960w, ./imgs/odl/showcase-00.webp 1920w, ./imgs/odl/showcase-00@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1920" height="1043"
+                     alt="Close Intake tab, Grant selection step; one funding source row selected; Grant activity and Grant outcome dropdowns required." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/odl/showcase-01.webp"
+                     srcset="./imgs/odl/showcase-01@0.5x.webp 960w, ./imgs/odl/showcase-01.webp 1920w, ./imgs/odl/showcase-01@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1920" height="1080"
+                     alt="Close Case tab, HUD step; emergency rental assistance Yes applied for assistance; Family income group Very Low Income selected." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/odl/showcase-02.webp"
+                     srcset="./imgs/odl/showcase-02@0.5x.webp 960w, ./imgs/odl/showcase-02.webp 1920w, ./imgs/odl/showcase-02@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1920" height="1080"
+                     alt="Close Intake Demographics step; Mailing Street validation error; At risk of homelessness, Disability, Indigent, and Prior Incarceration checked." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/odl/showcase-03.webp"
+                     srcset="./imgs/odl/showcase-03@0.5x.webp 960w, ./imgs/odl/showcase-03.webp 1920w, ./imgs/odl/showcase-03@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1920" height="1080"
+                     alt="Update Time cards dialog; Age filter set to Greater than 30; Indigent and Prior Incarceration checked; Search button." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/odl/showcase-04.webp"
+                     srcset="./imgs/odl/showcase-04@0.5x.webp 960w, ./imgs/odl/showcase-04.webp 1920w, ./imgs/odl/showcase-04@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1920" height="1080"
+                     alt="Update Time cards dialog; Returned 274.35 hours from 43 time cards; Available and Reassigned lists; Hours to reassign 80." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/odl/showcase-05.webp"
+                     srcset="./imgs/odl/showcase-05@0.5x.webp 960w, ./imgs/odl/showcase-05.webp 1920w, ./imgs/odl/showcase-05@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1920" height="1080"
+                     alt="Referral record; banner reads This referral is closed; Referral status Closed; activity log with sent, interest, case opened, and closed entries." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/odl/showcase-06.webp"
+                     srcset="./imgs/odl/showcase-06@0.5x.webp 960w, ./imgs/odl/showcase-06.webp 1920w, ./imgs/odl/showcase-06@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1920" height="1614"
+                     alt="Close Case Outcomes step; Degree of resolution Positive; Standard outcomes and State bar outcomes fields with Add outcomes links." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/odl/showcase-07.webp"
+                     srcset="./imgs/odl/showcase-07@0.5x.webp 960w, ./imgs/odl/showcase-07.webp 1920w, ./imgs/odl/showcase-07@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1920" height="1080"
+                     alt="Close Intake Checklist confirmation step; Conflict Check Correct and Guest Accommodations Correct checked; Client Parties table." loading="lazy" draggable="false">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <footer class="project-hero__footer cs-wrap">
+          <dl class="project-hero__meta">
+            <div>
+              <dt>Project</dt>
+              <dd>Two-sided referral marketplace and grant management system in Salesforce.</dd>
+            </div>
+            <div>
+              <dt>Contributions</dt>
+              <dd>UX Design, Stakeholder Alignment</dd>
+            </div>
+            <div>
+              <dt>Team</dt>
+              <dd>Product Manager, Engineer, Me</dd>
+            </div>
+            <div>
+              <dt>Client</dt>
+              <dd>Open Door Legal</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>6 months</dd>
+            </div>
+          </dl>
+        </footer>
+      </div>
+    </section>
+
+    <section class="text-cta">
+      <div class="cs-wrap text-cta__wrap">
+        <h2 class="text-cta__eyebrow">The client</h2>
+        <p class="text-cta__headline">
+          <span class="cs-line-mask"><span class="cs-line">Poverty is dramatically reduced when</span></span>
+          <span class="cs-line-mask"><span class="cs-line">everyone has access to legal</span></span>
+          <span class="cs-line-mask"><span class="cs-line">representation.</span></span>
+        </p>
+        <p class="text-cta__body">Open Door Legal is an award-winning San Francisco nonprofit running a high-volume intake and referral operation across housing, immigration, and family law. When they came to me, they had two problems. One they knew about. One they discovered once we started working.</p>
+      </div>
+    </section>
+
+    <section class="product-showcase">
+      <div class="cs-wrap product-showcase__wrap">
+        <h2 class="product-showcase__eyebrow">Product showcase</h2>
+        <div class="product-showcase__intro">
+          <p>The brief: build a two-sided referral marketplace inside Salesforce—connecting ODL with partner legal organizations—so referrals could be created, sent, tracked, and received in one system.</p>
+        </div>
+        <div class="product-showcase__grid">
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Compliance</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/odl/compliance.webp"
+                     srcset="./imgs/odl/compliance@0.5x.webp 960w, ./imgs/odl/compliance.webp 1920w, ./imgs/odl/compliance@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     width="1920" height="1080"
+                     alt="Create a referral screen; Out-of-network tab selected; partner table with Relevance, Area of law, ZIP Code, and Access method columns." loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Onboarding</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/odl/onboarding.webp"
+                     srcset="./imgs/odl/onboarding@0.5x.webp 960w, ./imgs/odl/onboarding.webp 1920w, ./imgs/odl/onboarding@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     width="1920" height="1080"
+                     alt="Create a new grant dialog, Contact filters step; Applies to some Contacts selected; Age, ZIP Code, and Race/Ethnicity filter fields." loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Management</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/odl/management.webp"
+                     srcset="./imgs/odl/management@0.5x.webp 960w, ./imgs/odl/management.webp 1920w, ./imgs/odl/management@2x.webp 3840w"
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     width="1920" height="1083"
+                     alt="Time cards list view; Filters panel open; Grant Activity column popover reads Update 8 selected items." loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Workflows</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/odl/workflows.webp"
+                     srcset="./imgs/odl/workflows@0.5x.webp 440w, ./imgs/odl/workflows.webp 880w, ./imgs/odl/workflows@2x.webp 1760w"
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     width="880" height="619"
+                     alt="Flowchart of referral process from Begin through partner availability, conflict check on client name and birthday, and partner acceptance." loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">Phase 1 — The referral feature</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">ODL's referral process was entirely manual.</p>
+          <div class="text-section__prose">
+            <p>When a client's needs fell outside what ODL could directly serve, admins searched an external database, retrieved contact details, and manually reached out by phone, email, fax, or post. Every referral was logged by hand. I was the sole designer—I drove research, defined user flows for both sides of the marketplace, owned all interaction design, and managed the client relationship through reviews and testing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asset-section">
+      <div class="cs-wrap">
+        <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/odl/odl-01.webp"
+               srcset="./imgs/odl/odl-01@0.5x.webp 960w, ./imgs/odl/odl-01.webp 1920w, ./imgs/odl/odl-01@2x.webp 3840w"
+               sizes="100vw"
+               width="1920" height="1080"
+               alt="Referral tab, Referral Engine; Cooperative Restraining Order Clinic listed with English and Español access details." loading="lazy">
+          <figcaption class="asset-section__caption">Referral tab, Referral Engine; Cooperative Restraining Order Clinic listed with English and Español access details.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">The constraint nobody warned me about</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">This wasn't just a workflow problem—it was a legal ethics problem.</p>
+          <div class="text-section__prose">
+            <p>Attorneys are bound by the California Rules of Professional Conduct. Sharing client information across a network triggers obligations around confidentiality, informed consent, and the duty to prospective clients. A California attorney reviewed the proposed system and issued a formal ethics opinion before we could ship.</p>
+            <p>Informed consent had to be built into referral creation. Data visible to receiving organizations required explicit scoping. The simplified conflict check was deliberately limited to three fields: first name, last name, and date of birth. The templated outbound client summary only auto-generates after a clean conflict check clears.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assets-duo">
+      <div class="cs-wrap assets-duo__wrap">
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/odl/odl-02.webp"
+               srcset="./imgs/odl/odl-02@0.5x.webp 960w, ./imgs/odl/odl-02.webp 1920w, ./imgs/odl/odl-02@2x.webp 3840w"
+               sizes="(max-width: 600px) 100vw, 50vw"
+               width="1920" height="1174"
+               alt="Flowchart of referral steps above numbered screen map for Referrer, Referring partner, and System rows." loading="lazy">
+          <figcaption class="assets-duo__caption">Flowchart of referral steps above numbered screen map for Referrer, Referring partner, and System rows.</figcaption>
+        </figure>
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/odl/odl-02-2.webp"
+               srcset="./imgs/odl/odl-02-2@0.5x.webp 440w, ./imgs/odl/odl-02-2.webp 880w, ./imgs/odl/odl-02-2@2x.webp 1760w"
+               sizes="(max-width: 600px) 100vw, 50vw"
+               width="880" height="619"
+               alt="Flowchart; Submit Referral leads to Available Referral Partners decision, then self-serve, share client information, or Simplified conflict check." loading="lazy">
+          <figcaption class="assets-duo__caption">Flowchart; Submit Referral leads to Available Referral Partners decision, then self-serve, share client information, or Simplified conflict check.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="text-blocks">
+      <div class="cs-wrap text-blocks__wrap">
+        <h2 class="text-blocks__eyebrow">The decisions that mattered</h2>
+        <div class="text-blocks__list">
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>In-network and out-of-network as first-class concepts.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Not every organization ODL refers to is in Salesforce. I designed in-network and out-of-network as explicit, equal designations at referral creation—keeping the manual path inside the product rather than beside it.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>The referral as a self-contained object.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Everything needed to process, act on, or close a referral is present in a single view—a deliberate choice against Salesforce's default related-list navigation for a high-volume, context-switching operation.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Designing for the end state.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>A closed referral still needs to communicate completeness and release attention. Staff should leave a closed referral and return to their queue without uncertainty about whether something was missed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asset-section">
+      <div class="cs-wrap">
+        <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/odl/odl-03.webp"
+               srcset="./imgs/odl/odl-03@0.5x.webp 960w, ./imgs/odl/odl-03.webp 1920w, ./imgs/odl/odl-03@2x.webp 3840w"
+               sizes="100vw"
+               width="1920" height="1080"
+               alt="Referral Client info; Check for conflicts fields filled; message Conflicts with the listed parties were found; Declined referral button shown." loading="lazy">
+          <figcaption class="asset-section__caption">Referral Client info; Check for conflicts fields filled; message Conflicts with the listed parties were found; Declined referral button shown.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">Phase 2 — Grant management</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">Why this problem is existential for a nonprofit.</p>
+          <div class="text-section__prose">
+            <p>ODL's funding comes from grants—each with unique reporting requirements. Grant administration was a convoluted, multi-step process: manual onboarding, monthly reconciliation across disconnected reports, and significant manual assembly for funder reports. The risk isn't inefficiency—it's reporting inaccuracy and compliance exposure on renewals.</p>
+            <p>The brief: redesign grant management in Salesforce to reduce administrative overhead by 90%, with as little burden on line staff as possible. The Beneficiary junction object—connecting contacts, grant activities, intakes, cases, and time forecasts—was the architectural linchpin that unlocked per-funder reporting without manual reconciliation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner-showroom">
+      <figure class="banner-showroom__figure">
+        <img class="banner-showroom__image" src="./imgs/odl/odl-04.webp"
+             srcset="./imgs/odl/odl-04@0.5x.webp 960w, ./imgs/odl/odl-04.webp 1920w, ./imgs/odl/odl-04@2x.webp 3840w"
+             sizes="100vw"
+             width="1920" height="1080"
+             alt="Create a referral form; Select a contact and Select a legal issue fields; Area of law dropdown expanded." loading="lazy">
+        <div class="banner-showroom__scrim" aria-hidden="true"></div>
+      </figure>
+      <div class="banner-showroom__stage">
+        <div class="cs-wrap banner-showroom__content">
+          <div class="banner-showroom__rule"></div>
+          <p class="banner-showroom__headline">
+            <span class="cs-line-mask"><span class="cs-line">Phase 1 results: NPS hit the 120-day target of 80.</span></span>
+            <span class="cs-line-mask"><span class="cs-line">They came back for Phase 2 without a competitive process.</span></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-blocks">
+      <div class="cs-wrap text-blocks__wrap">
+        <h2 class="text-blocks__eyebrow">What this engagement required that most don't</h2>
+        <div class="text-blocks__list">
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Ethics as a design constraint.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>The consequences of a wrong interaction state aren't a bad user experience—they're a professional conduct violation. That forced precision in consent flows, data visibility, and state communication I'd carry into any high-stakes domain work.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Guiding line staff without burdening them.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Case managers shouldn't need to think about grant compliance. Intake finalization and case close flows surface grant-relevant fields at the exact moment they're needed—and prevent progression unless required data is entered.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Working upstream of the UI.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>The grant data model work required operating at the boundary of UX and systems design—defining what objects needed to exist and how they needed to relate before any screens could be meaningful.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="asset-stack">
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+            <img class="asset-section__image" src="./imgs/odl/odl-05.webp"
+                 srcset="./imgs/odl/odl-05@0.5x.webp 960w, ./imgs/odl/odl-05.webp 1920w, ./imgs/odl/odl-05@2x.webp 3840w"
+                 sizes="100vw"
+                 width="1920" height="1080"
+                 alt="Create a new grant, Activities and outcomes step; Upload Files area; table columns Activity ID, Activity Name, Outcome, and Area of Law." loading="lazy">
+            <figcaption class="asset-section__caption">Create a new grant, Activities and outcomes step; Upload Files area; table columns Activity ID, Activity Name, Outcome, and Area of Law.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="assets-duo is-even">
+        <div class="cs-wrap assets-duo__wrap">
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/odl/odl-06.webp"
+                 srcset="./imgs/odl/odl-06@0.5x.webp 960w, ./imgs/odl/odl-06.webp 1920w, ./imgs/odl/odl-06@2x.webp 3840w"
+                 sizes="(max-width: 600px) 100vw, 50vw"
+                 width="1920" height="1080"
+                 alt="Close Intake tab; Case status step active; Will you be opening a case, case estimate, subject, description, and area of law fields; Grant selection and Finalized steps ahead." loading="lazy">
+            <figcaption class="assets-duo__caption">Close Intake tab; Case status step active; Will you be opening a case, case estimate, subject, description, and area of law fields; Grant selection and Finalized steps ahead.</figcaption>
+          </figure>
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/odl/odl-07.webp"
+                 srcset="./imgs/odl/odl-07@0.5x.webp 960w, ./imgs/odl/odl-07.webp 1920w, ./imgs/odl/odl-07@2x.webp 3840w"
+                 sizes="(max-width: 600px) 100vw, 50vw"
+                 width="1920" height="1113"
+                 alt="Close Intake tab; all progress steps complete; banner reads This intake has been finalized and submitted for review. A case has been opened." loading="lazy">
+            <figcaption class="assets-duo__caption">Close Intake tab; all progress steps complete; banner reads This intake has been finalized and submitted for review. A case has been opened.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+            <img class="asset-section__image" src="./imgs/odl/odl-08.webp"
+                 srcset="./imgs/odl/odl-08@0.5x.webp 960w, ./imgs/odl/odl-08.webp 1920w, ./imgs/odl/odl-08@2x.webp 3840w"
+                 sizes="100vw"
+                 width="1920" height="1080"
+                 alt="Close Case Resolution step; Type of resolution and Case resolution explained fields; banner Please update the case description to reflect how the case was resolved." loading="lazy">
+            <figcaption class="asset-section__caption">Close Case Resolution step; Type of resolution and Case resolution explained fields; banner Please update the case description to reflect how the case was resolved.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="assets-duo is-even">
+        <div class="cs-wrap assets-duo__wrap">
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/odl/odl-09.webp"
+                 srcset="./imgs/odl/odl-09@0.5x.webp 960w, ./imgs/odl/odl-09.webp 1920w, ./imgs/odl/odl-09@2x.webp 3840w"
+                 sizes="(max-width: 600px) 100vw, 50vw"
+                 width="1920" height="1043"
+                 alt="Grant selection step; one funding source row checked and labeled Grant selected; Grant activity and State bar activity dropdowns required." loading="lazy">
+            <figcaption class="assets-duo__caption">Grant selection step; one funding source row checked and labeled Grant selected; Grant activity and State bar activity dropdowns required.</figcaption>
+          </figure>
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/odl/odl-10.webp"
+                 srcset="./imgs/odl/odl-10@0.5x.webp 960w, ./imgs/odl/odl-10.webp 1920w, ./imgs/odl/odl-10@2x.webp 3840w"
+                 sizes="(max-width: 600px) 100vw, 50vw"
+                 width="1920" height="1080"
+                 alt="Close Case HUD step; emergency rental assistance Yes applied for assistance; federal housing program Yes but unsure which program; Very Low Income selected." loading="lazy">
+            <figcaption class="assets-duo__caption">Close Case HUD step; emergency rental assistance Yes applied for assistance; federal housing program Yes but unsure which program; Very Low Income selected.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+            <img class="asset-section__image" src="./imgs/odl/odl-11.webp"
+                 srcset="./imgs/odl/odl-11@0.5x.webp 960w, ./imgs/odl/odl-11.webp 1920w, ./imgs/odl/odl-11@2x.webp 3840w"
+                 sizes="100vw"
+                 width="1920" height="1080"
+                 alt="Demographics verification step; Mailing Street validation error; Age 34; At risk of homelessness, Disability, Indigent, and Prior Incarceration checked." loading="lazy">
+            <figcaption class="asset-section__caption">Demographics verification step; Mailing Street validation error; Age 34; At risk of homelessness, Disability, Indigent, and Prior Incarceration checked.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+            <img class="asset-section__image" src="./imgs/odl/odl-12.webp"
+                 srcset="./imgs/odl/odl-12@0.5x.webp 960w, ./imgs/odl/odl-12.webp 1920w, ./imgs/odl/odl-12@2x.webp 3840w"
+                 sizes="100vw"
+                 width="1920" height="1080"
+                 alt="Update Time cards search dialog; Demographics filters expanded; Indigent and Prior Incarceration checked; Search button." loading="lazy">
+            <figcaption class="asset-section__caption">Update Time cards search dialog; Demographics filters expanded; Indigent and Prior Incarceration checked; Search button.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="assets-duo is-even">
+        <div class="cs-wrap assets-duo__wrap">
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/odl/odl-13.webp"
+                 srcset="./imgs/odl/odl-13@0.5x.webp 960w, ./imgs/odl/odl-13.webp 1920w, ./imgs/odl/odl-13@2x.webp 3840w"
+                 sizes="(max-width: 600px) 100vw, 50vw"
+                 width="1920" height="1080"
+                 alt="Update Time cards dialog; toast Grant activities successfully updated; Available 192.35 hours and Reassigned 82 hours; Update button." loading="lazy">
+            <figcaption class="assets-duo__caption">Update Time cards dialog; toast Grant activities successfully updated; Available 192.35 hours and Reassigned 82 hours; Update button.</figcaption>
+          </figure>
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/odl/odl-14.webp"
+                 srcset="./imgs/odl/odl-14@0.5x.webp 960w, ./imgs/odl/odl-14.webp 1920w, ./imgs/odl/odl-14@2x.webp 3840w"
+                 sizes="(max-width: 600px) 100vw, 50vw"
+                 width="1920" height="1080"
+                 alt="Referral status Closed; Referral info table columns To, Referral sent, Interest expressed, and Case opened; four activity entries dated 3/20/17." loading="lazy">
+            <figcaption class="assets-duo__caption">Referral status Closed; Referral info table columns To, Referral sent, Interest expressed, and Case opened; four activity entries dated 3/20/17.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+            <img class="asset-section__image" src="./imgs/odl/odl-15.webp"
+                 srcset="./imgs/odl/odl-15@0.5x.webp 960w, ./imgs/odl/odl-15.webp 1920w, ./imgs/odl/odl-15@2x.webp 3840w"
+                 sizes="100vw"
+                 width="1920" height="1614"
+                 alt="Close Case Outcomes step; Degree of resolution Positive; Standard outcomes and State bar outcomes Available and Chosen lists." loading="lazy">
+            <figcaption class="asset-section__caption">Close Case Outcomes step; Degree of resolution Positive; Standard outcomes and State bar outcomes Available and Chosen lists.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+            <img class="asset-section__image" src="./imgs/odl/odl-16.webp"
+                 srcset="./imgs/odl/odl-16@0.5x.webp 960w, ./imgs/odl/odl-16.webp 1920w, ./imgs/odl/odl-16@2x.webp 3840w"
+                 sizes="100vw"
+                 width="1920" height="1080"
+                 alt="Checklist confirmation step; Conflict Check Correct and Guest Accommodations Correct checked; Client Parties and Adverse Parties tables." loading="lazy">
+            <figcaption class="asset-section__caption">Checklist confirmation step; Conflict Check Correct and Guest Accommodations Correct checked; Client Parties and Adverse Parties tables.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <section class="finish finish--brown" data-nav-theme="paper" aria-label="Results and contact">
+      <div class="finish__track">
+        <div class="finish__sticky">
+          <div class="finish__bg" aria-hidden="true"></div>
+          <div class="finish__stage">
+            <div class="finish__act finish__act--proof">
+              <div class="cs-wrap results-section__wrap">
+                <h2 class="results-section__eyebrow">Results</h2>
+                <div class="results-section__quote">
+                  <blockquote class="results-section__pullquote">
+                    <span class="results-section__quote-text">“You're the best designer we've ever had.”</span>
+                  </blockquote>
+                  <p class="results-section__cite">
+                    <strong>Executive Director</strong>
+                    <span class="results-section__cite-role">Open Door Legal</span>
+                  </p>
+                </div>
+                <p class="results-section__summary">NPS hit the 120-day target of 80 following the referral feature launch. Redundancies in referral handling were down 16% at measurement. Phase 2 grant management is in QA ahead of deployment—the 90% administration reduction is the production hypothesis.</p>
+              </div>
+            </div>
+            <div class="finish__act finish__act--cta">
+              <div class="closing-cta__inner cs-wrap">
+                <p id="closing-cta-headline" class="closing-cta__headline">
+                  <span class="cs-line-mask"><span class="cs-line">Your rivals expect you</span></span>
+                  <span class="cs-line-mask"><span class="cs-line">to sleep on your UX.</span></span>
+                  <span class="cs-line-mask"><span class="cs-line">They thrive</span></span>
+                  <span class="cs-line-mask"><span class="cs-line">on what you ignore.</span></span>
+                  <span class="cs-line-mask"><span class="cs-line"><a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="btn">Prove them wrong</a></span></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-handoff project-handoff--brand" data-nav-theme="brand" aria-label="Next project">
+      <a href="./zix" class="project-handoff__target"><span class="sr-only">Continue to Zix</span></a>
+      <p class="project-handoff__label">Next project</p>
+      <p class="project-handoff__title">21 apps. 1 system. $860M exit.</p>
+      <p class="project-handoff__lede">Unifying apps across a merger</p>
+      <p class="project-handoff__stat">$860M acquisition</p>
+      <img class="project-handoff__image"
+           src="./imgs/zix/showcase-01.webp"
+           srcset="./imgs/zix/showcase-01@0.5x.webp 958w, ./imgs/zix/showcase-01.webp 1916w, ./imgs/zix/showcase-01@2x.webp 3832w"
+           sizes="(max-width: 600px) 85vw, 400px"
+           width="1916" height="1491"
+           alt="" aria-hidden="true" loading="lazy">
+      <p class="project-handoff__hint">Keep scrolling</p>
+      <div class="project-handoff__progress" aria-hidden="true">
+        <div class="project-handoff__progress-bar"></div>
+      </div>
+      <a href="./zix" class="project-handoff__skip">Continue to Zix</a>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="./js/hero-gallery.js"></script>
+  <script src="./js/case-study.js"></script>
+</body>
+</html>

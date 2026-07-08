@@ -1,0 +1,3037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zix Design System — Pattern Gallery</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css">
+<style>
+:root {
+  --blue: #007FAA;
+  --blue-dark: #006a8f;
+  --green: #007B7B;
+  --green-dark: #006565;
+  --red: #DA0457;
+  --red-dark: #b80348;
+  --grey-light: #F9F9FC;
+  --black: #4B4A59;
+  --yellow: #FEDB7C;
+  --text-muted: #7a7985;
+  --border: #e2e2e8;
+  --font-size-base: 18px;
+  --font-size-xs: calc(var(--font-size-base) * 0.556);
+  --font-size-sm: calc(var(--font-size-base) * 0.667);
+  --font-size-md: calc(var(--font-size-base) * 0.778);
+  --font-size-lg: calc(var(--font-size-base) * 0.889);
+  --font-size-btn: calc(var(--font-size-base) * 0.722);
+  --font-size-title: calc(var(--font-size-base) * 1.222);
+  --font-size-panel: calc(var(--font-size-base) * 1.556);
+  --font-size-page: calc(var(--font-size-base) * 1.556);
+  --radius: 6px;
+  --control-height: 48px;
+  --control-height-sm: 32px;
+  --control-padding-x: 16px;
+  --control-border-width: 2px;
+  --control-border-color: #ccc;
+  --table-cell-height: 42px;
+  --table-cell-padding-x: 12px;
+}
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; overflow-x: clip; scroll-behavior: smooth; }
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  color: var(--black);
+  background: #eef0f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.42857143;
+  overflow-x: clip;
+  max-width: 100vw;
+}
+:where(.page-intro) h1 {
+  font-size: var(--font-size-base);
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: var(--black);
+}
+:where(.page-intro) p { margin: 0; color: var(--text-muted); font-size: var(--font-size-sm); }
+:where(.page-intro) code { font-size: calc(var(--font-size-base) * 0.611); background: var(--grey-light); padding: 1px 4px; border-radius: 2px; }
+.section-index {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.section-title {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: var(--black);
+}
+.panel-heading {
+  font-size: var(--font-size-panel);
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--black);
+  line-height: 1.2;
+}
+h3.sub {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--black);
+}
+label.field-label {
+  display: block;
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+.section { margin-bottom: 28px; }
+.page-intro {
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+input[type="text"], input[type="email"], input[type="number"], input[type="date"],
+textarea, select {
+  border: var(--control-border-width) solid var(--control-border-color);
+  border-radius: var(--radius);
+  padding: 0 var(--control-padding-x);
+  font-size: var(--font-size-lg);
+  font-family: Roboto, Arial, sans-serif;
+  background: #fff;
+  width: 100%;
+  color: var(--black);
+  height: var(--control-height);
+  box-sizing: border-box;
+}
+textarea.textarea-multiline {
+  min-height: calc(var(--control-height) * 1.5);
+  height: auto;
+  resize: vertical;
+  padding: var(--control-padding-x);
+}
+select { appearance: auto; cursor: pointer; width: auto; min-width: 120px; }
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px rgba(0, 127, 170, 0.25);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 calc(var(--control-padding-x) * 0.875);
+  font-size: var(--font-size-btn);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  border: var(--control-border-width) solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: Roboto, Arial, sans-serif;
+  white-space: nowrap;
+  line-height: 1.2;
+  vertical-align: middle;
+  height: var(--control-height);
+  box-sizing: border-box;
+}
+.btn-teal {
+  background: var(--green);
+  border: var(--control-border-width) solid var(--green-dark);
+  color: #fff;
+}
+.btn-teal:hover { background: var(--green-dark); }
+.btn-blue {
+  background: var(--blue);
+  border: var(--control-border-width) solid var(--blue-dark);
+  color: #fff;
+}
+.btn-blue:hover { background: var(--blue-dark); }
+.btn-magenta, .btn-danger {
+  background: var(--red);
+  border: var(--control-border-width) solid var(--red-dark);
+  color: #fff;
+}
+.btn-magenta:hover, .btn-danger:hover { background: var(--red-dark); }
+.btn-outline {
+  background: #fff;
+  border: var(--control-border-width) solid var(--green);
+  color: var(--green);
+}
+.btn-outline:hover { background: var(--grey-light); }
+.btn-outline-grey {
+  background: #fff;
+  border: var(--control-border-width) solid var(--border);
+  color: var(--text-muted);
+}
+.btn-outline-grey:hover:not(:disabled) { background: var(--grey-light); }
+.btn-outline-blue {
+  background: #fff;
+  border: var(--control-border-width) solid var(--blue);
+  color: var(--blue);
+}
+.btn-outline-blue:hover { background: var(--grey-light); }
+.btn-outline-teal {
+  background: #fff;
+  border: var(--control-border-width) solid var(--green);
+  color: var(--green);
+}
+.btn-outline-teal:hover { background: var(--grey-light); }
+.btn-sm {
+  padding: 0 calc(var(--control-padding-x) * 0.625);
+  font-size: var(--font-size-sm);
+  height: var(--control-height-sm);
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+.btn-action {
+  padding: 0 calc(var(--control-padding-x) * 0.75);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  height: var(--control-height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.btn:disabled, .btn.disabled { opacity: 0.5; cursor: not-allowed; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px 20px; }
+.field { margin-bottom: 14px; }
+.field.inline { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.row-flex { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+.col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 48px; }
+.results-actions-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 32px 56px;
+  margin-bottom: 20px;
+}
+.summary-col .count {
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: var(--black);
+  line-height: 1.5;
+}
+.summary-col ul {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.6;
+}
+.summary-col .sub + .count { margin-top: 0; }
+.save-search-block { margin-top: 20px; }
+.save-search-block .share-row {
+  margin-bottom: 8px;
+  font-size: var(--font-size-lg);
+}
+.inline-input-btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.inline-input-btn .field { flex: 1; margin-bottom: 0; min-width: 0; }
+:where(.inline-input-btn) .btn { flex-shrink: 0; }
+.bulk-actions-panel .apply-label {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  margin: 0 0 8px;
+  color: var(--black);
+}
+.bulk-actions-panel .bulk-label {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin: 16px 0 8px;
+  color: var(--black);
+}
+.bulk-actions-panel .bulk-label:first-of-type { margin-top: 10px; }
+.bulk-actions-panel .export-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.bulk-actions-panel .export-row select { flex: 1; min-width: 0; }
+.bulk-actions-panel .hold-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+.bulk-actions-panel .hold-row input { flex: 1; min-width: 0; }
+.bulk-actions-panel .update-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.bulk-actions-panel .update-row-inline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.bulk-actions-panel .update-row-inline input {
+  flex: 1;
+  min-width: 0;
+}
+.bulk-actions-panel .radio-group { margin-bottom: 0; }
+.bulk-actions-panel select.full-width { width: 100%; margin-top: 8px; }
+.bulk-actions-panel .hold-row-full {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.bulk-actions-panel .hold-row-full select,
+.bulk-actions-panel .hold-row-full input { flex: 1; min-width: 120px; }
+.bulk-actions-panel .update-row-full {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.bulk-actions-panel .update-row-full select { flex: 0 1 200px; min-width: 140px; }
+.bulk-actions-panel .update-row-full input { flex: 1; min-width: 120px; }
+.filters-bulk-wide {
+  display: flex;
+  gap: 32px 48px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.filters-bulk-wide .filters-col { flex: 0 0 25%; min-width: 200px; }
+.filters-bulk-wide .bulk-col { flex: 1; min-width: 0; }
+.bulk-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  align-items: flex-start;
+}
+.bulk-group { flex: 0 1 auto; min-width: 180px; }
+.bulk-group-export { flex: 1 1 280px; min-width: 260px; }
+.bulk-group-actions { flex: 0 1 auto; }
+.action-pair {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.action-pair .action-label {
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: var(--font-size-lg);
+  min-width: 48px;
+}
+.export-inline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.export-inline select { flex: 1; min-width: 200px; max-width: 360px; }
+.filters-audit-row {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.filters-audit-row .filters-col { flex: 0 0 220px; }
+.filters-audit-row .bulk-col { flex: 1; min-width: 400px; }
+.bulk-forwarding-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.bulk-forwarding-row .forwarding-label {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  margin-right: 8px;
+}
+.toggle-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.toggle-inline .status { font-size: var(--font-size-md); color: var(--text-muted); min-width: 80px; }
+.filters-inline-row {
+  display: flex;
+  gap: 20px 24px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+.filters-inline-row .field { flex: 1; min-width: 160px; margin-bottom: 0; }
+.svc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: var(--font-size-xs);
+}
+.svc-icon.active { background: var(--green); color: #fff; }
+.svc-icon.inactive { border: 2px solid var(--green); background: #fff; }
+.svc-icon.admin-role { color: var(--yellow); font-size: var(--font-size-lg); width: auto; height: auto; border-radius: 0; background: none; }
+.svc-icon.lock-red { color: var(--red); font-size: var(--font-size-lg); width: auto; height: auto; border-radius: 0; background: none; }
+.svc-icon.fail { color: var(--red); font-size: var(--font-size-md); width: auto; height: auto; border-radius: 0; background: none; }
+.domain-desc { font-size: var(--font-size-lg); margin-bottom: 16px; max-width: 720px; line-height: 1.5; }
+.domain-global-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: var(--font-size-lg);
+}
+.expanded-domain {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--grey-light);
+  flex-wrap: wrap;
+}
+.expanded-domain label.field-label { margin: 0; white-space: nowrap; font-size: var(--font-size-md); }
+.expanded-domain select { flex: 0 1 180px; }
+.expanded-domain input { flex: 1; min-width: 160px; }
+.audit-meta-row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 12px 14px;
+  background: var(--grey-light);
+  font-size: var(--font-size-md);
+  border-top: 1px solid var(--border);
+}
+.audit-meta-row span { color: var(--black); }
+.audit-meta-row strong { font-weight: 700; }
+.rule-expand-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 16px 14px;
+  background: var(--grey-light);
+  border-top: 1px solid var(--border);
+}
+.rule-expand-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+  font-size: var(--font-size-md);
+}
+.rule-expand-col label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.rule-expand-col .rule-detail {
+  display: inline;
+  margin: 0;
+  white-space: nowrap;
+}
+.rule-expand-col .rule-detail strong { font-weight: 700; }
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+:where(.tabs) a,
+:where(.tabs) span {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: var(--font-size-btn);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+:where(.tabs) a.active,
+:where(.tabs) span.active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+  font-weight: 700;
+}
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  gap: 16px;
+  max-width: 420px;
+}
+.toggle-row > span:first-child { flex: 1; font-size: var(--font-size-lg); }
+.toggle-row span.status { font-size: var(--font-size-md); color: var(--text-muted); min-width: 72px; text-align: right; }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #ccc;
+  border-radius: 22px;
+  transition: 0.15s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.15s;
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.switch input:checked + .slider { background: var(--blue); }
+.switch input:checked + .slider:before { transform: translateX(18px); }
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  margin-bottom: 0;
+}
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-base);
+  margin-bottom: 0;
+}
+table.data-table thead th {
+  background: #fff;
+  text-align: left;
+  padding: 0 var(--table-cell-padding-x);
+  height: var(--table-cell-height);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+table.data-table thead th .sort,
+table.data-table thead th .fa.sort,
+table.data-table thead th .fa-solid.sort {
+  color: #b0b0b8;
+  margin-left: 5px;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+}
+table.data-table tbody td {
+  padding: 0 var(--table-cell-padding-x);
+  height: var(--table-cell-height);
+  border-top: 1px solid var(--border);
+  vertical-align: middle;
+  line-height: 1.4;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  color: var(--black);
+}
+table.data-table tbody td input[type="text"],
+table.data-table tbody td input[type="email"],
+table.data-table tbody td select {
+  height: var(--table-cell-height);
+  padding: 0 var(--table-cell-padding-x);
+  font-size: var(--font-size-base);
+}
+table.data-table tbody tr.data-row { background: #fff; }
+table.data-table tbody tr.data-row.row-alt { background: var(--grey-light); }
+table.data-table:not(.has-expanded) tbody tr.data-row:nth-child(even) { background: var(--grey-light); }
+table.data-table:not(.has-expanded) tbody tr.data-row:nth-child(odd) { background: #fff; }
+table.data-table tbody tr.data-row:hover { background: #f3fafc; }
+table.data-table tbody tr.data-row.row-alt:hover,
+table.data-table:not(.has-expanded) tbody tr.data-row:nth-child(even):hover { background: #eef6f8; }
+table.data-table a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 400;
+}
+table.data-table a:hover { text-decoration: underline; }
+table.data-table .col-check {
+  width: 36px;
+  text-align: center;
+  padding-left: 12px;
+  padding-right: 8px;
+}
+table.data-table .col-actions {
+  text-align: left;
+  white-space: nowrap;
+}
+table.data-table tbody tr.expanded-row td {
+  padding: 0;
+  border-top: none;
+  background: var(--grey-light);
+}
+.expanded-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 12px 12px 48px;
+  flex-wrap: wrap;
+}
+.expanded-inner .inline-control-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 1;
+  min-width: 160px;
+}
+.expanded-inner .inline-control-row .input-compact {
+  flex: 1;
+  min-width: 100px;
+}
+.expanded-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.expanded-group .group-label {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--black);
+}
+.status-flag { color: var(--blue); font-size: calc(var(--font-size-base) * 0.833); }
+.change-options {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.change-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 400;
+}
+.change-option input[type="radio"] { margin: 0; order: 2; }
+.change-option .fa { font-size: calc(var(--font-size-base) * 0.833); order: 1; }
+.change-option .fa-check { color: var(--green); }
+.change-option .fa-times { color: var(--red); }
+.change-option .fa-eye { color: #c9a227; }
+.change-option .fa-hand-o-up { color: var(--black); }
+.input-compact {
+  width: auto;
+  min-width: 130px;
+  height: var(--control-height);
+  padding: 0 var(--control-padding-x);
+  font-size: var(--font-size-lg);
+}
+.expanded-panel {
+  background: var(--grey-light);
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+}
+.expanded-panel .row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 12px 0;
+  flex-wrap: wrap;
+  font-size: var(--font-size-md);
+  width: 100%;
+}
+.pagination-bar .info {
+  margin-right: 0;
+  margin-left: 0;
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.pagination-bar .page-btns,
+.pagination-bar .per-page {
+  flex-shrink: 0;
+}
+.page-btns { display: flex; gap: 0; }
+:where(.page-btns) button,
+:where(.page-btns) a {
+  min-width: var(--table-cell-height);
+  height: var(--table-cell-height);
+  padding: 0 8px;
+  border: var(--control-border-width) solid var(--border);
+  background: #fff;
+  color: var(--blue);
+  font-size: var(--font-size-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -1px;
+  font-family: Roboto, Arial, sans-serif;
+}
+:where(.page-btns) button:first-child,
+:where(.page-btns) a:first-child { margin-left: 0; }
+.page-btns .active {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+  z-index: 1;
+}
+.per-page select { width: auto; padding: 0 var(--control-padding-x); font-size: var(--font-size-md); height: var(--control-height); border: var(--control-border-width) solid var(--control-border-color); border-radius: var(--radius); }
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge-partner { background: var(--green); color: #fff; }
+.badge-reseller { background: #888; color: #fff; }
+.badge-customer { background: var(--yellow); color: var(--black); }
+.badge-internal { background: var(--black); color: #fff; }
+.badge-external { background: var(--yellow); color: var(--black); }
+
+/* Feedback & system states */
+.alert-banner {
+  align-items: center;
+  border-radius: var(--radius);
+  display: flex;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+.alert-banner--success { background: var(--green); color: #fff; }
+.alert-banner--error { background: var(--red); color: #fff; }
+.alert-banner--warning {
+  background: #fff8e6;
+  border: var(--control-border-width) solid #e6c200;
+  color: var(--black);
+}
+.alert-banner__text { flex: 1; margin: 0; }
+.alert-banner__dismiss {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  opacity: 0.85;
+  padding: 4px;
+}
+.alert-banner__dismiss:hover { opacity: 1; }
+.undo-bar {
+  align-items: center;
+  background: var(--black);
+  border-radius: var(--radius);
+  color: #fff;
+  display: flex;
+  font-size: var(--font-size-md);
+  gap: 16px;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+.undo-bar__message { margin: 0; }
+.undo-bar__action {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  padding: 0;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.undo-bar__action:hover { opacity: 0.9; }
+.field-error .field-label { color: var(--red); }
+.field-error input,
+.field-error select,
+.field-error textarea {
+  border-color: var(--red);
+}
+.field-error-msg {
+  color: var(--red);
+  font-size: var(--font-size-md);
+  margin: 6px 0 0;
+}
+.empty-state {
+  background: var(--grey-light);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  padding: 36px 24px;
+  text-align: center;
+}
+.empty-state strong {
+  color: var(--black);
+  display: block;
+  font-size: var(--font-size-base);
+  margin-bottom: 6px;
+}
+.a11y-target-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.a11y-target-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.a11y-target-card h4 {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+.a11y-target-card p {
+  color: var(--text-muted);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
+.a11y-target-visual {
+  align-items: center;
+  background: var(--grey-light);
+  border-radius: var(--radius);
+  display: flex;
+  height: var(--control-height);
+  justify-content: center;
+  position: relative;
+}
+.a11y-target-visual--sm { height: var(--control-height-sm); }
+.a11y-target-visual span {
+  background: color-mix(in srgb, var(--green) 25%, transparent);
+  border: 2px dashed var(--green);
+  border-radius: var(--radius);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.ds-state-stack { display: flex; flex-direction: column; gap: 16px; }
+
+.filters-bulk {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 40px;
+  margin-bottom: 16px;
+}
+.filters-bulk-impersonation {
+  grid-template-columns: 25% 50%;
+  gap: 24px 32px;
+}
+.filters-bulk h3, .filters-bulk-wide h3, .filters-col .panel-heading, .bulk-col .panel-heading {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--black);
+}
+.summary-col .panel-heading { font-size: var(--font-size-panel); margin-bottom: 12px; }
+.summary-col .count { font-size: var(--font-size-base); }
+.settings-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 24px;
+  overflow: hidden;
+}
+.settings-card-hdr {
+  background: #e8f4f8;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.settings-card-body {
+  padding: 16px 14px 20px;
+  background: #fff;
+}
+.settings-card-body h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--black);
+}
+.tag-subject-stack {
+  margin-bottom: 16px;
+}
+.tag-subject-stack > label {
+  display: block;
+  margin-bottom: 6px;
+}
+.tag-subject-stack input[type="text"] {
+  display: block;
+  margin-left: 22px;
+  width: 280px;
+  max-width: 100%;
+}
+.test-failure-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.test-failure-col { flex: 0 1 auto; }
+.notifications-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.notifications-toolbar .mini-pagination {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: calc(var(--font-size-base) * 0.611);
+  color: var(--text-muted);
+}
+.imp-email-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 4px;
+}
+.imp-email-table td {
+  padding: 8px 10px;
+  border-top: 1px solid var(--border);
+  font-size: var(--font-size-sm);
+  vertical-align: middle;
+}
+.imp-email-table tbody tr:nth-child(even) { background: var(--grey-light); }
+.imp-email-table tbody tr:nth-child(odd) { background: #fff; }
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  width: 100%;
+  padding: 12px 0;
+}
+.table-toolbar .pagination-bar {
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  padding: 0;
+  width: auto;
+  min-width: 0;
+}
+.table-toolbar .list-section-toolbar {
+  flex: 0 0 auto;
+  margin: 0;
+}
+.radio-group label, .check-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 18px;
+  margin-bottom: 6px;
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+}
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px 14px;
+  margin-top: 6px;
+}
+.media-grid label { display: flex; align-items: center; gap: 5px; font-size: var(--font-size-sm); }
+.query-row { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; align-items: center; }
+.query-row select, .query-row input { width: auto; flex: 0 0 auto; }
+.query-row input.grow { flex: 1; min-width: 140px; }
+.btn-remove-icon {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  line-height: 22px;
+  text-align: center;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.key-legend {
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  background: var(--grey-light);
+}
+.key-legend .key-title { font-weight: 700; margin-bottom: 10px; font-size: var(--font-size-lg); }
+.key-items { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: var(--font-size-md); align-items: center; }
+.key-icon-admin { color: var(--yellow); }
+.key-icon-lock { color: var(--red); }
+.key-dot {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.key-dot.green { background: var(--green); }
+.key-dot.yellow { background: var(--yellow); border: 1px solid #e5c96a; }
+.key-dot.blue { background: var(--blue); }
+.key-dot.teal { background: var(--green); }
+.key-dot.empty { border: 2px solid var(--green); background: #fff; }
+.summary-col { padding-right: 16px; }
+.link {
+  color: var(--blue);
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+.link .fa { margin-right: 4px; font-size: calc(var(--font-size-base) * 0.611); }
+.accordion-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: var(--font-size-lg);
+  color: var(--blue);
+  margin-top: 4px;
+}
+.accordion-hdr .fa { font-size: var(--font-size-xs); margin-left: 4px; }
+.severity-warn { color: #d4a017; }
+.severity-warn .fa { color: var(--yellow); }
+.severity-high { color: var(--red); }
+.severity-low { color: var(--green); }
+.portal-tab {
+  display: block;
+  font-size: var(--font-size-btn);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.footer-btns { margin-top: 14px; display: flex; gap: 6px; flex-wrap: wrap; }
+.svc-toggle { text-align: center; }
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.page-header h2 { font-size: var(--font-size-panel); margin: 0 0 6px; font-weight: 700; color: var(--black); }
+.page-header .subtitle { color: var(--text-muted); font-size: var(--font-size-lg); margin: 0; font-style: italic; }
+.form-block { margin-bottom: 20px; }
+.form-block hr { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
+.list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--font-size-sm);
+}
+.drag-handle { color: #aaa; cursor: grab; }
+.info-icon { color: var(--blue); font-size: var(--font-size-btn); margin-left: 3px; }
+.global-toggle { margin: 12px 0 20px; display: flex; align-items: center; gap: 12px; font-size: var(--font-size-lg); }
+.audit-desc { color: var(--text-muted); margin-bottom: 20px; max-width: 720px; font-size: var(--font-size-lg); line-height: 1.5; }
+.audit-desc a { color: var(--blue); }
+.detail-expand {
+  background: var(--grey-light);
+  padding: 10px 12px;
+  font-size: calc(var(--font-size-base) * 0.611);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+.bulk-panel { margin-bottom: 16px; }
+.link.btn-sm { color: var(--blue); font-size: var(--font-size-sm); text-transform: uppercase; background: none; border: none; padding: 0; }
+.list-section { margin-bottom: 32px; }
+.list-section-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.list-section .help-note {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin: 6px 0 0 22px;
+  line-height: 1.5;
+}
+.list-section-footer {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+}
+.th-sublabel { font-weight: 400; font-size: var(--font-size-md); }
+/* ── Design System Gallery Shell ── */
+.ds-layout {
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start;
+  max-width: 100%;
+  overflow-x: clip;
+}
+.ds-nav {
+  --ds-nav-pad-x: 24px;
+
+  position: sticky;
+  top: 0;
+  flex: 0 0 248px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  padding: 16px 0 40px;
+}
+.ds-nav__lockup {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 0 var(--ds-nav-pad-x);
+}
+.ds-nav__lockup-brand {
+  display: block;
+  flex-shrink: 0;
+  line-height: 0;
+  text-decoration: none;
+}
+.ds-nav__lockup-logo {
+  display: block;
+  height: auto;
+  width: 48px;
+}
+.ds-nav__lockup-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.ds-nav__lockup-name,
+.ds-nav__lockup-role {
+  margin: 0;
+}
+.ds-nav__lockup-name {
+  color: var(--black);
+  font-family: Montserrat, Roboto, Arial, sans-serif;
+  font-size: var(--font-size-sm);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ds-nav__lockup-role {
+  color: var(--text-muted);
+  font-family: Montserrat, Roboto, Arial, sans-serif;
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  line-height: 1.25;
+}
+.ds-nav__back {
+  color: var(--green);
+  display: block;
+  font-family: Montserrat, Roboto, Arial, sans-serif;
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  padding: 0 var(--ds-nav-pad-x);
+  text-decoration: none;
+  transition: color 0.12s;
+}
+.ds-nav__back:hover {
+  color: var(--blue);
+}
+.ds-nav__product {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+  padding: 0 var(--ds-nav-pad-x) 12px;
+}
+.ds-nav__product-name {
+  color: var(--green);
+  display: block;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.ds-nav__product-desc {
+  color: var(--text-muted);
+  display: block;
+  font-size: var(--font-size-sm);
+}
+.ds-nav__group {
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 8px var(--ds-nav-pad-x) 4px;
+  text-transform: uppercase;
+}
+.ds-nav__link {
+  border-left: 3px solid transparent;
+  color: var(--black);
+  display: block;
+  font-size: var(--font-size-md);
+  padding: 7px var(--ds-nav-pad-x) 7px calc(var(--ds-nav-pad-x) - 3px);
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+.ds-nav__link:hover {
+  background: var(--grey-light);
+  color: var(--blue);
+}
+.ds-nav__link.is-active {
+  background: var(--grey-light);
+  border-left-color: var(--green);
+  color: var(--green);
+  font-weight: 700;
+}
+.ds-main {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 40px 48px 80px;
+  max-width: 1100px;
+  overflow-x: clip;
+}
+.ds-pattern,
+.ds-preview {
+  max-width: 100%;
+  min-width: 0;
+}
+.ds-hero {
+  margin-bottom: 48px;
+  padding-bottom: 28px;
+  border-bottom: 3px solid var(--green);
+}
+:where(.ds-hero) h1 {
+  font-size: calc(var(--font-size-base) * 2);
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--black);
+  line-height: 1.15;
+}
+:where(.ds-hero) p {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--text-muted);
+  max-width: 640px;
+  line-height: 1.55;
+}
+.ds-hero .ds-ref {
+  margin-top: 14px;
+  font-size: var(--font-size-sm);
+}
+:where(.ds-hero .ds-ref) a { color: var(--blue); }
+.ds-section {
+  margin-bottom: 56px;
+  scroll-margin-top: 24px;
+}
+:where(.ds-section) > h2 {
+  font-size: var(--font-size-panel);
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--black);
+}
+:where(.ds-section) > p.ds-lead {
+  margin: 0 0 28px;
+  color: var(--text-muted);
+  font-size: var(--font-size-lg);
+  max-width: 680px;
+}
+.ds-pattern {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 28px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(75, 74, 89, 0.06);
+}
+.ds-pattern-hdr {
+  padding: 18px 24px 14px;
+  border-bottom: 1px solid var(--border);
+  background: #fafbfc;
+}
+:where(.ds-pattern-hdr) h3 {
+  margin: 0 0 6px;
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--black);
+}
+:where(.ds-pattern-hdr) p {
+  margin: 0;
+  font-size: var(--font-size-md);
+  color: var(--text-muted);
+}
+.ds-pattern-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 24px;
+  background: var(--grey-light);
+  border-bottom: 1px solid var(--border);
+}
+:where(.ds-pattern-meta) code {
+  font-family: "SF Mono", "Fira Code", Consolas, monospace;
+  font-size: var(--font-size-xs);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  color: var(--blue-dark);
+}
+.ds-preview {
+  padding: 24px;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.ds-preview--muted { background: #fafafa; }
+.ds-preview--flush { padding: 0; }
+:where(.ds-preview--flush) .table-wrap { border: none; border-radius: 0; }
+.ds-preview--narrow { max-width: 480px; }
+.ds-preview--row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.ds-token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+.ds-swatch {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.ds-swatch-color { height: 64px; }
+.ds-swatch-label {
+  padding: 8px 10px;
+  background: #fff;
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+:where(.ds-swatch-label) strong {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--black);
+}
+.ds-type-scale { display: grid; gap: 12px; }
+.ds-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.ds-type-row:last-child { border-bottom: none; }
+.ds-type-meta {
+  flex: 0 0 160px;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-family: monospace;
+}
+.ds-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-md);
+}
+:where(.ds-spec-table) th,
+:where(.ds-spec-table) td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+:where(.ds-spec-table) th { font-weight: 700; color: var(--text-muted); font-size: var(--font-size-sm); text-transform: uppercase; }
+.ds-field-narrow { max-width: 360px; }
+.ds-field-medium { max-width: 480px; }
+.ds-mt-sm { margin-top: 12px; }
+.ds-mt-md { margin-top: 20px; }
+.ds-mb-sm { margin-bottom: 12px; }
+.row-flex--tight { margin: 0; }
+.list-section--flush { margin-bottom: 0; }
+.bulk-label--flush { margin-top: 0; }
+.radio-group--shrink { flex-shrink: 0; }
+.ds-input-inline { flex: 1; max-width: 320px; width: auto; }
+:where(.ds-principle-card) h3 { margin: 0 0 8px; font-size: var(--font-size-base); font-weight: 700; }
+:where(.ds-principle-card) p { margin: 0; font-size: var(--font-size-md); color: var(--text-muted); line-height: 1.5; }
+.ds-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.ds-principle-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  border-top: 3px solid var(--green);
+}
+.ds-getting-started {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+:where(.ds-getting-started) h3 { margin: 0 0 10px; font-size: var(--font-size-base); }
+:where(.ds-getting-started) ol { margin: 0; padding-left: 20px; color: var(--text-muted); font-size: var(--font-size-md); line-height: 1.7; }
+.ds-semantics-table { margin-top: 0; }
+.ds-guidance {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--font-size-md);
+}
+:where(.ds-guidance) > div { padding: 16px 20px; border-right: 1px solid var(--border); }
+:where(.ds-guidance) > div:last-child { border-right: none; }
+:where(.ds-guidance) h4 {
+  margin: 0 0 10px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ds-guidance-do { border-left: 3px solid var(--green); }
+:where(.ds-guidance-do) h4 { color: var(--green-dark); }
+.ds-guidance-dont { border-left: 3px solid #c9a227; }
+:where(.ds-guidance-dont) h4 { color: #9a7b0a; }
+.ds-guidance-a11y { border-left: 3px solid var(--blue); background: #fafcfd; }
+:where(.ds-guidance-a11y) h4 { color: var(--blue-dark); }
+:where(.ds-guidance) ul { margin: 0; padding-left: 18px; line-height: 1.55; color: var(--black); }
+:where(.ds-guidance-a11y) p { margin: 0; line-height: 1.55; color: var(--black); }
+.ds-pattern-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  font-size: var(--font-size-sm);
+}
+.ds-related-label {
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.05em;
+}
+.ds-pattern-footer__link,
+:where(.ds-pattern-footer) a {
+  color: var(--blue);
+  text-decoration: none;
+  padding: 4px 10px;
+  background: var(--grey-light);
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+}
+.ds-pattern-footer__link:hover,
+:where(.ds-pattern-footer) a:hover { background: #e8f4f8; text-decoration: underline; }
+.ds-do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--border); }
+.ds-do, .ds-dont { padding: 16px 20px; font-size: var(--font-size-md); }
+.ds-do { background: #f6fbf9; border-right: 1px solid var(--border); }
+.ds-dont { background: #fffbf5; }
+.ds-do-label, .ds-dont-label {
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.ds-do-label { background: var(--green); color: #fff; }
+.ds-dont-label { background: #c9a227; color: #fff; }
+:where(.ds-do) p,
+:where(.ds-dont) p { margin: 8px 0 0; color: var(--text-muted); }
+.ds-tab-panel { display: none; padding: 16px 0 0; font-size: var(--font-size-md); color: var(--text-muted); }
+.ds-tab-panel.active { display: block; }
+:where(.tabs) button[role="tab"] {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+.accordion-panel { display: none; padding: 12px 0; font-size: var(--font-size-md); color: var(--text-muted); }
+.accordion-panel.is-open { display: block; }
+.accordion-hdr.is-open .fa-chevron-down { transform: rotate(180deg); }
+.accordion-hdr .fa-chevron-down { transition: transform 0.15s; display: inline-block; }
+.settings-card.is-collapsed .settings-card-body { display: none; }
+.settings-card-hdr .fa-chevron-down { transition: transform 0.15s; }
+.settings-card.is-collapsed .settings-card-hdr .fa-chevron-down { transform: rotate(-90deg); }
+.expanded-row.is-hidden { display: none; }
+.ds-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--black);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: var(--font-size-md);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+  z-index: 9999;
+}
+.ds-toast.is-visible { opacity: 1; transform: translateY(0); }
+.ds-pattern-meta code, .ds-swatch { cursor: pointer; }
+
+/* Composite layouts — stack before sidebar + content overflow */
+@media (max-width: 1200px) {
+  .filters-bulk,
+  .filters-bulk-impersonation {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .filters-bulk-wide {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .filters-bulk-wide .filters-col,
+  .filters-bulk-wide .bulk-col {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .filters-audit-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .filters-audit-row .filters-col,
+  .filters-audit-row .bulk-col {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .results-actions-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .bulk-groups {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bulk-group,
+  .bulk-group-export,
+  .bulk-group-actions {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .export-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .export-inline select {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .bulk-actions-panel .export-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bulk-actions-panel .export-row select {
+    width: 100%;
+  }
+  .bulk-actions-panel .hold-row-full {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bulk-actions-panel .hold-row-full select,
+  .bulk-actions-panel .hold-row-full input {
+    min-width: 0;
+    width: 100%;
+  }
+  .bulk-actions-panel .hold-row-full .radio-group {
+    width: 100%;
+  }
+  .bulk-actions-panel .hold-row-full .btn {
+    width: 100%;
+  }
+  .bulk-actions-panel .update-row-full select,
+  .bulk-actions-panel .update-row-full input {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .bulk-actions-panel .update-row-full .btn {
+    width: 100%;
+  }
+  .rule-expand-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ds-layout { flex-direction: column; }
+  .ds-nav {
+    position: relative;
+    height: auto;
+    flex: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .ds-nav__lockup { width: 100%; }
+  .ds-nav__product { width: 100%; padding-bottom: 12px; margin-bottom: 8px; }
+  .ds-nav__group { width: 100%; padding-inline: var(--ds-nav-pad-x); padding-top: 12px; }
+  .ds-nav__link {
+    display: inline-block;
+    padding: 6px 14px;
+    border-left: none;
+    border-radius: var(--radius);
+  }
+  .ds-nav__link.is-active {
+    border-left: none;
+    background: var(--green);
+    color: #fff;
+  }
+  .ds-main {
+    padding: 24px 16px 60px;
+    max-width: 100%;
+    width: 100%;
+  }
+  :where(.ds-hero) h1 { font-size: calc(var(--font-size-base) * 1.45); }
+  .ds-section > h2 { font-size: var(--font-size-title); }
+  .ds-guidance { grid-template-columns: 1fr; }
+  .ds-guidance > div { border-right: none; border-bottom: 1px solid var(--border); }
+  .ds-guidance > div:last-child { border-bottom: none; }
+  .ds-do-dont { grid-template-columns: 1fr; }
+  .ds-do { border-right: none; border-bottom: 1px solid var(--border); }
+  .ds-preview { padding: 16px; }
+  .ds-preview--flush { padding: 0; }
+
+  /* Composite layouts — stack columns, remove fixed min-widths */
+  .filters-bulk,
+  .filters-bulk-impersonation {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .filters-bulk-wide {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .filters-bulk-wide .filters-col,
+  .filters-bulk-wide .bulk-col {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .filters-audit-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .filters-audit-row .filters-col,
+  .filters-audit-row .bulk-col {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .results-actions-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .bulk-groups {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bulk-group,
+  .bulk-group-export,
+  .bulk-group-actions {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .export-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .export-inline select {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .bulk-actions-panel .export-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bulk-actions-panel .export-row select {
+    width: 100%;
+  }
+  .bulk-actions-panel .hold-row-full {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bulk-actions-panel .hold-row-full select,
+  .bulk-actions-panel .hold-row-full input {
+    min-width: 0;
+    width: 100%;
+  }
+  .bulk-actions-panel .hold-row-full .radio-group {
+    width: 100%;
+  }
+  .bulk-actions-panel .hold-row-full .btn {
+    width: 100%;
+  }
+  .ds-field-medium,
+  .ds-field-narrow {
+    max-width: none;
+  }
+  .ds-input-inline {
+    max-width: none;
+    width: 100%;
+  }
+  .bulk-actions-panel .update-row-full select,
+  .bulk-actions-panel .update-row-full input {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .bulk-actions-panel .update-row-full .btn {
+    width: 100%;
+  }
+  .bulk-forwarding-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .toggle-inline {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .filters-inline-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .filters-inline-row .field {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .table-toolbar .pagination-bar {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .list-section-toolbar {
+    flex-wrap: wrap;
+  }
+  .pagination-bar {
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .pagination-bar .info {
+    white-space: normal;
+    text-align: right;
+    max-width: 100%;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .page-header .footer-btns {
+    justify-content: flex-start;
+  }
+  .expanded-inner {
+    padding-left: 12px;
+    gap: 12px;
+  }
+  .expanded-inner .inline-control-row {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .rule-expand-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .expanded-domain select,
+  .expanded-domain input {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .test-failure-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .tag-subject-stack input[type="text"] {
+    margin-left: 0;
+    width: 100%;
+  }
+  .inline-input-btn {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .inline-input-btn .btn {
+    width: 100%;
+  }
+  .grid-2,
+  .col-2 {
+    grid-template-columns: 1fr;
+  }
+  .tabs {
+    flex-wrap: wrap;
+  }
+  :where(.tabs) a,
+  :where(.tabs) span,
+  :where(.tabs) button[role="tab"] {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .ds-main { padding: 16px 12px 48px; }
+  .ds-pattern-hdr { padding: 14px 16px 12px; }
+  .ds-pattern-meta { padding: 8px 16px; }
+  .ds-pattern-footer { padding: 10px 16px; }
+  .ds-preview { padding: 12px; }
+  .btn-action { width: 100%; }
+  .list-section-toolbar .btn-action { width: auto; }
+  .pagination-bar .page-btns { flex-wrap: wrap; }
+}
+
+</style>
+</head>
+<body>
+<div class="ds-layout">
+<nav class="ds-nav" aria-label="Pattern navigation">
+  <div class="ds-nav__lockup">
+    <a href="./" class="ds-nav__lockup-brand" aria-label="Daniel Mason — Home">
+      <img src="./imgs/logo.svg" width="33" height="25" alt="" class="ds-nav__lockup-logo" aria-hidden="true">
+    </a>
+    <div class="ds-nav__lockup-identity">
+      <p class="ds-nav__lockup-name">Daniel Mason</p>
+      <p class="ds-nav__lockup-role">Lead UX Designer · Enterprise SaaS · AI/ML</p>
+    </div>
+  </div>
+  <a href="./zix.html" class="ds-nav__back">← Back to Zix case study</a>
+  <div class="ds-nav__product">
+    <span class="ds-nav__product-name">Zix</span>
+    <span class="ds-nav__product-desc">Admin Design System</span>
+  </div>
+  <a href="#ds-principles" class="ds-nav__link">Principles</a>
+  <div class="ds-nav__group">Foundations</div>
+  <a href="#ds-foundations" class="ds-nav__link">Tokens &amp; Type</a>
+  <a href="#ds-typography" class="ds-nav__link">Typography &amp; Structure</a>
+  <div class="ds-nav__group">Components</div>
+  <a href="#ds-buttons" class="ds-nav__link">Buttons</a>
+  <a href="#ds-forms" class="ds-nav__link">Form Controls</a>
+  <a href="#ds-toggles" class="ds-nav__link">Toggles &amp; Tabs</a>
+  <a href="#ds-badges" class="ds-nav__link">Badges &amp; Status</a>
+  <a href="#ds-feedback" class="ds-nav__link">Feedback &amp; States</a>
+  <a href="#ds-pagination" class="ds-nav__link">Pagination</a>
+  <a href="#ds-tables" class="ds-nav__link">Data Tables</a>
+  <a href="#ds-expanded" class="ds-nav__link">Expanded Rows</a>
+  <div class="ds-nav__group">Layouts</div>
+  <a href="#ds-composite" class="ds-nav__link">Composite Patterns</a>
+</nav>
+
+<main class="ds-main">
+<div class="ds-hero">
+  <h1>Pattern Gallery</h1>
+  <p>Reusable UI and Interaction patterns. Each card includes live demos, usage guidance, and accessibility notes — click class chips to copy.</p>
+</div>
+
+<section class="ds-section" id="ds-principles">
+<h2>Principles</h2>
+<p class="ds-lead">The Zix admin experience is built for operators who manage thousands of users and messages. These principles guide every pattern below.</p>
+<div class="ds-principles-grid">
+  <div class="ds-principle-card"><h3>Clarity for operators</h3><p>Dense data must remain scannable. Strong hierarchy, explicit labels, and consistent iconography reduce cognitive load during high-stakes tasks.</p></div>
+  <div class="ds-principle-card"><h3>Efficiency at scale</h3><p>Bulk actions, inline filters, and expandable rows keep experts in flow. Minimize page loads for repetitive admin work.</p></div>
+  <div class="ds-principle-card"><h3>Trust through consistency</h3><p>Teal commits, blue operates, magenta destroys — everywhere. Operators build muscle memory when semantics never shift.</p></div>
+  <div class="ds-principle-card"><h3>Progressive disclosure</h3><p>Show summary first; reveal export options, audit rules, and row actions on demand. Never dump full complexity on first paint.</p></div>
+  <div class="ds-principle-card"><h3>Ship-ready system states</h3><p>Prototypes are built against requirements, tested, and refined until releasable. Success, error, undo, and failure patterns are system components — not page-specific afterthoughts.</p></div>
+  <div class="ds-principle-card"><h3>Accessibility by default</h3><p>Larger interaction targets, increased spacing, and simplified flows are properties of the system — not one-off fixes applied at the end of a sprint.</p></div>
+</div>
+<div class="ds-getting-started">
+  <h3>Getting started</h3>
+  <ol>
+    <li>Start from CSS tokens in <code>:root</code> — never hard-code sizes or colors.</li>
+    <li>Copy a <strong>pattern</strong>, not a full page. Compose filters + table + pagination as needed.</li>
+    <li>Click any class chip or swatch in this gallery to copy it to your clipboard.</li>
+  </ol>
+</div>
+<div class="ds-pattern">
+  <div class="ds-pattern-hdr"><h3>Color semantics</h3><p>Map intent to token before picking a button or badge variant.</p></div>
+  <div class="ds-preview">
+    <table class="ds-spec-table">
+      <thead><tr><th>Token</th><th>Semantic intent</th><th>Example usage</th></tr></thead>
+      <tbody>
+        <tr><td><code>--green</code> / .btn-teal</td><td>Commit &amp; create</td><td>Save, Add User, Add Customer</td></tr>
+        <tr><td><code>--blue</code> / .btn-blue</td><td>Operate &amp; process</td><td>Export, Filter, Update, Hold, Edit</td></tr>
+        <tr><td><code>--red</code> / .btn-magenta</td><td>Destroy (irreversible)</td><td>Delete user, Delete message</td></tr>
+        <tr><td><code>--yellow</code></td><td>Highlight &amp; entity tag</td><td>Customer badge, admin star</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-foundations">
+<h2>Foundations</h2>
+<p class="ds-lead">Design tokens derived from an 18px base. All sizes scale proportionally. Start every new screen from tokens — never one-off pixel values.</p>
+
+<div class="ds-pattern" id="pattern-color-tokens">
+  <div class="ds-pattern-hdr"><h3>Color Tokens</h3><p>Brand and semantic colors used across the admin UI.</p></div>
+  <div class="ds-pattern-meta"><code>--blue</code><code>--green</code><code>--red</code><code>--yellow</code><code>--grey-light</code><code>--black</code><code>--text-muted</code><code>--border</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Apply semantic tokens instead of raw hex</li><li>Use --text-muted for secondary copy</li><li>Use --grey-light for expanded rows</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Hard-code hex values</li><li>Use --red for non-destructive warnings</li><li>Use --yellow as large fills</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Maintain 4.5:1 contrast for body text on white.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-typography-scale">Typography scale</a><a href="#pattern-btn-solid">Solid buttons</a></div>
+<div class="ds-preview">
+    <div class="ds-token-grid">
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#007FAA"></div><div class="ds-swatch-label"><strong>Blue</strong>--blue · #007FAA</div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#007B7B"></div><div class="ds-swatch-label"><strong>Teal</strong>--green · #007B7B</div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#DA0457"></div><div class="ds-swatch-label"><strong>Magenta</strong>--red · #DA0457</div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#FEDB7C"></div><div class="ds-swatch-label"><strong>Yellow</strong>--yellow · #FEDB7C</div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#F9F9FC;border-bottom:1px solid var(--border)"></div><div class="ds-swatch-label"><strong>Grey Light</strong>--grey-light</div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#4B4A59"></div><div class="ds-swatch-label"><strong>Text</strong>--black · #4B4A59</div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#7a7985"></div><div class="ds-swatch-label"><strong>Muted</strong>--text-muted</div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#e2e2e8"></div><div class="ds-swatch-label"><strong>Border</strong>--border</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-typography-scale">
+  <div class="ds-pattern-hdr"><h3>Typography Scale</h3><p>Font sizes calculated from <code>--font-size-base: 18px</code>.</p></div>
+  <div class="ds-pattern-meta"><code>--font-size-xs</code><code>--font-size-sm</code><code>--font-size-md</code><code>--font-size-lg</code><code>--font-size-base</code><code>--font-size-title</code><code>--font-size-panel</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Derive sizes from --font-size-base</li><li>Use --font-size-panel for page headings only</li><li>Use --font-size-md for table headers</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Mix arbitrary px outside scale</li><li>Use panel size in table cells</li><li>Skip heading hierarchy levels</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>calc() sizes respect user font preferences when base changes.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-heading-hierarchy">Heading hierarchy</a><a href="#pattern-spacing-controls">Spacing controls</a></div>
+<div class="ds-preview">
+    <div class="ds-type-scale">
+      <div class="ds-type-row"><span class="ds-type-meta">--font-size-xs · 10px</span><span style="font-size:var(--font-size-xs)">Section index / meta labels</span></div>
+      <div class="ds-type-row"><span class="ds-type-meta">--font-size-sm · 12px</span><span style="font-size:var(--font-size-sm)">Button sm, badges, table sort icons</span></div>
+      <div class="ds-type-row"><span class="ds-type-meta">--font-size-md · 14px</span><span style="font-size:var(--font-size-md)">Field labels, pagination info, table headers</span></div>
+      <div class="ds-type-row"><span class="ds-type-meta">--font-size-lg · 16px</span><span style="font-size:var(--font-size-lg)">Input text, radio labels, toggle rows</span></div>
+      <div class="ds-type-row"><span class="ds-type-meta">--font-size-base · 18px</span><span style="font-size:var(--font-size-base)">Body text, table cells, sub headings</span></div>
+      <div class="ds-type-row"><span class="ds-type-meta">--font-size-title · 22px</span><span style="font-size:var(--font-size-title);font-weight:700">Section titles</span></div>
+      <div class="ds-type-row"><span class="ds-type-meta">--font-size-panel · 28px</span><span style="font-size:var(--font-size-panel);font-weight:700">Panel headings</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-spacing-controls">
+  <div class="ds-pattern-hdr"><h3>Spacing &amp; Controls</h3><p>Shared dimensions for inputs, buttons, and table cells.</p></div>
+  <div class="ds-pattern-meta"><code>--control-height</code><code>--control-height-sm</code><code>--table-cell-height</code><code>--radius</code><code>--control-border-width</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>48px for toolbar inputs and buttons</li><li>32px .btn-sm in tables</li><li>42px table cell height everywhere</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Shrink rows below 42px</li><li>Mix 1px and 2px borders on controls</li><li>Use inconsistent radii</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>48px controls meet touch target minimums.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-form-inputs">Form inputs</a><a href="#pattern-btn-sizes">Button sizes</a></div>
+<div class="ds-preview">
+    <table class="ds-spec-table">
+      <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td><code>--control-height</code></td><td>48px</td><td>Default buttons and inputs</td></tr>
+        <tr><td><code>--control-height-sm</code></td><td>32px</td><td>Table action buttons (.btn-sm)</td></tr>
+        <tr><td><code>--table-cell-height</code></td><td>42px</td><td>Table row and header height</td></tr>
+        <tr><td><code>--radius</code></td><td>6px</td><td>Buttons, inputs, cards</td></tr>
+        <tr><td><code>--control-border-width</code></td><td>2px</td><td>Input and button borders</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-typography">
+<h2>Typography &amp; Page Structure</h2>
+<p class="ds-lead">Heading hierarchy and page-level chrome for settings and list views. These patterns establish scan path: page name → panel regions → fields.</p>
+
+<div class="ds-pattern" id="pattern-heading-hierarchy">
+  <div class="ds-pattern-hdr"><h3>Heading Hierarchy</h3><p>Standard titles used across admin screens.</p></div>
+  <div class="ds-pattern-meta"><code>.section-title</code><code>.panel-heading</code><code>h3.sub</code><code>.field-label</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>One .section-title per page</li><li>.panel-heading for Filters and Bulk regions</li><li>h3.sub for subsections</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Skip heading levels</li><li>Use panel-heading in cells</li><li>Bold body instead of .sub</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Preserve h2 → h3 order for screen reader landmarks.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-page-header">Page header</a><a href="#pattern-typography-scale">Typography scale</a></div>
+<div class="ds-preview">
+    <h2 class="section-title">Section Title</h2>
+    <h3 class="panel-heading">Panel Heading</h3>
+    <h3 class="sub">Sub Section</h3>
+    <div class="field ds-field-narrow"><label class="field-label">Field Label</label><input type="text" placeholder="Example input"></div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-page-header">
+  <div class="ds-pattern-hdr"><h3>Page Header</h3><p>Settings pages with title, subtitle, and save actions.</p></div>
+  <div class="ds-pattern-meta"><code>.page-header</code><code>.subtitle</code><code>.footer-btns</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Settings pages with Save/Cancel</li><li>Teal Save in .footer-btns</li><li>.subtitle for context</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Duplicate titles</li><li>Destructive actions without confirm</li><li>On simple list-only screens</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Label Save/Cancel consistently; never icon-only commits.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-btn-solid">Solid buttons</a><a href="#pattern-form-block">Form block</a></div>
+<div class="ds-preview">
+    <div class="page-header">
+      <div><h2>Appliance System Settings</h2><p class="subtitle">The web interface is currently configured to use:</p></div>
+      <div class="footer-btns"><button type="button" class="btn btn-outline">CANCEL</button><button type="button" class="btn btn-teal">SAVE</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-portal-tab">
+  <div class="ds-pattern-hdr"><h3>Portal Tab Label</h3><p>Section label above tabbed admin tables.</p></div>
+  <div class="ds-pattern-meta"><code>.portal-tab</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Static label above tabbed tables</li><li>Place above .tabs or toolbar</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Use as clickable tab</li><li>Use for breadcrumbs</li><li>Stack multiple vertically</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Label should match active tab context.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-tabs">Tabs</a><a href="#pattern-table-toolbar">Table toolbar</a></div>
+<div class="ds-preview"><span class="portal-tab">Portal Administrators</span></div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-buttons">
+<h2>Buttons</h2>
+<p class="ds-lead">Primary actions use teal; table and bulk actions use blue; destructive actions use magenta. Color encodes commitment level — not decoration.</p>
+
+<div class="ds-pattern" id="pattern-btn-solid">
+  <div class="ds-pattern-hdr"><h3>Solid Buttons</h3><p>Primary, secondary, and destructive CTAs at default height.</p></div>
+  <div class="ds-pattern-meta"><code>.btn-teal</code><code>.btn-blue</code><code>.btn-magenta</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Teal: Save, Add User, Add Customer</li><li>Blue: Export, Filter, Update</li><li>Magenta: irreversible Delete only</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Teal in-table row actions</li><li>Magenta for undoable remove</li><li>Blue alone on destructive confirm</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Never rely on color alone — use DELETE label.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-btn-outline">Outline buttons</a><a href="#pattern-btn-sizes">Button sizes</a></div>
+<div class="ds-preview ds-preview--row">
+    <button type="button" class="btn btn-teal">SAVE</button>
+    <button type="button" class="btn btn-blue">EXPORT</button>
+    <button type="button" class="btn btn-magenta">DELETE</button>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><div class="ds-preview--row"><button type="button" class="btn btn-teal">SAVE</button><button type="button" class="btn btn-blue btn-sm">EDIT</button><button type="button" class="btn btn-magenta btn-action">DELETE</button></div><p>Teal commit, blue row ops, magenta delete.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><div class="ds-preview--row"><button type="button" class="btn btn-teal btn-sm">EDIT</button><button type="button" class="btn btn-blue">DELETE</button></div><p>Teal in-table or blue for destructive.</p></div></div>
+</div>
+
+<div class="ds-pattern" id="pattern-btn-outline">
+  <div class="ds-pattern-hdr"><h3>Outline Buttons</h3><p>Secondary actions and disabled states.</p></div>
+  <div class="ds-pattern-meta"><code>.btn-outline</code><code>.btn-outline-teal</code><code>.btn-outline-blue</code><code>.btn-outline-grey</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Cancel and non-commit paths</li><li>Grey DELETE when nothing selected</li><li>Outline-teal for secondary add</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Outline Cancel as teal solid</li><li>Outline for primary filter</li><li>Enabled DELETE with no selection</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Outline buttons inherit focus ring from input focus token.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-btn-solid">Solid buttons</a><a href="#pattern-list-section">List section</a></div>
+<div class="ds-preview ds-preview--row">
+    <button type="button" class="btn btn-outline">CANCEL</button>
+    <button type="button" class="btn btn-outline-teal">ADD THIRD-PARTY ADMIN</button>
+    <button type="button" class="btn btn-outline-blue">SEND WELCOME EMAIL</button>
+    <button type="button" class="btn btn-outline-grey" disabled>DELETE</button>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-btn-sizes">
+  <div class="ds-pattern-hdr"><h3>Table &amp; Toolbar Sizes</h3><p>Small in-row actions vs. toolbar action buttons.</p></div>
+  <div class="ds-pattern-meta"><code>.btn-sm</code><code>.btn-action</code><code>.footer-btns</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>.btn-sm for EDIT/MANAGE in rows</li><li>.btn-action for toolbar CTAs</li><li>.footer-btns for page saves</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>.btn-action in table cells</li><li>Mixed heights in one toolbar</li><li>footer-btns mid-page</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>32px row buttons are OK in dense tables, not for sole primary CTA.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-btn-solid">Solid buttons</a><a href="#pattern-table-checkbox">Checkbox table</a></div>
+<div class="ds-preview">
+    <div class="ds-preview--row ds-mb-sm">
+      <button type="button" class="btn btn-blue btn-sm">EDIT</button>
+      <button type="button" class="btn btn-magenta btn-sm">DELETE</button>
+      <button type="button" class="btn btn-blue btn-sm">MANAGE</button>
+    </div>
+    <div class="ds-preview--row ds-mb-sm">
+      <button type="button" class="btn btn-teal btn-action">ADD USER</button>
+      <button type="button" class="btn btn-blue btn-action">EXPORT</button>
+      <button type="button" class="btn btn-blue btn-action">FILTER</button>
+    </div>
+    <div class="footer-btns"><button type="button" class="btn btn-outline">CANCEL</button><button type="button" class="btn btn-teal">SAVE</button></div>
+  </div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-forms">
+<h2>Form Controls</h2>
+<p class="ds-lead">Inputs, selection controls, and inline field layouts for filters, settings, and bulk action panels across the admin portal.</p>
+
+<div class="ds-pattern" id="pattern-form-inputs">
+  <div class="ds-pattern-hdr"><h3>Text Inputs &amp; Selects</h3><p>Standard stacked fields at 48px control height.</p></div>
+  <div class="ds-pattern-meta"><code>.field</code><code>.field-label</code><code>.textarea-multiline</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Stack .field-label above input</li><li>Constrain width with utilities</li><li>.textarea-multiline for comments</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Labels inside inputs only</li><li>Native unstyled inputs</li><li>Unlabeled inputs in production</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Associate every input with a label via for/id.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-form-radio">Radio groups</a><a href="#pattern-form-inline">Inline input</a></div>
+<div class="ds-preview">
+    <div class="grid-2">
+      <div class="field"><label class="field-label">Text</label><input type="text" placeholder="Enter value"></div>
+      <div class="field"><label class="field-label">Email</label><input type="email" placeholder="user@example.com"></div>
+      <div class="field"><label class="field-label">Select</label><select><option>All Domains</option><option>Single Domain</option></select></div>
+      <div class="field"><label class="field-label">Textarea</label><textarea class="textarea-multiline" placeholder="Multi-line text"></textarea></div>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-form-radio">
+  <div class="ds-pattern-hdr"><h3>Radio &amp; Checkbox Groups</h3><p>Inline label groups for bulk action scope and settings.</p></div>
+  <div class="ds-pattern-meta"><code>.radio-group</code><code>.check-group</code><code>.field.inline</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Bulk scope: Selected vs Entire set</li><li>.check-group for boolean settings</li><li>Inline radios when options are short</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Radios for on/off — use switch</li><li>More than 5 radios without select</li><li>Duplicate name attributes</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Use fieldset/legend for radio groups in apps.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-switch-toggle">Switch toggle</a><a href="#pattern-filters-bulk">Filters bulk</a></div>
+<div class="ds-preview">
+    <p class="apply-label">Apply Actions to</p>
+    <div class="radio-group ds-mb-sm">
+      <label><input type="radio" name="ds-radio" checked> Selected Items</label>
+      <label><input type="radio" name="ds-radio"> Entire Results Set (100 items)</label>
+    </div>
+    <div class="check-group">
+      <label><input type="checkbox" checked> Enable notifications</label>
+      <label><input type="checkbox"> Share with team</label>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-form-inline">
+  <div class="ds-pattern-hdr"><h3>Inline Input + Button</h3><p>Save search and add-email patterns.</p></div>
+  <div class="ds-pattern-meta"><code>.inline-input-btn</code><code>.row-flex</code><code>.grid-2</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>.inline-input-btn for Save Search</li><li>.row-flex for add-email</li><li>Align button to input baseline</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Separate row when inline fits</li><li>More than two controls without wrap</li><li>Unlabeled inline fields</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Tab order: input then button, left to right.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-form-inputs">Form inputs</a><a href="#pattern-results-actions">Results actions</a></div>
+<div class="ds-preview">
+    <div class="inline-input-btn ds-field-medium">
+      <div class="field"><label class="field-label">Name</label><input type="text"></div>
+      <button type="button" class="btn btn-blue btn-action">SAVE</button>
+    </div>
+    <div class="row-flex ds-mt-sm">
+      <input type="email" class="ds-input-inline" placeholder="Email address">
+      <button type="button" class="btn btn-outline">ADD EMAIL</button>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-toggles">
+<h2>Toggles &amp; Tabs</h2>
+<p class="ds-lead">Switch controls, toggle rows, and tab navigation for binary settings and sibling views at the same hierarchy level.</p>
+
+<div class="ds-pattern" id="pattern-switch-toggle">
+  <div class="ds-pattern-hdr"><h3>Switch Toggle</h3><p>Blue when active; used in tables and settings.</p></div>
+  <div class="ds-pattern-meta"><code>.switch</code><code>.slider</code><code>.svc-toggle</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Boolean permissions in admin tables</li><li>Enable/disable in audit rows</li><li>Blue when active</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Switches for mutually exclusive options</li><li>Switches for confirmed actions</li><li>Switches without column header</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Associate switch with visible label text.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-toggle-row">Toggle row</a><a href="#pattern-table-switches">In-table switches</a></div>
+<div class="ds-preview ds-preview--row">
+    <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-toggle-row">
+  <div class="ds-pattern-hdr"><h3>Toggle Row &amp; Inline</h3><p>Label + status + switch layouts.</p></div>
+  <div class="ds-pattern-meta"><code>.toggle-row</code><code>.toggle-inline</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Settings feature flags with status</li><li>.toggle-inline in audit bulk</li><li>Show Enabled/Not Enabled text</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>toggle-row for table permission grid</li><li>Hide status text</li><li>Destructive enable without confirm</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Update status text when switch changes.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-switch-toggle">Switch toggle</a><a href="#pattern-filters-impersonation">Filters impersonation</a></div>
+<div class="ds-preview">
+    <div class="toggle-row"><span>Enable domain protection</span><span class="status">Enabled</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+    <div class="toggle-inline ds-mt-sm">
+      <span>Forwarding to external address</span>
+      <span class="status">Not Enabled</span>
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-tabs">
+  <div class="ds-pattern-hdr"><h3>Tabs</h3><p>Section navigation with active underline.</p></div>
+  <div class="ds-pattern-meta"><code>.tabs</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>2–4 sibling views at same level</li><li>Blue underline on active</li><li>Short scannable labels</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Tabs for one view</li><li>Tabs for wizard steps</li><li>Nested tabs</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Use role=tablist, aria-selected, arrow keys.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-portal-tab">Portal tab</a><a href="#pattern-filters-inline">Inline filters</a></div>
+<div class="ds-preview">
+    <div data-ds-tabs>
+      <div class="tabs" role="tablist">
+        <button type="button" class="active" data-ds-tab="0" role="tab">Impersonation Protection</button>
+        <button type="button" data-ds-tab="1" role="tab">Domain Protection</button>
+      </div>
+      <div class="ds-tab-panel active" data-ds-tab-panel role="tabpanel">Manage display names and allowed internal addresses for impersonation testing.</div>
+      <div class="ds-tab-panel" data-ds-tab-panel role="tabpanel">Configure domain-level protection rules and allowed sender policies.</div>
+    </div>
+    <p class="ds-mt-sm" style="font-size:var(--font-size-md);color:var(--text-muted)">Static reference:</p>
+    <div class="tabs"><span class="active">Customers</span><span>Users</span></div>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><p>2–4 sibling views at the same level.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><p>Single tab or wizard steps as tabs.</p></div></div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-badges">
+<h2>Badges, Icons &amp; Status</h2>
+<p class="ds-lead">Entity badges, service indicators, severity levels, and links — used in partner portal, user management, and audit reports.</p>
+
+<div class="ds-pattern" id="pattern-entity-badges">
+  <div class="ds-pattern-hdr"><h3>Entity Badges</h3><p>Customer type labels in partner portal tables.</p></div>
+  <div class="ds-pattern-meta"><code>.badge-partner</code><code>.badge-reseller</code><code>.badge-customer</code><code>.badge-internal</code><code>.badge-external</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Partner portal entity type in cells</li><li>One badge type per entity</li><li>Uppercase badge text</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Badges for transient status</li><li>Multiple badges per cell</li><li>Yellow badge as only type indicator</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Include text label, not color alone.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-severity-links">Severity links</a><a href="#pattern-table-basic">Basic table</a></div>
+<div class="ds-preview ds-preview--row">
+    <span class="badge badge-partner">Partner</span>
+    <span class="badge badge-reseller">Reseller</span>
+    <span class="badge badge-customer">Customer</span>
+    <span class="badge badge-internal">Internal</span>
+    <span class="badge badge-external">External</span>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-key-legend">
+  <div class="ds-pattern-hdr"><h3>Key Legend &amp; Service Icons</h3><p>User management table legend and cell indicators.</p></div>
+  <div class="ds-pattern-meta"><code>.key-legend</code><code>.key-dot</code><code>.svc-icon</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Above complex service matrix tables</li><li>All icons documented</li><li>Grey .key-legend background</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Legend on every simple table</li><li>New icons without legend update</li><li>Dots without legend nearby</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Mirror legend labels in cell aria-labels.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-table-switches">In-table switches</a><a href="#pattern-filters-bulk-wide">Filters bulk wide</a></div>
+<div class="ds-preview ds-preview--muted">
+    <div class="key-legend">
+      <div class="key-title">Key</div>
+      <div class="key-items">
+        <span><i class="fa fa-star key-icon-admin"></i> Administrator</span>
+        <span><i class="fa fa-lock key-icon-lock"></i> Locked Account</span>
+        <span><span class="svc-icon active"><i class="fa fa-check"></i></span> Active Service</span>
+        <span><span class="svc-icon inactive"></span> Inactive Service</span>
+        <span><span class="key-dot blue"></span> Disabled Service</span>
+        <span class="severity-high"><i class="fa fa-exclamation-triangle"></i> Install Started</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-severity-links">
+  <div class="ds-pattern-hdr"><h3>Severity &amp; Links</h3><p>Audit report severity columns and action links.</p></div>
+  <div class="ds-pattern-meta"><code>.severity-warn</code><code>.severity-high</code><code>.severity-low</code><code>.link</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Audit severity columns</li><li>.link for progressive disclosure</li><li>Distinct warn/high/low icons</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Severity colors decoratively</li><li>Links as buttons</li><li>High severity for info</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Icons need alt text; links need descriptive text.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-entity-badges">Entity badges</a><a href="#pattern-audit-meta">Audit meta</a></div>
+<div class="ds-preview ds-preview--row">
+    <span class="severity-warn"><i class="fa fa-exclamation-triangle"></i> Warning</span>
+    <span class="severity-high"><i class="fa fa-exclamation-triangle"></i> High</span>
+    <span class="severity-low"><i class="fa fa-check-circle"></i> Low</span>
+    <a href="#" class="link"><i class="fa fa-plus"></i> Display Additional Filters</a>
+  </div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-feedback">
+<h2>Feedback &amp; System States</h2>
+<p class="ds-lead">Edge cases and failure states are first-class system components. Every settings save, bulk action, and filter submission should account for success confirmation, recoverable mistakes, clear errors, and empty results — with accessibility baked into the tokens below.</p>
+
+<div class="ds-pattern" id="pattern-success-banner">
+  <div class="ds-pattern-hdr"><h3>Success Banner</h3><p>Page-level confirmation after a save or configuration change.</p></div>
+  <div class="ds-pattern-meta"><code>.alert-banner</code><code>.alert-banner--success</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>After successful Save on settings pages</li><li>One banner per page — dismiss or auto-clear</li><li>Plain-language outcome, not error codes</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Inline field validation (use field errors)</li><li>Transient copy-to-clipboard (use toast)</li><li>Warning-level partial success</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Use role=status or aria-live=polite; include text label, not color alone.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-undo-bar">Undo bar</a><a href="#pattern-page-header">Page header</a></div>
+<div class="ds-preview">
+    <div class="alert-banner alert-banner--success" role="status">
+      <p class="alert-banner__text">Customization successful.</p>
+      <button type="button" class="alert-banner__dismiss" aria-label="Dismiss success message">&times;</button>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-error-states">
+  <div class="ds-pattern-hdr"><h3>Error States</h3><p>Page-level failure banner and inline field validation.</p></div>
+  <div class="ds-pattern-meta"><code>.alert-banner--error</code><code>.field-error</code><code>.field-error-msg</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Banner for request or server failures</li><li>.field-error on invalid inputs</li><li>Specific recovery guidance in copy</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Red banner for warnings</li><li>Icon-only error indicators</li><li>Generic “Something went wrong” without next step</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Associate .field-error-msg with input via aria-describedby; use aria-invalid on fields.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-form-inputs">Form inputs</a><a href="#pattern-empty-state">Empty state</a></div>
+<div class="ds-preview ds-state-stack">
+    <div class="alert-banner alert-banner--error" role="alert">
+      <p class="alert-banner__text">Unable to save settings. Check the highlighted fields and try again.</p>
+    </div>
+    <div class="field field-error ds-field-narrow">
+      <label class="field-label" for="ds-error-email">Notification email</label>
+      <input type="email" id="ds-error-email" value="admin@invalid" aria-invalid="true" aria-describedby="ds-error-email-msg">
+      <p class="field-error-msg" id="ds-error-email-msg">Enter a valid email address.</p>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-undo-bar">
+  <div class="ds-pattern-hdr"><h3>Undo Action</h3><p>Recoverable destructive or bulk changes with a time-limited undo affordance.</p></div>
+  <div class="ds-pattern-meta"><code>.undo-bar</code><code>.undo-bar__action</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>After delete, remove, or bulk update</li><li>Describe what changed in plain language</li><li>UNDO as text button — not icon-only</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Irreversible deletes (use confirm modal)</li><li>Magenta DELETE for undoable actions</li><li>Undo without stating the affected item count</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>aria-live=polite on bar; undo action reachable by keyboard before timeout.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-success-banner">Success banner</a><a href="#pattern-btn-solid">Solid buttons</a></div>
+<div class="ds-preview ds-state-stack">
+    <div class="undo-bar" role="status" id="ds-undo-demo" hidden>
+      <p class="undo-bar__message">3 users removed from the portal.</p>
+      <button type="button" class="undo-bar__action" data-ds-undo-dismiss>UNDO</button>
+    </div>
+    <button type="button" class="btn btn-magenta btn-action" data-ds-undo-trigger>DELETE SELECTED</button>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><p>Undo bar for recoverable bulk delete.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><p>Magenta DELETE without confirm for irreversible actions.</p></div></div>
+</div>
+
+<div class="ds-pattern" id="pattern-empty-state">
+  <div class="ds-pattern-hdr"><h3>Empty &amp; Failure Edge Cases</h3><p>Zero-result tables and policy failure notifications — designed as reusable states.</p></div>
+  <div class="ds-pattern-meta"><code>.empty-state</code><code>.alert-banner--warning</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Empty tables after filter with guidance</li><li>Warning banner for partial failures</li><li>Failure notification toggles in settings cards</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Blank white space with no explanation</li><li>Empty state without a next action</li><li>Hide failure paths behind advanced settings only</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Empty states need heading + description; failure checkboxes need visible labels.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-form-block">Form block</a><a href="#pattern-filters-impersonation">Filters impersonation</a></div>
+<div class="ds-preview ds-state-stack">
+    <div class="alert-banner alert-banner--warning" role="status">
+      <p class="alert-banner__text">LDAP test failed. Review connection settings or retry the query.</p>
+    </div>
+    <div class="empty-state">
+      <strong>No users match these filters</strong>
+      Adjust filter criteria or clear filters to see the full results set.
+    </div>
+    <div class="form-block">
+      <label><input type="checkbox" checked> Enable email notifications when failure occurs</label>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-a11y-system">
+  <div class="ds-pattern-hdr"><h3>Accessibility Tokens</h3><p>Touch targets, spacing, and simplified control heights applied system-wide.</p></div>
+  <div class="ds-pattern-meta"><code>--control-height</code><code>--control-height-sm</code><code>--table-cell-height</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>48px default controls in toolbars and forms</li><li>32px .btn-sm only inside dense tables</li><li>42px minimum row height for scanability</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Shrink primary CTAs below 48px</li><li>32px buttons as sole page-level actions</li><li>Compress table rows for decorative density</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Targets meet 44×44px minimum; spacing tokens reduce mis-taps; simplified flows limit steps per task.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-spacing-controls">Spacing controls</a><a href="#pattern-form-inputs">Form inputs</a></div>
+<div class="ds-preview">
+    <div class="a11y-target-grid">
+      <div class="a11y-target-card">
+        <h4>Default control · 48px</h4>
+        <div class="a11y-target-visual"><span></span></div>
+        <p>Toolbar inputs, Save/Cancel, FILTER — primary interaction target.</p>
+      </div>
+      <div class="a11y-target-card">
+        <h4>Table action · 32px</h4>
+        <div class="a11y-target-visual a11y-target-visual--sm"><span></span></div>
+        <p>In-row EDIT/DELETE only — not for sole page commits.</p>
+      </div>
+      <div class="a11y-target-card">
+        <h4>Table row · 42px</h4>
+        <div class="a11y-target-visual" style="height:var(--table-cell-height)"><span></span></div>
+        <p>Minimum cell height for readable spacing and tap accuracy.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-pagination">
+<h2>Pagination</h2>
+<p class="ds-lead">Item count, page controls, and per-page selector. Always duplicate top/bottom on long lists; info text stays right-aligned with controls.</p>
+
+<div class="ds-pattern" id="pattern-pagination-standalone">
+  <div class="ds-pattern-hdr"><h3>Standalone Pagination Bar</h3><p>Above or below tables without action buttons.</p></div>
+  <div class="ds-pattern-meta"><code>.pagination-bar</code><code>.info</code><code>.page-btns</code><code>.per-page</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Top and bottom on long lists</li><li>Info right-aligned with controls</li><li>Show filtered counts</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Info isolated on far left</li><li>No pagination over 25 items</li><li>Missing per-page selector</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>aria-current on active page; label prev/next.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-table-toolbar">Table toolbar</a><a href="#pattern-list-section">List section</a></div>
+<div class="ds-preview">
+    <div class="pagination-bar" data-ds-pagination>  <span class="info">Showing 1-25 of 100 items (filtered from 100)</span>
+  <div class="page-btns">
+    <button type="button">&laquo;</button>
+    <button type="button">&lsaquo;</button>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <button type="button">&rsaquo;</button>
+    <button type="button">&raquo;</button>
+  </div>
+  <div class="per-page"><select><option>25 items per page</option></select></div></div>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><p>Info text right-aligned with page controls.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><p>Info text isolated on the far left.</p></div></div>
+</div>
+
+<div class="ds-pattern" id="pattern-table-toolbar">
+  <div class="ds-pattern-hdr"><h3>Table Toolbar</h3><p>Action buttons left; pagination group right.</p></div>
+  <div class="ds-pattern-meta"><code>.table-toolbar</code><code>.list-section-toolbar</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>ADD left, pagination right</li><li>.list-section-toolbar for ADD+DELETE</li><li>Same row at desktop width</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Pagination stacked below on wide screens</li><li>DELETE enabled with no selection</li><li>Unrelated actions ungrouped</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Disabled DELETE needs aria-disabled.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-pagination-standalone">Pagination standalone</a><a href="#pattern-list-section">List section</a></div>
+<div class="ds-preview">
+    <div class="table-toolbar">
+      <div class="list-section-toolbar">
+        <button type="button" class="btn btn-teal btn-action">ADD NEW</button>
+        <button type="button" class="btn btn-outline-grey btn-action" disabled>DELETE</button>
+      </div>
+      <div class="pagination-bar">  <span class="info">Showing 1-25 of 100 items (filtered from 100)</span>
+  <div class="page-btns">
+    <button type="button">&laquo;</button>
+    <button type="button">&lsaquo;</button>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <button type="button">&rsaquo;</button>
+    <button type="button">&raquo;</button>
+  </div>
+  <div class="per-page"><select><option>25 items per page</option></select></div></div>
+    </div>
+    <div class="table-toolbar ds-mt-md">
+      <div class="row-flex row-flex--tight">
+        <button type="button" class="btn btn-teal btn-action">ADD USER</button>
+        <button type="button" class="btn btn-outline-teal btn-action">ADD THIRD-PARTY ADMIN</button>
+      </div>
+      <div class="pagination-bar">  <span class="info">Showing 1-25 of 100 items (filtered from 100)</span>
+  <div class="page-btns">
+    <button type="button">&laquo;</button>
+    <button type="button">&lsaquo;</button>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <button type="button">&rsaquo;</button>
+    <button type="button">&raquo;</button>
+  </div>
+  <div class="per-page"><select><option>25 items per page</option></select></div></div>
+    </div>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><p>ADD left, pagination right on one row.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><p>Pagination stacked above buttons.</p></div></div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-tables">
+<h2>Data Tables</h2>
+<p class="ds-lead">Sortable headers, zebra striping, checkboxes, and in-table controls — the core data density patterns for admin operators.</p>
+
+<div class="ds-pattern" id="pattern-table-basic">
+  <div class="ds-pattern-hdr"><h3>Basic Data Table</h3><p>Sortable columns, link cells, auto zebra striping.</p></div>
+  <div class="ds-pattern-meta"><code>.table-wrap</code><code>.data-table</code><code>.sort</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Sort icons on sortable columns</li><li>Links for drill-down cells</li><li>Zebra striping for density</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Checkbox without bulk actions</li><li>8+ columns without scroll</li><li>Remove row hover</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>th scope=col; announce sort direction in apps.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-table-checkbox">Checkbox table</a><a href="#pattern-expanded-inner">Expanded inner</a></div>
+<div class="ds-preview ds-preview--flush">
+    <div class="table-wrap"><table class="data-table"><thead><tr>
+      <th>SUBJECT <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+      <th>TO <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+      <th>FROM <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+      <th>DATE <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+    </tr></thead><tbody>
+      <tr class="data-row"><td><a href="#">Sample message subject line</a></td><td>admin@example.com</td><td>user@example.com</td><td>Dec 30, 2021 12:43 PM</td></tr>
+      <tr class="data-row"><td><a href="#">Another archived message</a></td><td>admin@example.com</td><td>sender@example.com</td><td>Dec 30, 2021 11:38 AM</td></tr>
+      <tr class="data-row"><td><a href="#">Third row example</a></td><td>ops@example.com</td><td>user@example.com</td><td>Dec 29, 2021 4:15 PM</td></tr>
+    </tbody></table></div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-table-checkbox">
+  <div class="ds-pattern-hdr"><h3>Checkbox &amp; Actions Column</h3><p>Selectable rows with in-table action buttons.</p></div>
+  <div class="ds-pattern-meta"><code>.col-check</code><code>.col-actions</code><code>.btn-blue.btn-sm</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>When bulk actions apply</li><li>Checkbox column first</li><li>.col-actions for row EDIT</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Checkboxes without bulk panel</li><li>Checkboxes for single-select</li><li>DELETE with zero selected</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Header checkbox selects visible rows.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-table-toolbar">Table toolbar</a><a href="#pattern-filters-bulk">Filters bulk</a></div>
+<div class="ds-preview ds-preview--flush">
+    <div class="table-wrap"><table class="data-table"><thead><tr>
+      <th class="col-check"><input type="checkbox"></th>
+      <th>DISPLAY NAME <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+      <th>EMAIL <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+      <th>ACTIONS</th>
+    </tr></thead><tbody>
+      <tr class="data-row"><td class="col-check"><input type="checkbox"></td><td><strong>Jane Smith</strong></td><td>jane@example.com</td><td><button type="button" class="btn btn-blue btn-sm">EDIT</button></td></tr>
+      <tr class="data-row row-alt"><td class="col-check"><input type="checkbox"></td><td><strong>John Doe</strong></td><td>john@example.com</td><td><button type="button" class="btn btn-blue btn-sm">EDIT</button></td></tr>
+    </tbody></table></div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-table-switches">
+  <div class="ds-pattern-hdr"><h3>In-Table Switches</h3><p>Portal administrator permission toggles.</p></div>
+  <div class="ds-pattern-meta"><code>.svc-toggle</code><code>.has-expanded</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Per-row boolean permissions</li><li>Center in .svc-toggle</li><li>Header describes switch meaning</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Switches for tri-state values</li><li>Mixed column types</li><li>Permissions without page save</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Each switch needs accessible name from header.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-switch-toggle">Switch toggle</a><a href="#pattern-key-legend">Key legend</a></div>
+<div class="ds-preview ds-preview--flush">
+    <div class="table-wrap"><table class="data-table"><thead><tr>
+      <th class="col-check"><input type="checkbox"></th>
+      <th>USER <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+      <th>EXPIRE MESSAGES <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+      <th>MANAGE ADMINS <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+    </tr></thead><tbody>
+      <tr><td><input type="checkbox"></td><td>Name 001</td><td class="svc-toggle"><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td><td class="svc-toggle"><label class="switch"><input type="checkbox"><span class="slider"></span></label></td></tr>
+      <tr><td><input type="checkbox"></td><td>Name 002</td><td class="svc-toggle"><label class="switch"><input type="checkbox"><span class="slider"></span></label></td><td class="svc-toggle"><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+    </tbody></table></div>
+  </div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-expanded">
+<h2>Expanded Table Content</h2>
+<p class="ds-lead">Inline expansion beneath table rows for actions, audit detail, and domain settings without navigating away from the list.</p>
+
+<div class="ds-pattern" id="pattern-expanded-inner">
+  <div class="ds-pattern-hdr"><h3>Expanded Inner Row</h3><p>Status change controls with comment and update.</p></div>
+  <div class="ds-pattern-meta"><code>.expanded-inner</code><code>.expanded-group</code><code>.change-options</code><code>.input-compact</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Archive message inline update</li><li>Status + change options + UPDATE</li><li>One expanded row at a time</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>All rows expanded on load</li><li>UPDATE off-screen on mobile</li><li>Static read-only detail</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Toggle keyboard accessible; use aria-controls.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-expanded-panel">Expanded panel</a><a href="#pattern-results-actions">Results actions</a></div>
+<div class="ds-preview ds-preview--flush">
+    <div class="table-wrap"><table class="data-table has-expanded"><thead><tr>
+      <th>SUBJECT</th><th>ACTIONS</th>
+    </tr></thead><tbody>
+      <tr class="data-row"><td><a href="#">Message with expanded actions</a></td><td><button type="button" class="btn btn-blue btn-action" data-ds-expand-btn>HIDE ACTIONS</button></td></tr>
+      <tr class="expanded-row"><td colspan="2">
+        <div class="expanded-inner">
+          <div class="expanded-group"><span class="group-label">Status</span><i class="fa fa-flag status-flag"></i></div>
+          <div class="expanded-group"><span class="group-label">Status to</span>
+            <span class="change-options">
+              <label class="change-option"><i class="fa fa-check"></i><input type="radio" name="ds-ch"></label>
+              <label class="change-option"><i class="fa fa-times"></i><input type="radio" name="ds-ch"></label>
+              <label class="change-option"><i class="fa fa-eye"></i><input type="radio" name="ds-ch"></label>
+            </span>
+          </div>
+          <select class="input-compact"><option>Select Supervisor</option></select>
+          <div class="inline-control-row"><input type="text" class="input-compact" placeholder="Comment"><button type="button" class="btn btn-blue btn-action">UPDATE</button></div>
+        </div>
+      </td></tr>
+    </tbody></table></div>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><p>One expanded row, toggled by operator.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><p>All rows expanded on load.</p></div></div>
+</div>
+
+<div class="ds-pattern" id="pattern-expanded-panel">
+  <div class="ds-pattern-hdr"><h3>Expanded Panel &amp; Domain Row</h3><p>Action button panel and inline domain settings.</p></div>
+  <div class="ds-pattern-meta"><code>.expanded-panel</code><code>.expanded-domain</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>MANAGE, GUEST ADMIN actions</li><li>.expanded-domain for inline edit</li><li>Grey background distinction</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Full forms inside panel</li><li>Primary navigation</li><li>Panel without user toggle</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Buttons need clear labels; follows row in tab order.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-expanded-inner">Expanded inner</a><a href="#pattern-audit-meta">Audit meta</a></div>
+<div class="ds-preview">
+    <div class="expanded-panel ds-mb-sm"><button type="button" class="btn btn-blue btn-sm">MANAGE</button> <button type="button" class="btn btn-blue btn-sm">GUEST ADMIN</button></div>
+    <div class="expanded-domain"><label class="field-label">Allowed Domain</label><select><option>example.com</option></select><input type="text" placeholder="Additional address"></div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-audit-meta">
+  <div class="ds-pattern-hdr"><h3>Audit Meta &amp; Rule Grid</h3><p>Expanded audit details for mailbox rule reports.</p></div>
+  <div class="ds-pattern-meta"><code>.audit-meta-row</code><code>.rule-expand-grid</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Mailbox audit drill-down</li><li>meta row + rule grid</li><li>SHOW/HIDE INFO toggle</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Grid without expand action</li><li>5 columns on mobile without scroll</li><li>Mix with archive status pattern</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Rule checkboxes need labels; grid scrolls on small screens.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-severity-links">Severity links</a><a href="#pattern-expanded-inner">Expanded inner</a></div>
+<div class="ds-preview ds-preview--flush">
+    <div class="table-wrap"><table class="data-table has-expanded"><thead><tr><th>EMAIL</th><th>SEVERITY</th><th>ACTIONS</th></tr></thead><tbody>
+      <tr class="data-row"><td>user@example.com</td><td class="severity-warn"><i class="fa fa-exclamation-triangle"></i></td><td class="col-actions"><button type="button" class="btn btn-blue btn-sm" data-ds-expand-btn data-ds-start="collapsed">SHOW INFO</button></td></tr>
+      <tr class="expanded-row is-hidden"><td colspan="3">
+        <div class="audit-meta-row"><span><strong>Last Access:</strong> 7/18/19, 5:54 PM</span><span><strong>Type:</strong> User Mailbox</span></div>
+        <div class="rule-expand-grid">
+          <div class="rule-expand-col"><label><input type="checkbox"> OWA Rule</label><div class="rule-detail"><strong>Name:</strong> Forward</div><div class="rule-detail"><strong>Addresses:</strong> external@example.com</div></div>
+          <div class="rule-expand-col"><label><input type="checkbox"> Forward To</label><div class="rule-detail"><strong>Name:</strong> Auto Forward</div><div class="rule-detail"><strong>Addresses:</strong> backup@example.com</div></div>
+          <div class="rule-expand-col"><label><input type="checkbox"> Inbox Rule</label><div class="rule-detail"><strong>Name:</strong> —</div></div>
+          <div class="rule-expand-col"><label><input type="checkbox"> Transport Rule</label><div class="rule-detail"><strong>Name:</strong> —</div></div>
+          <div class="rule-expand-col"><label><input type="checkbox"> Other</label><div class="rule-detail"><strong>Name:</strong> —</div></div>
+        </div>
+      </td></tr>
+    </tbody></table></div>
+  </div>
+</div>
+</section>
+
+<section class="ds-section" id="ds-composite">
+<h2>Composite Layouts</h2>
+<p class="ds-lead">Multi-region page patterns combining filters, bulk actions, and tables — use when a screen has more than one concern at page level.</p>
+
+<div class="ds-pattern" id="pattern-list-section">
+  <div class="ds-pattern-hdr"><h3>List Section</h3><p>Subheading, description, toolbar, table, and bottom pagination.</p></div>
+  <div class="ds-pattern-meta"><code>.list-section</code><code>.audit-desc</code><code>.table-toolbar</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Category filters, allowed addresses</li><li>Description + toolbar + table + pagination</li><li>DELETE disabled until checked</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>No bottom pagination</li><li>Read-only reports</li><li>Save inside list-section</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Description before controls; label checkboxes with row context.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-table-toolbar">Table toolbar</a><a href="#pattern-form-block">Form block</a></div>
+<div class="ds-preview">
+    <div class="list-section list-section--flush" data-ds-list-section>
+      <h3 class="sub">Category Filters</h3>
+      <p class="audit-desc">Select categories to filter encrypted messages.</p>
+      <div class="table-toolbar">
+        <div class="list-section-toolbar">
+          <button type="button" class="btn btn-teal btn-action">ADD NEW</button>
+          <button type="button" class="btn btn-outline-grey btn-action" data-ds-delete-btn disabled>DELETE</button>
+        </div>
+        <div class="pagination-bar">
+          <span class="info">Showing 2 of 2 definitions (filtered from 2 total)</span>
+          <div class="page-btns">
+            <button type="button">&laquo;</button>
+            <button type="button">&lsaquo;</button>
+            <a href="#" class="active">1</a>
+            <button type="button">&rsaquo;</button>
+            <button type="button">&raquo;</button>
+          </div>
+          <div class="per-page"><select><option>20 items per page</option></select></div>
+        </div>
+      </div>
+      <div class="table-wrap"><table class="data-table"><thead><tr>
+        <th class="col-check"><input type="checkbox"></th>
+        <th>CATEGORY <i class="fa-solid fa-arrow-down-arrow-up sort"></i></th>
+      </tr></thead><tbody>
+        <tr class="data-row"><td class="col-check"><input type="checkbox"></td><td>Adult Content</td></tr>
+        <tr class="data-row row-alt"><td class="col-check"><input type="checkbox"></td><td>Gambling</td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><p>DELETE disabled until a row is checked.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><p>Enabled DELETE with zero selection.</p></div></div>
+</div>
+
+<div class="ds-pattern" id="pattern-filters-bulk">
+  <div class="ds-pattern-hdr"><h3>Filters + Bulk (50/50 Grid)</h3><p>Two-column filters and bulk actions layout.</p></div>
+  <div class="ds-pattern-meta"><code>.filters-bulk</code><code>.action-pair</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>50/50 filters and bulk</li><li>Apply Actions to radios always</li><li>Delete with .action-pair</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Filters-only pages</li><li>Bulk scope below fold</li><li>Unlabeled bulk rows</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Filters column before bulk in tab order.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-filters-bulk-wide">Filters bulk wide</a><a href="#pattern-results-actions">Results actions</a></div>
+<div class="ds-preview">
+    <div class="filters-bulk">
+      <div><h3 class="panel-heading">Filters</h3><div class="field"><label class="field-label">Display Name</label><input type="text"></div></div>
+      <div><h3 class="panel-heading">Bulk Actions</h3>
+        <p class="apply-label">Apply Actions to</p>
+        <div class="radio-group"><label><input type="radio" name="ds-bulk" checked> Selected Items</label><label><input type="radio" name="ds-bulk"> Entire Results Set</label></div>
+        <div class="action-pair ds-mt-sm"><span class="action-label">Delete</span><button type="button" class="btn btn-magenta btn-action">DELETE</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-filters-bulk-wide">
+  <div class="ds-pattern-hdr"><h3>Filters + Bulk (Wide Flex)</h3><p>25% filters column with grouped bulk actions.</p></div>
+  <div class="ds-pattern-meta"><code>.filters-bulk-wide</code><code>.bulk-groups</code><code>.export-inline</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>User Management layout</li><li>Grouped .bulk-groups</li><li>Accordion for export options</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Wide layout for one filter field</li><li>Delete before scope radios</li><li>Hidden export options without accordion</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Accordion toggles aria-expanded.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-filters-bulk">Filters bulk</a><a href="#pattern-key-legend">Key legend</a></div>
+<div class="ds-preview">
+    <div class="filters-bulk-wide">
+      <div class="filters-col"><h3 class="panel-heading">Filters</h3><div class="field"><label class="field-label">Users</label><input type="text"></div><div class="field"><label class="field-label">Domains</label><select><option>All Domains</option></select></div></div>
+      <div class="bulk-col"><h3 class="panel-heading">Bulk Actions</h3>
+        <div class="bulk-groups">
+          <div class="bulk-group"><p class="apply-label">Apply Actions to</p><div class="radio-group"><label><input type="radio" name="ds-wide" checked> Selected Items</label><label><input type="radio" name="ds-wide"> Entire Results Set</label></div></div>
+          <div class="bulk-group bulk-group-export"><p class="bulk-label bulk-label--flush">Export</p><div class="export-inline"><select><option>Archive (.zip)</option></select><button type="button" class="btn btn-blue btn-action">EXPORT</button></div><div class="accordion-hdr">Export Options <i class="fa fa-chevron-down"></i></div><div class="accordion-panel"><label><input type="checkbox"> Include attachments</label><br><label><input type="checkbox"> Include metadata</label></div></div>
+          <div class="bulk-group bulk-group-actions"><div class="action-pair"><span class="action-label">Delete</span><button type="button" class="btn btn-magenta btn-action">DELETE</button></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><p>25% filters + labeled bulk groups.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><p>Delete before scope selection.</p></div></div>
+</div>
+
+<div class="ds-pattern" id="pattern-filters-impersonation">
+  <div class="ds-pattern-hdr"><h3>Filters + Bulk (Impersonation)</h3><p>25%/50% grid with settings card below table area.</p></div>
+  <div class="ds-pattern-meta"><code>.filters-bulk-impersonation</code><code>.settings-card</code><code>.tag-subject-stack</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>25%/50% impersonation grid</li><li>Settings card below table</li><li>Collapsible advanced policy</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Settings in toolbar</li><li>Tag field without checkbox gate</li><li>Single-field filter pages</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Settings header toggles aria-expanded.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-toggle-row">Toggle row</a><a href="#pattern-list-section">List section</a></div>
+<div class="ds-preview">
+    <div class="filters-bulk filters-bulk-impersonation">
+      <div><h3 class="panel-heading">Filters</h3><div class="field"><label class="field-label">Display Name</label><input type="text"></div></div>
+      <div><h3 class="panel-heading">Bulk Actions</h3><p class="apply-label">Apply Actions to</p><div class="radio-group"><label><input type="radio" name="ds-imp" checked> Selected Items</label><label><input type="radio" name="ds-imp"> Entire Results Set</label></div><div class="action-pair ds-mt-sm"><span class="action-label">Delete</span><button type="button" class="btn btn-magenta btn-action">DELETE</button></div></div>
+    </div>
+    <div class="settings-card">
+      <div class="settings-card-hdr">Settings <i class="fa fa-chevron-down"></i></div>
+      <div class="settings-card-body">
+        <h4>Test Failure Action</h4>
+        <div class="tag-subject-stack"><label><input type="checkbox" checked> Tag subject with</label><input type="text" value="[SUSPECTED IMPERSONATION]"></div>
+        <h4 class="ds-mt-md">Notifications</h4>
+        <label><input type="checkbox" checked> Send notification email if test fails</label>
+        <div class="notifications-toolbar ds-mt-sm"><button type="button" class="btn btn-teal btn-action">ADD EMAIL</button><button type="button" class="btn btn-outline btn-action" disabled>DELETE</button></div>
+        <table class="imp-email-table"><tbody><tr><td><label><input type="checkbox"> admin@example.com</label></td></tr></tbody></table>
+      </div>
+    </div>
+  </div>
+<div class="ds-do-dont"><div class="ds-do"><span class="ds-do-label">Do</span><p>Collapsible settings card for policy.</p></div><div class="ds-dont"><span class="ds-dont-label">Don't</span><p>Always-visible settings above table.</p></div></div>
+</div>
+
+<div class="ds-pattern" id="pattern-results-actions">
+  <div class="ds-pattern-hdr"><h3>Results Summary + Bulk Actions</h3><p>Archive search results with export, hold, and update rows.</p></div>
+  <div class="ds-pattern-meta"><code>.results-actions-grid</code><code>.bulk-actions-panel</code><code>.hold-row-full</code><code>.update-row-full</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Archive search summary + bulk</li><li>Inline export/hold/update rows</li><li>Criteria in left column</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>No bulk operations</li><li>Duplicate summary in title</li><li>Vertical bulk on desktop</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Summary uses semantic ul; labels precede controls.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-filters-bulk-wide">Filters bulk wide</a><a href="#pattern-expanded-inner">Expanded inner</a></div>
+<div class="ds-preview">
+    <div class="results-actions-grid">
+      <div class="summary-col">
+        <h3 class="panel-heading">Results Summary</h3>
+        <p class="count">100 messages where all criteria match:</p>
+        <ul><li>Dates include Dec 03, 2023</li><li>Media Types include Email</li></ul>
+        <a href="#" class="link"><i class="fa fa-plus"></i> Display Additional Filters</a>
+      </div>
+      <div class="bulk-actions-panel">
+        <h3 class="panel-heading">Bulk Actions</h3>
+        <p class="apply-label">Apply Actions to</p>
+        <div class="radio-group"><label><input type="radio" name="ds-res" checked> Selected Items</label><label><input type="radio" name="ds-res"> Entire Results Set</label></div>
+        <p class="bulk-label">Export</p>
+        <div class="export-row"><select><option>Archive (zip) of Email (.eml) files</option></select><button type="button" class="btn btn-blue btn-action">EXPORT</button></div>
+        <p class="bulk-label">Litigation Hold</p>
+        <div class="hold-row-full"><div class="radio-group radio-group--shrink"><label><input type="radio" name="ds-hold" checked> Existing</label><label><input type="radio" name="ds-hold"> New</label></div><select><option>Select Folder</option></select><input type="text" placeholder="Name"><button type="button" class="btn btn-blue btn-action">HOLD</button></div>
+        <p class="bulk-label">Update</p>
+        <div class="update-row-full"><select><option>Status to</option></select><select><option>Escalate to</option></select><input type="text" placeholder="Comment"><button type="button" class="btn btn-blue btn-action">UPDATE</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-filters-inline">
+  <div class="ds-pattern-hdr"><h3>Inline Filters Row</h3><p>Horizontal filter fields with FILTER button.</p></div>
+  <div class="ds-pattern-meta"><code>.filters-inline-row</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>3–5 horizontal filters</li><li>FILTER button for server round-trip</li><li>Info icons for help</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>8+ fields inline</li><li>Auto-submit every keystroke</li><li>Missing Filter button</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Info icons need aria-label in production.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-form-inputs">Form inputs</a><a href="#pattern-table-toolbar">Table toolbar</a></div>
+<div class="ds-preview">
+    <h3 class="panel-heading">Filters</h3>
+    <div class="filters-inline-row">
+      <div class="field"><label class="field-label">Customer</label><input type="text"></div>
+      <div class="field"><label class="field-label">Customer Type</label><select><option>All</option></select></div>
+      <div class="field"><label class="field-label">Product <i class="fa fa-info-circle info-icon"></i></label><select><option>All</option></select></div>
+    </div>
+    <button type="button" class="btn btn-blue btn-action">FILTER</button>
+  </div>
+</div>
+
+<div class="ds-pattern" id="pattern-form-block">
+  <div class="ds-pattern-hdr"><h3>Form Block with List Rows</h3><p>Notifications section with removable email list.</p></div>
+  <div class="ds-pattern-meta"><code>.form-block</code><code>.list-row</code></div>
+  <div class="ds-guidance">
+  <div class="ds-guidance-do"><h4>When to use</h4><ul><li>Notifications email lists</li><li>.list-row per entry</li><li>ADD EMAIL inline</li></ul></div>
+  <div class="ds-guidance-dont"><h4>When not to use</h4><ul><li>Table data management</li><li>Delete without confirm on sensitive lists</li><li>Save inside form-block</li></ul></div>
+  <div class="ds-guidance-a11y"><h4>Accessibility</h4><p>Delete buttons need email in aria-label.</p></div>
+</div>
+<div class="ds-pattern-footer"><span class="ds-related-label">Related</span><a href="#pattern-page-header">Page header</a><a href="#pattern-list-section">List section</a></div>
+<div class="ds-preview">
+    <div class="form-block"><h3 class="sub">Notifications</h3><hr>
+      <label><input type="checkbox" checked> Enable email notifications when failure occurs</label>
+      <div class="list-row"><span>admin@example.com</span><button type="button" class="btn btn-magenta btn-sm">DELETE</button></div>
+      <div class="list-row"><span>ops@example.com</span><button type="button" class="btn btn-magenta btn-sm">DELETE</button></div>
+      <div class="row-flex ds-mt-sm"><input type="email" class="ds-input-inline" placeholder="Email address"><button type="button" class="btn btn-outline">ADD EMAIL</button></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+</div>
+
+<script>
+(function () {
+  function toast(msg) {
+    var el = document.getElementById('ds-toast');
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.add('is-visible');
+    clearTimeout(el._t);
+    el._t = setTimeout(function () { el.classList.remove('is-visible'); }, 1800);
+  }
+  function initTabs() {
+    document.querySelectorAll('[data-ds-tabs]').forEach(function (wrap) {
+      var tabs = wrap.querySelectorAll('[data-ds-tab], .tabs [role="tab"]');
+      var panels = wrap.querySelectorAll('[data-ds-tab-panel]');
+      tabs.forEach(function (tab, i) {
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('tabindex', tab.classList.contains('active') ? '0' : '-1');
+        tab.setAttribute('aria-selected', tab.classList.contains('active') ? 'true' : 'false');
+        tab.addEventListener('click', function () { activate(i); });
+        tab.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowRight') { e.preventDefault(); activate((i + 1) % tabs.length); tabs[(i + 1) % tabs.length].focus(); }
+          if (e.key === 'ArrowLeft') { e.preventDefault(); var p = (i - 1 + tabs.length) % tabs.length; activate(p); tabs[p].focus(); }
+        });
+      });
+      function activate(idx) {
+        tabs.forEach(function (t, j) {
+          t.classList.toggle('active', j === idx);
+          t.setAttribute('aria-selected', j === idx ? 'true' : 'false');
+          t.setAttribute('tabindex', j === idx ? '0' : '-1');
+        });
+        panels.forEach(function (p, j) { p.classList.toggle('active', j === idx); });
+      }
+    });
+  }
+  function initAccordions() {
+    document.querySelectorAll('.accordion-hdr').forEach(function (hdr) {
+      hdr.setAttribute('role', 'button');
+      hdr.setAttribute('tabindex', '0');
+      hdr.setAttribute('aria-expanded', 'false');
+      var panel = hdr.nextElementSibling;
+      if (!panel || !panel.classList.contains('accordion-panel')) return;
+      function toggle() {
+        var open = hdr.classList.toggle('is-open');
+        panel.classList.toggle('is-open', open);
+        hdr.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      hdr.addEventListener('click', toggle);
+      hdr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+    });
+    document.querySelectorAll('.settings-card-hdr').forEach(function (hdr) {
+      var card = hdr.closest('.settings-card');
+      if (!card) return;
+      hdr.setAttribute('role', 'button');
+      hdr.setAttribute('tabindex', '0');
+      hdr.setAttribute('aria-expanded', 'true');
+      hdr.addEventListener('click', function () {
+        card.classList.toggle('is-collapsed');
+        hdr.setAttribute('aria-expanded', card.classList.contains('is-collapsed') ? 'false' : 'true');
+      });
+      hdr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); hdr.click(); } });
+    });
+  }
+  function initRowExpand() {
+    document.querySelectorAll('[data-ds-expand-btn]').forEach(function (btn) {
+      var row = btn.closest('tr');
+      if (!row) return;
+      var exp = row.nextElementSibling;
+      if (!exp || !exp.classList.contains('expanded-row')) return;
+      if (btn.getAttribute('data-ds-start') === 'collapsed') {
+        exp.classList.add('is-hidden');
+      }
+      btn.addEventListener('click', function () {
+        var hidden = exp.classList.toggle('is-hidden');
+        var t = btn.textContent.trim();
+        if (/SHOW/i.test(t)) btn.textContent = t.replace(/SHOW/i, 'HIDE');
+        else btn.textContent = t.replace(/HIDE/i, 'SHOW');
+      });
+    });
+  }
+  function initPagination() {
+    document.querySelectorAll('[data-ds-pagination]').forEach(function (bar) {
+      var info = bar.querySelector('.info');
+      var perPage = 25, total = 100, pages = 4, current = 1;
+      function update() {
+        bar.querySelectorAll('.page-btns a').forEach(function (a) {
+          var n = parseInt(a.textContent, 10);
+          if (!isNaN(n)) a.classList.toggle('active', n === current);
+        });
+        if (info) {
+          var start = (current - 1) * perPage + 1;
+          var end = Math.min(current * perPage, total);
+          info.textContent = 'Showing ' + start + '-' + end + ' of ' + total + ' items (filtered from ' + total + ')';
+        }
+      }
+      bar.querySelectorAll('.page-btns a').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var n = parseInt(a.textContent, 10);
+          if (!isNaN(n)) { current = n; update(); }
+        });
+      });
+      bar.querySelectorAll('.page-btns button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var ch = btn.textContent;
+          if (ch.indexOf('\u2039') >= 0 || ch === '<') current = Math.max(1, current - 1);
+          else if (ch.indexOf('\u203a') >= 0 || ch === '>') current = Math.min(pages, current + 1);
+          else if (ch.indexOf('\u00ab') >= 0) current = 1;
+          else if (ch.indexOf('\u00bb') >= 0) current = pages;
+          update();
+        });
+      });
+    });
+  }
+  function initScrollSpy() {
+    var links = document.querySelectorAll('.ds-nav__link[href^="#"]');
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    if (!window.IntersectionObserver) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          links.forEach(function (l) { l.classList.remove('is-active'); });
+          if (map[entry.target.id]) map[entry.target.id].classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -55% 0px', threshold: 0 });
+    document.querySelectorAll('.ds-section').forEach(function (s) { obs.observe(s); });
+  }
+  function initCopyTokens() {
+    document.querySelectorAll('.ds-pattern-meta code, .ds-swatch').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var text = el.textContent.trim();
+        var m = text.match(/(--[\w-]+|\.\w[\w-]*)/);
+        text = m ? m[1] : text.split()[0];
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () { toast('Copied: ' + text); });
+        }
+      });
+    });
+  }
+  function initListSection() {
+    document.querySelectorAll('[data-ds-list-section]').forEach(function (sec) {
+      var del = sec.querySelector('[data-ds-delete-btn]');
+      var boxes = sec.querySelectorAll('tbody input[type="checkbox"]');
+      if (!del || !boxes.length) return;
+      function sync() {
+        var any = Array.prototype.some.call(boxes, function (c) { return c.checked; });
+        del.disabled = !any;
+      }
+      boxes.forEach(function (c) { c.addEventListener('change', sync); });
+      sync();
+    });
+  }
+  function initFeedbackStates() {
+    document.querySelectorAll('.alert-banner__dismiss').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var banner = btn.closest('.alert-banner');
+        if (banner) banner.hidden = true;
+      });
+    });
+    document.querySelectorAll('[data-ds-undo-trigger]').forEach(function (btn) {
+      var bar = document.getElementById('ds-undo-demo');
+      if (!bar) return;
+      btn.addEventListener('click', function () {
+        bar.hidden = false;
+      });
+    });
+    document.querySelectorAll('[data-ds-undo-dismiss]').forEach(function (btn) {
+      var bar = document.getElementById('ds-undo-demo');
+      if (!bar) return;
+      btn.addEventListener('click', function () {
+        bar.hidden = true;
+        toast('Delete undone');
+      });
+    });
+  }
+  var toastEl = document.createElement('div');
+  toastEl.id = 'ds-toast';
+  toastEl.className = 'ds-toast';
+  toastEl.setAttribute('role', 'status');
+  document.body.appendChild(toastEl);
+  initTabs(); initAccordions(); initRowExpand(); initPagination();
+  initScrollSpy(); initCopyTokens(); initListSection(); initFeedbackStates();
+})();
+</script>
+
+</body>
+</html>

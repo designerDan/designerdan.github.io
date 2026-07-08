@@ -1,0 +1,65 @@
+/* Design tokens — Daniel brand */
+
+:root {
+  --size: 1600;
+  --font-s: calc((100vw / var(--size)) * 10);
+
+  /* Type scale — rem bounds assume 10px root (html font-size: var(--font-s)) */
+  --type-eyebrow: clamp(0.75rem, calc(var(--font-s) * 2), 2rem);
+  --type-display: clamp(3.4rem, 6vw, 6.4rem);
+  --type-hero: clamp(3.6rem, 9vw, 14rem);
+  --type-section: clamp(2.4rem, calc(var(--font-s) * 6), 6rem);
+  --type-headline: clamp(2.4rem, calc(var(--font-s) * 4), 4rem);
+  --type-body: clamp(1.6rem, calc(var(--font-s) * 2), 2rem);
+  --type-body-lg: clamp(1.6rem, calc(var(--font-s) * 2.4), 2.4rem);
+  --type-stat: clamp(2.4rem, calc(var(--font-s) * 4), 4rem);
+  --type-handoff: clamp(2rem, calc(var(--font-s) * 3.5), 3.5rem);
+  --type-label: clamp(14px, calc(var(--font-s) * 1.6), 1.6rem);
+  --type-meta: clamp(14px, calc(var(--font-s) * 1.7), 1.7rem);
+  --type-ui: clamp(14px, calc(var(--font-s) * 1.5), 1.5rem);
+  --type-hero-label: clamp(12px, calc(var(--font-s) * 1.2), 1.2rem);
+  --type-nav: clamp(15px, calc(var(--font-s) * 1.7), 1.7rem);
+  --radius-ui: 0;
+
+  /* Colors */
+  --color-brand: #d01156;
+  --color-yellow: #fee65a;
+  --color-brown: #4f1814;
+  --color-black: #140A0F;
+  --color-paper: #FCEFDC;
+  --color-white: #FFFFFA;
+
+  /* Typography — role tokens map to loaded families */
+  --font-libre: "Libre Baskerville", georgia, serif;
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
+  --font-tiempos: "Tiempos Fine", georgia, serif;
+  --font-display: var(--font-montserrat);
+  --font-body: var(--font-libre);
+  --font-label: var(--font-montserrat);
+  --font-stat: var(--font-tiempos);
+
+  /* Motion */
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Layout */
+  --cs-pad: clamp(1.25rem, 4vw, 4rem);
+  --container-max: 87.8rem;
+  --section-gap-sm: 8rem;
+  --section-gap-lg: 15rem;
+  --page-margin: 2rem;
+  --page-margin-lg: 4rem;
+  --site-head-height: 5.75rem;
+}
+
+@media (width <= 600px) {
+  :root {
+    --size: 375;
+  }
+}
+
+.about-page {
+  --about-section-gap: clamp(10rem, 16vw, 20rem);
+  --about-section-gap-sm: clamp(6rem, 10vw, 12rem);
+  --about-intra-gap: clamp(3rem, 6vw, 6rem);
+}

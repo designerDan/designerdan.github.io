@@ -1,0 +1,17 @@
+# Daniel Mason — Portfolio
+
+> Senior UX Designer · AI/ML · Enterprise SaaS · 12 years experience.
+> The last product I helped design sold for $860 million (Zix, acquired by OpenText).
+
+## Primary pages
+
+- [Home](https://www.danielgmason.com/): Portfolio overview and featured case studies
+- [Zix case study](https://www.danielgmason.com/zix): Unifying 21 enterprise apps across a merger; $860M acquisition
+- [Pixly case study](https://www.danielgmason.com/pixly): Construction AI photo search POC; Kiewit pipeline
+- [Open Door Legal case study](https://www.danielgmason.com/odl): Salesforce referral marketplace and grant management
+- [About](https://www.danielgmason.com/about): Background, process, and FAQs
+
+## Contact
+
+- [Inquiry form](https://forms.gle/cHUEEu3JhBvc7hF57): Availability and project inquiries
+- LinkedIn: https://linkedin.com/in/designemissary

@@ -1,5 +1,5 @@
-# www.robotstxt.org/
-
-# Disallow crawling of all content
 User-agent: *
-Disallow: /
+Allow: /
+
+# AI discovery: https://www.danielgmason.com/llms.txt
+Sitemap: https://www.danielgmason.com/sitemap.xml

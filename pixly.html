@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pixly case study — AI-powered construction photo search by Daniel Mason">
+  <title>Pixly — Making Construction Photos Findable</title>
+  <link rel="canonical" href="https://www.danielgmason.com/pixly">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Daniel Mason">
+  <meta property="og:title" content="Pixly — Making Construction Photos Findable">
+  <meta property="og:description" content="3-week AI POC for construction photo search. $1M+ pipeline with Kiewit.">
+  <meta property="og:url" content="https://www.danielgmason.com/pixly">
+  <meta property="og:image" content="https://www.danielgmason.com/imgs/pixly/px-16.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Pixly — Making Construction Photos Findable",
+    "description": "3-week AI POC for construction photo search. $1M+ pipeline with Kiewit.",
+    "url": "https://www.danielgmason.com/pixly",
+    "image": "https://www.danielgmason.com/imgs/pixly/px-16.webp",
+    "author": { "@type": "Person", "name": "Daniel Mason", "url": "https://www.danielgmason.com/" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="./imgs/pixly/showcase-01.webp" as="image">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;900&display=swap">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+<body class="case-page" data-next-project="./odl">
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-head">
+    <div class="site-head__lockup">
+      <a href="/" class="site-head__brand" aria-label="Daniel Mason — Home">
+        <img src="./imgs/logo.svg" width="33" height="25" alt="" class="site-head__logo" aria-hidden="true">
+      </a>
+      <div class="site-head__identity">
+        <p class="site-head__name">Daniel Mason</p>
+        <p class="site-head__role">Lead UX Designer · Enterprise SaaS · AI/ML</p>
+      </div>
+    </div>
+    <div class="site-head__end">
+      <a href="https://linkedin.com/in/designemissary" class="site-head__linkedin linkedin" aria-label="LinkedIn profile">LinkedIn</a>
+      <nav class="site-head__nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./about" class="nav-link">About</a></li>
+          <li><a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="project-hero project-hero--fold project-hero--yellow" data-nav-link-tone="dark" aria-labelledby="project-title">
+      <div class="project-hero__stage">
+        <header class="project-hero__header cs-wrap">
+          <h1 id="project-title" class="project-hero__title">AI vision for construction photos</h1>
+          <div class="project-hero__stats">
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">$1M+</p>
+              <p class="project-hero__stat-label">Pipeline with Kiewit, Granite, Kahua</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">50%</p>
+              <p class="project-hero__stat-label">Of ENR 400 via SmartPM integration</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">3,056</p>
+              <p class="project-hero__stat-label">Users · 29 customers at POC delivery</p>
+            </div>
+            <div class="project-hero__stat">
+              <p class="project-hero__stat-value">90%+</p>
+              <p class="project-hero__stat-label">Tag precision validated in testing</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="project-hero__gallery" data-hero-gallery>
+          <div class="project-hero__gallery-viewport" aria-label="Pixly product screenshots — scroll horizontally">
+            <div class="project-hero__gallery-track">
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/pixly/showcase-01.webp"
+                     srcset="./imgs/pixly/showcase-01@0.5x.webp 720w, ./imgs/pixly/showcase-01.webp 1440w, ./imgs/pixly/showcase-01@2x.webp 2880w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1440" height="1024"
+                     alt="Pixly General album page: upload area labeled Add Photo/Video by Drag &amp; Drop, Browse button, and five selected photos with Tagging complete." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/pixly/showcase-02.webp"
+                     srcset="./imgs/pixly/showcase-02@0.5x.webp 720w, ./imgs/pixly/showcase-02.webp 1440w, ./imgs/pixly/showcase-02@2x.webp 2880w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1440" height="1024"
+                     alt="Pixly photo viewer of wall openings; Issue tags numbered 1, 2, and 3 on photo; Tags panel lists three Issue items labeled Pixly AI." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/pixly/showcase-03.webp"
+                     srcset="./imgs/pixly/showcase-03@0.5x.webp 720w, ./imgs/pixly/showcase-03.webp 1440w, ./imgs/pixly/showcase-03@2x.webp 2880w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1440" height="1024"
+                     alt="Pixly photo viewer of wooden gate; Tag Filter tab with Issue filter toggled on." loading="eager" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/pixly/showcase-04.webp"
+                     srcset="./imgs/pixly/showcase-04@0.5x.webp 720w, ./imgs/pixly/showcase-04.webp 1440w, ./imgs/pixly/showcase-04@2x.webp 2880w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1440" height="1024"
+                     alt="Pixly Tag Library listing General, Hole, Inspection, Issue, and other tags; notification reads Hole tag created." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/pixly/showcase-05.webp"
+                     srcset="./imgs/pixly/showcase-05@0.5x.webp 720w, ./imgs/pixly/showcase-05.webp 1440w, ./imgs/pixly/showcase-05@2x.webp 2880w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1440" height="1024"
+                     alt="Pixly Add Tags panel with Safety, Submittal, Task, and Trash options; Trash selected; Place Tags button." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/pixly/showcase-06.webp"
+                     srcset="./imgs/pixly/showcase-06@0.5x.webp 720w, ./imgs/pixly/showcase-06.webp 1440w, ./imgs/pixly/showcase-06@2x.webp 2880w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1440" height="1024"
+                     alt="Pixly Feed with List view selected, search bar, and two posts dated 01/22/2025 labeled General." loading="lazy" draggable="false">
+              </figure>
+              <figure class="project-hero__gallery-item">
+                <img class="project-hero__gallery-image" src="./imgs/pixly/showcase-07.webp"
+                     srcset="./imgs/pixly/showcase-07@0.5x.webp 720w, ./imgs/pixly/showcase-07.webp 1440w, ./imgs/pixly/showcase-07@2x.webp 2880w"
+                     sizes="(max-width: 600px) 100vw, 85vw"
+                     width="1440" height="1024"
+                     alt="Pixly Tag Library General view, count 99; menu open with Edit tag and Delete tag options." loading="lazy" draggable="false">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <footer class="project-hero__footer cs-wrap">
+          <dl class="project-hero__meta">
+            <div>
+              <dt>Project</dt>
+              <dd>AI-powered auto-tagging and content-indexed search for construction photo documentation.</dd>
+            </div>
+            <div>
+              <dt>Contributions</dt>
+              <dd>UX Research, Interaction Design, Tag Taxonomy</dd>
+            </div>
+            <div>
+              <dt>Partners</dt>
+              <dd>SnapSoft (AI/ML), Carnera (UI), Pixly</dd>
+            </div>
+            <div>
+              <dt>Client</dt>
+              <dd>Pixly.ai</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>3 weeks</dd>
+            </div>
+          </dl>
+        </footer>
+      </div>
+    </section>
+
+    <section class="text-cta">
+      <div class="cs-wrap text-cta__wrap">
+        <h2 class="text-cta__eyebrow">The business problem</h2>
+        <p class="text-cta__headline">
+          <span class="cs-line-mask"><span class="cs-line">Pixly was capturing photos well.</span></span>
+          <span class="cs-line-mask"><span class="cs-line">The problem was retrieval—and it was</span></span>
+          <span class="cs-line-mask"><span class="cs-line">eroding their competitive position.</span></span>
+        </p>
+        <p class="text-cta__body">Construction teams generated hundreds of geo-tagged photos per project, but nobody could find them. Manual tags failed in the field. The brief: auto-tag at capture with computer vision, then redesign search to feel native—not bolted on.</p>
+      </div>
+    </section>
+
+    <section class="product-showcase">
+      <div class="cs-wrap product-showcase__wrap">
+        <h2 class="product-showcase__eyebrow">Product showcase</h2>
+        <div class="product-showcase__intro">
+          <p>Mobile-first capture and search across iOS, Android, and web—designed for field conditions and desktop reporting.</p>
+        </div>
+        <div class="product-showcase__grid">
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Capture</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/pixly/capture.webp"
+                     srcset="./imgs/pixly/capture@0.5x.webp 197w, ./imgs/pixly/capture.webp 393w, ./imgs/pixly/capture@2x.webp 786w"
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     width="393" height="852"
+                     alt="Pixly mobile camera screen with Uploading message and General category selected." loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Albums</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/pixly/albums.webp"
+                     srcset="./imgs/pixly/albums@0.5x.webp 720w, ./imgs/pixly/albums.webp 1440w, ./imgs/pixly/albums@2x.webp 2880w"
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     width="1440" height="1024"
+                     alt="Pixly Albums page with Most Recent albums, General thumbnail, and Folders tab selected." loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Tags</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/pixly/tags.webp"
+                     srcset="./imgs/pixly/tags@0.5x.webp 197w, ./imgs/pixly/tags.webp 393w, ./imgs/pixly/tags@2x.webp 786w"
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     width="393" height="852"
+                     alt="Pixly mobile Tags sheet on site photo; three Issue rows labeled Pixly AI." loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="product-showcase__item">
+            <h3 class="product-showcase__item-title">Search</h3>
+            <div class="product-showcase__media">
+              <div class="product-showcase__parallax">
+                <img class="product-showcase__image" src="./imgs/pixly/search.webp"
+                     srcset="./imgs/pixly/search@0.5x.webp 197w, ./imgs/pixly/search.webp 393w, ./imgs/pixly/search@2x.webp 786w"
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     width="393" height="852"
+                     alt="Pixly mobile Tag Library with Trash in search field; Place a Tag button; keyboard visible." loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What I owned</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">Scope clarity on a three-partner engagement.</p>
+          <div class="text-section__prose">
+            <p>I led research and contextual inquiry, owned the tag taxonomy and vocabulary decisions, drove search interaction design and mobile-first direction, validated the AI confidence threshold model with users, and aligned SnapSoft and Carnera around a shared UX direction throughout.</p>
+            <p>SnapSoft owned the ML pipeline. Carnera executed visual UI. The decisions about what the system should communicate to users—and what it should stay quiet about—were mine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asset-section">
+      <div class="cs-wrap">
+        <figure class="asset-section__figure">
+        <img class="asset-section__image" src="./imgs/pixly/px-01.webp"
+     srcset="./imgs/pixly/px-01@0.5x.webp 720w, ./imgs/pixly/px-01.webp 1440w, ./imgs/pixly/px-01@2x.webp 2880w"
+     sizes="100vw"
+     width="1440" height="1024"
+     alt="Pixly Add Tags dialog on site photo; tag options General, Hole, Inspection, and Issue; Place Tags button." loading="lazy">
+        <figcaption class="asset-section__caption">Tagging runs in the photo viewer — not a separate admin screen.</figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">Research</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">How field teams actually search.</p>
+          <div class="text-section__prose">
+            <p>I conducted contextual inquiry with 8 field users across 3 construction firms. Users think in terms of content, not chronology—materials, equipment, site conditions—not when or where a photo was taken. Average time to find a specific photo by scrolling: 4.2 minutes.</p>
+            <p>Field adoption of manual tags sat at 15%. Meanwhile, 92% of photos were captured on mobile, but 40% of retrieval happened on desktop during reporting. Search sessions broke into specific recall and categorical browse—both requiring content-indexed search, surfaced differently in the UI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assets-duo">
+      <div class="cs-wrap assets-duo__wrap">
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/pixly/px-02.webp"
+            srcset="./imgs/pixly/px-02@0.5x.webp 720w, ./imgs/pixly/px-02.webp 1440w, ./imgs/pixly/px-02@2x.webp 2880w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="1440" height="1024"
+            alt="Pixly Feed in list view with search field, image-search icon, Filter control, and two photo entries." loading="lazy">
+          <figcaption class="assets-duo__caption">Same feed serves field capture and desktop retrieval workflows.</figcaption>
+        </figure>
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/pixly/px-03.webp"
+            srcset="./imgs/pixly/px-03@0.5x.webp 197w, ./imgs/pixly/px-03.webp 393w, ./imgs/pixly/px-03@2x.webp 786w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="393" height="852"
+            alt="Android photo picker, Photos tab; one gate thumbnail selected; Add button at bottom." loading="lazy">
+          <figcaption class="assets-duo__caption">System photo picker for batch upload from the device camera roll.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">Users</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">Two distinct needs, one shared frustration.</p>
+          <div class="text-section__prose">
+            <p><strong>Marcus — Site Superintendent.</strong> Takes 30–50 photos daily across subcontractor documentation, safety records, and progress updates. Primary device: phone, often in low-connectivity conditions. “By Friday I've taken 200 photos. Finding one from Tuesday? Forget it.”</p>
+            <p><strong>Sarah — Project Manager.</strong> Assembles weekly reports and compliance audits from photos across the whole team. Works on desktop. “I need all concrete pour photos from the east wing, from anyone on the team.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner-showroom">
+      <figure class="banner-showroom__figure">
+        <img class="banner-showroom__image" src="./imgs/pixly/px-04.webp"
+     srcset="./imgs/pixly/px-04@0.5x.webp 720w, ./imgs/pixly/px-04.webp 1440w, ./imgs/pixly/px-04@2x.webp 2880w"
+     sizes="100vw"
+     width="1440" height="1024"
+     alt="Pixly Evaluation Dashboard: Member Count 3, Album Count 1, Tag Count 0, and project map with location pin." loading="lazy">
+        <div class="banner-showroom__scrim" aria-hidden="true"></div>
+      </figure>
+      <div class="banner-showroom__stage">
+        <div class="cs-wrap banner-showroom__content">
+          <div class="banner-showroom__rule"></div>
+          <p class="banner-showroom__headline">
+            <span class="cs-line-mask"><span class="cs-line">Search that speaks their language,</span></span>
+            <span class="cs-line-mask"><span class="cs-line">not a bolt-on feature.</span></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-blocks">
+      <div class="cs-wrap text-blocks__wrap">
+        <h2 class="text-blocks__eyebrow">The three decisions that mattered</h2>
+        <div class="text-blocks__list">
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>AI that doesn't announce itself.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>No AI iconography. Tags surface as passive metadata and match annotations—not badges on every thumbnail. Field teams trust the system when it demonstrates accuracy, not when it declares capability.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Suppressing low-confidence tags.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>An 80% confidence floor calibrated trust. Tags below threshold stay in the index but out of results until users confirm or reject—building a feedback loop without exposing uncertain AI output.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>One search input, not a new surface.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Natural language resolves intent—“excavator near Building C” maps date, location, and material tags. Filter chips remain for power users. Voice input is parity with text for gloved hands and bright sun.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assets-duo">
+      <div class="cs-wrap assets-duo__wrap">
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/pixly/px-06.webp"
+            srcset="./imgs/pixly/px-06@0.5x.webp 720w, ./imgs/pixly/px-06.webp 1440w, ./imgs/pixly/px-06@2x.webp 2880w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="1440" height="1024"
+            alt="Pixly General album upload with five photos selected; four thumbnails show Tagging photos status." loading="lazy">
+          <figcaption class="assets-duo__caption">Batch upload on desktop; tagging status shown per thumbnail.</figcaption>
+        </figure>
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/pixly/px-05.webp"
+            srcset="./imgs/pixly/px-05@0.5x.webp 197w, ./imgs/pixly/px-05.webp 393w, ./imgs/pixly/px-05@2x.webp 786w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="393" height="852"
+            alt="Pixly mobile General album, Jan 21 2025; one photo tagged; five thumbnails show Tagging photos status." loading="lazy">
+          <figcaption class="assets-duo__caption">Mobile album grid shows tag counts while batch tagging runs.</figcaption>
+        </figure>
+        
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">Technical integration</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">The vocabulary problem I had to own.</p>
+          <div class="text-section__prose">
+            <p>AWS Rekognition produces generic object labels. SageMaker custom models produce domain labels—rebar types, concrete conditions, equipment models. The taxonomy had to merge both into one vocabulary that matched how field users actually spoke.</p>
+            <p>SnapSoft's initial label set didn't map to field vocabulary. “Excavating equipment” isn't what Marcus says; “excavator” and “backhoe” are. Building the synonym map required sitting between ML output and user research—forcing an alignment neither party was initially scoping for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asset-section">
+      <div class="cs-wrap">
+        <figure class="asset-section__figure">
+        <img class="asset-section__image" src="./imgs/pixly/px-07.webp"
+     srcset="./imgs/pixly/px-07@0.5x.webp 720w, ./imgs/pixly/px-07.webp 1440w, ./imgs/pixly/px-07@2x.webp 2880w"
+     sizes="100vw"
+     width="1440" height="1024"
+     alt="Pixly Tag Library listing General, Hole, Inspection, Issue, Material Delivery, Observation, PCO-Prime, and PCO-Sub with counts." loading="lazy">
+        <figcaption class="asset-section__caption">Tag names and counts after merging ML labels with field vocabulary.</figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="text-blocks">
+      <div class="cs-wrap text-blocks__wrap">
+        <h2 class="text-blocks__eyebrow">What was validated and what wasn't</h2>
+        <div class="text-blocks__list">
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Validated: tag accuracy.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Exceeded 90% precision on high-confidence construction-specific tags, confirmed through user testing and manual audit. The taxonomy held up against real field vocabulary.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Hypothesis: search adoption.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Target of 60%+ engagement within the first month (up from 23% on date/location filters) requires production deployment to measure.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Scoped out deliberately.</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Collaborative tagging provenance and faceted navigation for mature tag libraries were deferred to production. Co-locating AI and UX for the first sprint would have saved the week lost to async taxonomy back-and-forth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="asset-stack">
+      <section class="assets-duo">
+        <div class="cs-wrap assets-duo__wrap">
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/pixly/px-09.webp"
+              srcset="./imgs/pixly/px-09@0.5x.webp 720w, ./imgs/pixly/px-09.webp 1440w, ./imgs/pixly/px-09@2x.webp 2880w"
+              sizes="(max-width: 600px) 100vw, 50vw"
+              width="1440" height="1024"
+              alt="Pixly desktop photo viewer; Issue tags 1–3 on wall photo; Tags list shows Issue, Pixly AI, for each item." loading="lazy">
+            <figcaption class="assets-duo__caption">Sidebar tag list matches numbered pins on the photo.</figcaption>
+          </figure>
+          <figure class="assets-duo__item">
+            <img class="assets-duo__image" src="./imgs/pixly/px-08.webp"
+              srcset="./imgs/pixly/px-08@0.5x.webp 197w, ./imgs/pixly/px-08.webp 393w, ./imgs/pixly/px-08@2x.webp 786w"
+              sizes="(max-width: 600px) 100vw, 50vw"
+              width="393" height="852"
+              alt="Pixly mobile photo of wall holes with Issue tags numbered 1, 2, and 3; Tag Filter and Tags tabs below." loading="lazy">
+            <figcaption class="assets-duo__caption">Tags appear as numbered pins on the photo.</figcaption>
+          </figure>
+          
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/pixly/px-10.webp"
+      srcset="./imgs/pixly/px-10@0.5x.webp 720w, ./imgs/pixly/px-10.webp 1440w, ./imgs/pixly/px-10@2x.webp 2880w"
+      sizes="100vw"
+      width="1440" height="1024"
+      alt="Pixly General album with five selected photos and Tagging complete button." loading="lazy">
+          <figcaption class="asset-section__caption">Album grid after batch tagging finishes.</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="assets-trio">
+        <div class="cs-wrap assets-trio__wrap">
+          <figure class="assets-trio__item">
+            <img class="assets-trio__image" src="./imgs/pixly/px-11.webp"
+              srcset="./imgs/pixly/px-11@0.5x.webp 197w, ./imgs/pixly/px-11.webp 393w, ./imgs/pixly/px-11@2x.webp 786w"
+              sizes="(max-width: 600px) 33vw, 33vw"
+              width="393" height="852"
+              alt="Pixly mobile Tag Library; search field contains Trash; New Tag and Place a Tag buttons; keyboard open." loading="lazy">
+            <figcaption class="assets-trio__caption">Tag search and placement use the same Tag Library sheet.</figcaption>
+          </figure>
+          <figure class="assets-trio__item">
+            <img class="assets-trio__image" src="./imgs/pixly/px-12.webp"
+              srcset="./imgs/pixly/px-12@0.5x.webp 197w, ./imgs/pixly/px-12.webp 393w, ./imgs/pixly/px-12@2x.webp 786w"
+              sizes="(max-width: 600px) 33vw, 33vw"
+              width="393" height="852"
+              alt="Pixly mobile search field reading Add to your search; feed post shows gate photo labeled General, tag count 1." loading="lazy">
+            <figcaption class="assets-trio__caption">Search bar above feed accepts text and image input.</figcaption>
+          </figure>
+          <figure class="assets-trio__item">
+            <img class="assets-trio__image" src="./imgs/pixly/px-13.webp"
+              srcset="./imgs/pixly/px-13@0.5x.webp 197w, ./imgs/pixly/px-13.webp 393w, ./imgs/pixly/px-13@2x.webp 786w"
+              sizes="(max-width: 600px) 33vw, 33vw"
+              width="393" height="852"
+              alt="Pixly mobile Tag Library for Pixly Evaluation; Issue listed with Count - 3; Add Tag button." loading="lazy">
+            <figcaption class="assets-trio__caption">Issue tag count shown separately from other tag types.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/pixly/px-15.webp"
+      srcset="./imgs/pixly/px-15@0.5x.webp 720w, ./imgs/pixly/px-15.webp 1440w, ./imgs/pixly/px-15@2x.webp 2880w"
+      sizes="100vw"
+      width="1440" height="1024"
+      alt="Pixly Tag Library General view, count 99; menu open with Edit tag and Delete tag options." loading="lazy">
+          <figcaption class="asset-section__caption">General tag grid with edit and delete actions per row.</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="asset-section">
+        <div class="cs-wrap">
+          <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/pixly/px-16.webp"
+      srcset="./imgs/pixly/px-16@0.5x.webp 720w, ./imgs/pixly/px-16.webp 1440w, ./imgs/pixly/px-16@2x.webp 2880w"
+      sizes="100vw"
+      width="1440" height="1024"
+      alt="Pixly photo viewer of wooden gate; Tag Filter tab with Issue filter toggled on." loading="lazy">
+          <figcaption class="asset-section__caption">Issue filter applied in photo viewer sidebar.</figcaption>
+        </figure>
+        </div>
+      </section>
+    </div>
+
+    <section class="finish finish--yellow" data-nav-link-tone="dark" data-nav-theme="paper" aria-label="Results and contact">
+      <div class="finish__track">
+        <div class="finish__sticky">
+          <div class="finish__bg" aria-hidden="true"></div>
+          <div class="finish__stage">
+            <div class="finish__act finish__act--proof">
+              <div class="cs-wrap results-section__wrap">
+                <h2 class="results-section__eyebrow">Results</h2>
+                <div class="results-section__quote">
+                  <blockquote class="results-section__pullquote">
+                    <span class="results-section__quote-text">“Pixly saves us time and resources and has streamlined our photo documentation process. It's an absolute game-changer!”</span>
+                  </blockquote>
+                  <p class="results-section__cite">
+                    <strong>Tim Van Hook</strong>
+                    <span class="results-section__cite-role">Director of Learning &amp; Development, Kitchen Saver</span>
+                  </p>
+                </div>
+                <p class="results-section__summary">Tag accuracy validated above 90% precision during the AWS-funded POC. The path to full deployment is open—with $1M+ pipeline unlocked with Kiewit, Granite, and Kahua.</p>
+              </div>
+            </div>
+            <div class="finish__act finish__act--cta">
+              <div class="closing-cta__inner cs-wrap">
+                <p id="closing-cta-headline" class="closing-cta__headline">
+                  <span class="cs-line-mask"><span class="cs-line">Your rivals expect you</span></span>
+                  <span class="cs-line-mask"><span class="cs-line">to sleep on your UX.</span></span>
+                  <span class="cs-line-mask"><span class="cs-line">They thrive</span></span>
+                  <span class="cs-line-mask"><span class="cs-line">on what you ignore.</span></span>
+                  <span class="cs-line-mask"><span class="cs-line"><a href="https://forms.gle/cHUEEu3JhBvc7hF57" class="btn">Prove them wrong</a></span></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-handoff project-handoff--brown" data-nav-theme="brown" aria-label="Next project">
+      <a href="./odl" class="project-handoff__target"><span class="sr-only">Continue to Open Door Legal</span></a>
+      <p class="project-handoff__label">Next project</p>
+      <p class="project-handoff__title">Ethics review. Salesforce. 80 NPS.</p>
+      <p class="project-handoff__lede">Infrastructure for Legal Tech</p>
+      <p class="project-handoff__stat">NPS 80</p>
+      <img class="project-handoff__image"
+           src="./imgs/odl/showcase-01.webp"
+           srcset="./imgs/odl/showcase-01@0.5x.webp 960w, ./imgs/odl/showcase-01.webp 1920w, ./imgs/odl/showcase-01@2x.webp 3840w"
+           sizes="(max-width: 600px) 85vw, 400px"
+           width="1920" height="1080"
+           alt="" aria-hidden="true" loading="lazy">
+      <p class="project-handoff__hint">Keep scrolling</p>
+      <div class="project-handoff__progress" aria-hidden="true">
+        <div class="project-handoff__progress-bar"></div>
+      </div>
+      <a href="./odl" class="project-handoff__skip">Continue to Open Door Legal</a>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="./js/hero-gallery.js"></script>
+  <script src="./js/case-study.js"></script>
+</body>
+</html>

@@ -1,15 +1,8 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+/* TEAM */
+Daniel Mason — Senior UX Designer, danielgmason.com
 
-# TEAM
+/* SITE */
+San Francisco, CA · Remote available
 
-    Daniel - Solopreneur
-
-# THANKS
-
-    <name>
-
-# TECHNOLOGY COLOPHON
-
-    CSS3, HTML5, SCSS
-    Apache Server Configs, Normalize.css
+/* THANKS */
+Montserrat, Libre Baskerville, Tiempos Fine, Normalize.css, GSAP

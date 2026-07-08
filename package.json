@@ -1,0 +1,16 @@
+{
+  "name": "designerdan-portfolio",
+  "private": true,
+  "devDependencies": {
+    "sharp": "^0.34.2",
+    "stylelint": "^16.18.0",
+    "stylelint-config-standard": "^38.0.0"
+  },
+  "scripts": {
+    "build:images": "node scripts/convert-case-images.mjs --remove-jpg",
+    "build:images:pixly": "node scripts/convert-case-images.mjs imgs/pixly",
+    "build:images:odl": "node scripts/convert-case-images.mjs imgs/odl --remove-jpg",
+    "validate:html": "npx --yes html-validate '*.html'",
+    "lint:css": "npx --yes stylelint 'css/**/*.css'"
+  }
+}
