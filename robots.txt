@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# AI discovery: https://www.danielgmason.com/llms.txt
-Sitemap: https://www.danielgmason.com/sitemap.xml
+# AI discovery: https://designerdan.github.io/llms.txt
+Sitemap: https://designerdan.github.io/sitemap.xml

@@ -1,6 +1,6 @@
 # Daniel Mason — Full site content
 
-> Complete text export of danielgmason.com for LLM ingestion. Companion to [llms.txt](https://www.danielgmason.com/llms.txt). Generated from public HTML pages. Images are omitted; captions are preserved where present.
+> Complete text export of designerdan.github.io for LLM ingestion. Companion to [llms.txt](https://designerdan.github.io/llms.txt). Generated from public HTML pages. Images are omitted; captions are preserved where present.
 
 **Contact:** https://forms.gle/cHUEEu3JhBvc7hF57 · **LinkedIn:** https://linkedin.com/in/designemissary · **Location:** San Francisco, remote available
 
@@ -8,7 +8,7 @@
 
 # Home
 
-Source: https://www.danielgmason.com/
+Source: https://designerdan.github.io/
 
 ## Designer of software worth millions. $860M to be exact.
 
@@ -37,7 +37,7 @@ Contributions: Discovery, Workflows, Exec Buy-in
 
 # About
 
-Source: https://www.danielgmason.com/about
+Source: https://designerdan.github.io/about
 
 ## 12 years in. More whiteboard than mockup. Why before how.
 
@@ -121,7 +121,7 @@ If you value style, craft, and consideration from the people you work with — w
 
 # Zix — Unifying apps across a merger
 
-Source: https://www.danielgmason.com/zix
+Source: https://designerdan.github.io/zix
 
 ## Unifying apps across a merger
 
@@ -234,7 +234,7 @@ $1M+ pipeline
 
 # Pixly — AI vision for construction photos
 
-Source: https://www.danielgmason.com/pixly
+Source: https://designerdan.github.io/pixly
 
 ## AI vision for construction photos
 
@@ -354,7 +354,7 @@ Search that speaks their language, not a bolt-on feature.
 
 # Open Door Legal — Infrastructure for Legal Tech
 
-Source: https://www.danielgmason.com/odl
+Source: https://designerdan.github.io/odl
 
 ## Infrastructure for Legal Tech
 

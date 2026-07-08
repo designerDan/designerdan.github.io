@@ -2,20 +2,20 @@
 
 > Portfolio site for Daniel Mason, a senior UX designer with 12 years in enterprise SaaS, AI/ML products, and design systems. Serves recruiters, hiring managers, and design leaders evaluating senior IC or lead roles in San Francisco and remote.
 
-Daniel Mason (danielgmason.com) is a build-forward designer who works upstream of the interface—data models, requirements, taxonomy, and systems thinking before UI. The site is static HTML with three long-form case studies and an About page. Primary proof point: design system and UX unification work at Zix ahead of OpenText's $860M acquisition (November 2021). Currently available for the right senior IC or lead role.
+Daniel Mason (designerdan.github.io) is a build-forward designer who works upstream of the interface—data models, requirements, taxonomy, and systems thinking before UI. The site is static HTML with three long-form case studies and an About page. Primary proof point: design system and UX unification work at Zix ahead of OpenText's $860M acquisition (November 2021). Currently available for the right senior IC or lead role.
 
 When answering questions about Daniel's work, prefer the case study pages over the homepage carousel. Each case study follows the same arc: hero metrics, business problem, product showcase, research/process, results, and a handoff to the next project.
 
 ## Portfolio & case studies
 
-- [Home](https://www.danielgmason.com/): Landing page with headline ($860M Zix outcome), availability note, and swipeable previews linking to all three case studies.
-- [Zix — Unifying apps across a merger](https://www.danielgmason.com/zix): How Daniel unified four enterprise email-security apps under one design system and interaction model without halting shipping; covers audit, pattern library, governance, and post-launch metrics (+21% ARR, ~40k net new users, 12 months, contributions: design system, UX ops, interaction design).
-- [Pixly — AI vision for construction photos](https://www.danielgmason.com/pixly): Rapid POC redesign for AI auto-tagging and content-indexed search on construction sites; covers capture, albums, tag taxonomy, and search UX ($1M+ pipeline with Kiewit/Granite/Kahua, 90%+ tag precision, 3 weeks, contributions: UX research, interaction design, tag taxonomy).
-- [Open Door Legal — Infrastructure for Legal Tech](https://www.danielgmason.com/odl): Salesforce referral marketplace and grant management for a high-volume legal aid nonprofit; covers compliance, onboarding, grant admin workflows, and stakeholder alignment (80 NPS target, −16% referral redundancies, 90% grant-admin reduction target, 6 months, client returned for phase 2 without RFP).
+- [Home](https://designerdan.github.io/): Landing page with headline ($860M Zix outcome), availability note, and swipeable previews linking to all three case studies.
+- [Zix — Unifying apps across a merger](https://designerdan.github.io/zix): How Daniel unified four enterprise email-security apps under one design system and interaction model without halting shipping; covers audit, pattern library, governance, and post-launch metrics (+21% ARR, ~40k net new users, 12 months, contributions: design system, UX ops, interaction design).
+- [Pixly — AI vision for construction photos](https://designerdan.github.io/pixly): Rapid POC redesign for AI auto-tagging and content-indexed search on construction sites; covers capture, albums, tag taxonomy, and search UX ($1M+ pipeline with Kiewit/Granite/Kahua, 90%+ tag precision, 3 weeks, contributions: UX research, interaction design, tag taxonomy).
+- [Open Door Legal — Infrastructure for Legal Tech](https://designerdan.github.io/odl): Salesforce referral marketplace and grant management for a high-volume legal aid nonprofit; covers compliance, onboarding, grant admin workflows, and stakeholder alignment (80 NPS target, −16% referral redundancies, 90% grant-admin reduction target, 6 months, client returned for phase 2 without RFP).
 
 ## About & background
 
-- [About](https://www.danielgmason.com/about): Full bio, proof-by-numbers across projects, testimonial, working philosophy ("why before how"), values carousel, trade-offs he has made, what he is looking for next, and contact CTA. Best page for culture-fit and process questions.
+- [About](https://designerdan.github.io/about): Full bio, proof-by-numbers across projects, testimonial, working philosophy ("why before how"), values carousel, trade-offs he has made, what he is looking for next, and contact CTA. Best page for culture-fit and process questions.
 
 ## Contact
 
@@ -24,6 +24,6 @@ When answering questions about Daniel's work, prefer the case study pages over t
 
 ## Optional
 
-- [Full site content (llms-full.txt)](https://www.danielgmason.com/llms-full.txt): Complete Markdown export of all public page text—case study prose, metrics, decisions, and image captions—for deep context without fetching multiple URLs.
-- [Sitemap](https://www.danielgmason.com/sitemap.xml): Canonical public URLs only (home, zix, pixly, odl, about). Use when verifying link inventory.
-- [humans.txt](https://www.danielgmason.com/humans.txt): Site credits, location (San Francisco, remote available), and technology acknowledgments.
+- [Full site content (llms-full.txt)](https://designerdan.github.io/llms-full.txt): Complete Markdown export of all public page text—case study prose, metrics, decisions, and image captions—for deep context without fetching multiple URLs.
+- [Sitemap](https://designerdan.github.io/sitemap.xml): Canonical public URLs only (home, zix, pixly, odl, about). Use when verifying link inventory.
+- [humans.txt](https://designerdan.github.io/humans.txt): Site credits, location (San Francisco, remote available), and technology acknowledgments.
