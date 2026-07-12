@@ -163,11 +163,10 @@
   }
 
   .project-hero--fold .project-hero__gallery-item {
-    aspect-ratio: 1916 / 1491;
+    aspect-ratio: var(--gallery-aspect-ratio, 16 / 10);
     flex-shrink: 0;
     height: 100%;
     margin: 0;
-    max-width: min(88vw, 46rem);
     min-width: 14rem;
     overflow: hidden;
     position: relative;
@@ -176,18 +175,18 @@
 
   @media (width >= 901px) {
     .project-hero--fold .project-hero__gallery-item {
-      max-width: min(54vw, 46rem);
+      min-width: 16rem;
     }
   }
 
   .project-hero--fold .project-hero__gallery-image {
     height: 100%;
-    left: -7.5%;
+    left: -4%;
     object-fit: cover;
     object-position: top center;
     position: absolute;
     top: 0;
-    width: 115%;
+    width: 108%;
     will-change: transform;
   }
 
@@ -363,8 +362,7 @@
 
     .project-hero--fold .project-hero__gallery-item {
       height: 100%;
-      max-width: 88vw;
-      min-width: 78vw;
+      min-width: 0;
       width: auto;
     }
 

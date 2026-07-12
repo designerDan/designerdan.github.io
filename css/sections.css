@@ -64,22 +64,6 @@
     }
   }
 
-  .text-section__prose .btn {
-    margin-top: 2.5rem;
-    max-width: 36rem;
-  }
-
-  @media (width <= 600px) {
-    .text-section__prose .btn {
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
-      max-width: none;
-      text-align: center;
-      width: 100%;
-    }
-  }
-
   .text-section__work-grid {
     display: grid;
     gap: clamp(2rem, 5vw, 3rem);

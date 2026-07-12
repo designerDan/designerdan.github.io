@@ -22,6 +22,7 @@ Use **Zix** (`zix.html`) as the reference page. Copy its structure; swap content
    - Yellow: `data-accent-theme="yellow"` + `data-nav-link-tone="dark"`
    - Brown: `data-accent-theme="brown"` + `data-nav-link-tone="light"`
    - Add `[data-hero-gallery]` wrapper if using horizontal gallery images
+   - Set `--gallery-aspect-ratio: W / H` on `[data-hero-gallery]` to match that project’s showcase export size (same for every image in the set)
 
 5. **Content sections** — reuse canonical blocks in order:
    - `text-section` → `asset-section` / `assets-duo` / `assets-trio` → `banner-showroom` → `product-showcase` → `text-blocks`

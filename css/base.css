@@ -187,6 +187,7 @@ blockquote > p {
   letter-spacing: 0.08em;
   line-height: 1.25;
   padding: 1.5rem;
+  margin-top: 2.5rem;
   text-decoration: none;
   text-transform: uppercase;
   transition:
