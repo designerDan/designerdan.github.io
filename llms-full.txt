@@ -130,7 +130,7 @@ Source: https://designerdan.github.io/zix
 - **$860M** — OpenText acquisition, Nov 2021
 - **21%** — ARR increase post-launch
 - **~40k** — net new users
-- **4** — sotwares merged
+- **4** — softwares merged
 
 **Project details**
 
