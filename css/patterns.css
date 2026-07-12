@@ -1,0 +1,264 @@
+/* Shared layout patterns — one rule, many components */
+
+/* Section vertical rhythm */
+:is(.text-section, .text-blocks, .banner-showroom, .text-cta, .product-showcase) {
+  margin-block: var(--section-gap-sm) 0;
+}
+
+@media (width >= 601px) {
+  :is(.text-section, .text-blocks, .banner-showroom, .text-cta, .product-showcase) {
+    margin-block: var(--section-gap-lg) 0;
+  }
+}
+
+.finish {
+  margin-block: var(--section-gap-sm) 0 0;
+}
+
+@media (width >= 601px) {
+  .finish {
+    margin-block-start: var(--section-gap-lg);
+  }
+}
+
+/* Asset block rhythm */
+:is(.asset-section, .assets-trio) {
+  margin-block: var(--asset-gap-sm);
+}
+
+@media (width >= 601px) {
+  :is(.asset-section, .assets-trio) {
+    margin-block: var(--asset-gap-lg);
+  }
+
+  .assets-duo {
+    margin-block: var(--asset-gap-lg);
+  }
+}
+
+@media (width <= 600px) {
+  .assets-duo {
+    margin-block: var(--section-gap-sm) 0;
+  }
+}
+
+/* Section intro divider */
+:is(.text-section__wrap, .text-blocks__wrap, .product-showcase__wrap) {
+  border-top: 1px solid var(--color-black);
+  padding-top: 1.5rem;
+}
+
+@media (width >= 601px) {
+  :is(.text-section__wrap, .text-blocks__wrap) {
+    padding-top: 2rem;
+  }
+
+  .product-showcase__wrap {
+    padding-top: 2rem;
+  }
+}
+
+/* Asset captions + duo/trio images */
+:is(.asset-section__caption, .assets-duo__caption, .assets-trio__caption) {
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  font-style: italic;
+  margin: 0.75rem 0 0;
+  text-align: left;
+}
+
+:is(.assets-duo__image, .assets-trio__image) {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* Centered proof / CTA column */
+:is(.text-cta__wrap, .results-section__wrap) {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+:is(.text-cta__headline, .results-section__quote) {
+  margin: 3rem 0;
+  max-width: 120rem;
+  text-align: center;
+}
+
+@media (width >= 601px) {
+  :is(.text-cta__headline, .results-section__quote) {
+    margin: 4rem 0;
+  }
+}
+
+:is(.text-cta__body, .results-section__summary) {
+  max-width: 47ch;
+  width: 100%;
+}
+
+.text-cta__eyebrow,
+.results-section__eyebrow {
+  justify-content: center;
+}
+
+/* Finish act layers */
+.finish__act {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  opacity: 0;
+  padding: clamp(4rem, 10vh, 8rem) var(--page-margin);
+  pointer-events: none;
+  position: absolute;
+}
+
+@media (width >= 601px) {
+  .finish__act {
+    padding-inline: var(--page-margin-lg);
+  }
+}
+
+.finish__act--proof {
+  overflow: clip;
+  z-index: 2;
+}
+
+.finish__act--cta {
+  color: var(--color-white);
+  z-index: 3;
+}
+
+/* Accent surfaces (hero + finish) */
+[data-accent-theme="yellow"] {
+  --surface-bg: var(--color-yellow);
+  --surface-fg: var(--color-brown);
+  --surface-accent: var(--color-brand);
+  --surface-meta-border: color-mix(in srgb, var(--color-brown) 35%, transparent);
+  --case-nav-link-tone: dark;
+}
+
+[data-accent-theme="brown"] {
+  --surface-bg: var(--color-brown);
+  --surface-fg: var(--color-white);
+  --surface-accent: var(--color-yellow);
+  --case-nav-link-tone: light;
+}
+
+.project-hero--fold[data-accent-theme] {
+  background: var(--surface-bg);
+  color: var(--surface-fg);
+}
+
+.project-hero--fold[data-accent-theme="yellow"] :is(.project-hero__title, .project-hero__stat-label, .project-hero__meta :is(dt, dd)) {
+  color: var(--surface-fg);
+}
+
+.project-hero--fold[data-accent-theme] .project-hero__stat-value {
+  color: var(--surface-accent);
+}
+
+.project-hero--fold[data-accent-theme="yellow"] .project-hero__meta {
+  border-top-color: var(--surface-meta-border);
+}
+
+.finish[data-accent-theme="yellow"] .finish__bg {
+  background: var(--surface-bg);
+}
+
+.finish[data-accent-theme="yellow"] :is(.finish__act--cta, .closing-cta__headline) {
+  color: var(--surface-fg);
+}
+
+.finish[data-accent-theme="brown"] .finish__bg {
+  background: var(--surface-bg);
+}
+
+/* Handoff theme surfaces */
+.project-handoff {
+  --handoff-bg: var(--color-yellow);
+  --handoff-fg: var(--color-brown);
+  --handoff-emphasis: var(--color-brown);
+  --handoff-progress-track: color-mix(in srgb, var(--color-brown) 15%, transparent);
+  --handoff-focus: var(--color-brown);
+
+  background: var(--handoff-bg);
+  color: var(--handoff-fg);
+}
+
+.project-handoff[data-nav-theme="brown"],
+.project-handoff[data-nav-theme="brand"] {
+  --handoff-fg: var(--color-white);
+  --handoff-emphasis: var(--color-yellow);
+  --handoff-focus: var(--color-white);
+}
+
+.project-handoff[data-nav-theme="brown"] {
+  --handoff-bg: var(--color-brown);
+  --handoff-progress-track: color-mix(in srgb, var(--color-white) 20%, transparent);
+}
+
+.project-handoff[data-nav-theme="brand"] {
+  --handoff-bg: var(--color-brand);
+  --handoff-progress-track: color-mix(in srgb, var(--color-white) 25%, transparent);
+}
+
+.project-handoff__target:focus-visible {
+  outline: 3px solid var(--handoff-focus);
+  outline-offset: -6px;
+}
+
+.project-handoff__hint,
+.project-handoff[data-nav-theme="brown"] .project-handoff__stat,
+.project-handoff[data-nav-theme="brand"] .project-handoff__stat {
+  color: var(--handoff-emphasis);
+}
+
+.project-handoff__progress {
+  background: var(--handoff-progress-track);
+}
+
+/* Sticky scroll track (finish + about bene) */
+.scroll-track {
+  position: relative;
+}
+
+:is(.finish__sticky, .about-bene__sticky) {
+  height: 100svh;
+  overflow: clip;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.finish__track {
+  height: 400vh;
+}
+
+.about-bene__track {
+  height: 300vh;
+}
+
+/* Image hover zoom */
+@media (hover: hover) and (pointer: fine) {
+  :is(.product-showcase__item, .about-work__link):is(:hover, :focus-visible) :is(.product-showcase__image, .about-work__image) {
+    transform: scale(1.04);
+  }
+}
+
+.product-showcase__image,
+.about-work__image {
+  transition: transform 0.45s var(--ease-out-quart);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-showcase__image,
+  .about-work__image {
+    transition: none;
+  }
+
+  :is(.product-showcase__item, .about-work__link):hover :is(.product-showcase__image, .about-work__image) {
+    transform: none;
+  }
+}

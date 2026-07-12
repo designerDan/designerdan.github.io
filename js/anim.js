@@ -16,7 +16,7 @@ function initLandingAnim() {
   const headline = document.querySelector(".landing-headline");
   const lockup = document.querySelector(".site-head__lockup");
   const nav = document.querySelector(".site-head__nav");
-  let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let reducedMotion = prefersReducedMotion();
   let activeColIndex = -1;
 
   function formatStat(el, value) {
@@ -491,8 +491,4 @@ function initLandingAnim() {
   });
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initLandingAnim);
-} else {
-  initLandingAnim();
-}
+onReady(initLandingAnim);

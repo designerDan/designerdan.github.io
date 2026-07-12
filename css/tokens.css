@@ -49,6 +49,8 @@
   --section-gap-lg: 15rem;
   --page-margin: 2rem;
   --page-margin-lg: 4rem;
+  --asset-gap-sm: 3rem;
+  --asset-gap-lg: 4rem;
   --site-head-height: 5.75rem;
 }
 

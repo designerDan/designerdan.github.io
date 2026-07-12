@@ -1,26 +1,12 @@
 /**
  * Case study + About page motion — line-mask reveals, scroll-reveal, nav sync
+ * Depends on shared.js for motion utilities.
  */
-
-function prefersReducedMotion() {
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
 
 const FINISH_BRAND_THRESHOLD = 0.35;
 const FINISH_LINE_START = 0.5;
 const FINISH_LINE_HIDE = 0.46;
 const FINISH_LINE_STAGGER = 0.07;
-
-function clampFinish(value, min = 0, max = 1) {
-  return Math.min(max, Math.max(min, value));
-}
-
-function getFinishProgress(track) {
-  if (!track) return 0;
-  const range = track.offsetHeight - window.innerHeight;
-  if (range <= 0) return 0;
-  return clampFinish(-track.getBoundingClientRect().top / range);
-}
 
 function sectionCoversNavBand(el, navH) {
   if (!el) return false;
@@ -167,14 +153,8 @@ function initCaseStudy() {
 
   const reduced = prefersReducedMotion();
 
-  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-    document.querySelectorAll(".cs-line-mask").forEach((mask) => {
-      mask.classList.add("is-revealed");
-    });
-    document.querySelectorAll(".scroll-reveal").forEach((el) => {
-      el.style.opacity = "1";
-      el.style.transform = "none";
-    });
+  if (!hasMotionLibs()) {
+    revealStaticMotion();
     initProjectHandoff(reduced);
     initBannerShowroom(reduced);
     initFinishSequence(true);
@@ -185,60 +165,8 @@ function initCaseStudy() {
   document.body.classList.add("motion-ready");
   gsap.registerPlugin(ScrollTrigger);
 
-  const lines = gsap.utils.toArray(".cs-line-mask .cs-line");
-  if (lines.length) {
-    if (reduced) {
-      lines.forEach((line) => {
-        if (line.closest(".finish")) return;
-        gsap.set(line, { yPercent: 0 });
-      });
-    } else {
-      lines.forEach((line, i) => {
-        if (line.closest(".finish")) return;
-
-        gsap.set(line, { yPercent: 110 });
-        ScrollTrigger.create({
-          trigger: line.closest(".banner-showroom, .text-blocks, section") || line,
-          start: "top 82%",
-          once: true,
-          onEnter: () => {
-            line.closest(".cs-line-mask")?.classList.add("is-revealed");
-            gsap.to(line, {
-              yPercent: 0,
-              duration: 0.95,
-              delay: i * 0.07,
-              ease: "power3.out",
-            });
-          },
-        });
-      });
-    }
-  }
-
-  if (reduced) {
-    document.querySelectorAll(".scroll-reveal").forEach((el) => {
-      gsap.set(el, { opacity: 1, y: 0 });
-    });
-  } else {
-    gsap.utils.toArray(".scroll-reveal").forEach((el) => {
-      if (el.closest(".finish")) return;
-
-      gsap.set(el, { opacity: 0, y: 24 });
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top 88%",
-        once: true,
-        onEnter: () => {
-          gsap.to(el, {
-            opacity: 1,
-            y: 0,
-            duration: 0.9,
-            ease: "power3.out",
-          });
-        },
-      });
-    });
-  }
+  initLineMaskReveals(".cs-line-mask .cs-line", { reduced, excludeSelector: ".finish" });
+  initScrollReveals(".scroll-reveal", { reduced, excludeSelector: ".finish" });
 
   initProjectHandoff(reduced);
   initBannerShowroom(reduced);
@@ -246,42 +174,17 @@ function initCaseStudy() {
   initFinishSequence(reduced);
   initSiteHeadTheme();
 
-  ScrollTrigger.refresh();
-  syncSiteHeadTheme();
-
-  window.addEventListener(
-    "load",
-    () => {
-      syncSiteHeadMetrics();
-      ScrollTrigger.refresh();
-      syncSiteHeadTheme();
-    },
-    { once: true }
-  );
-
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      syncSiteHeadMetrics();
-      ScrollTrigger.refresh();
-      syncSiteHeadTheme();
-    }, 150);
-  });
+  window.addEventListener("load", () => refreshScrollLayout({ sync: syncSiteHeadTheme }), { once: true });
+  onDebouncedResize(() => refreshScrollLayout({ sync: syncSiteHeadTheme }));
 }
 
 function initSiteHeadTheme(useFallback) {
   if (!document.querySelector(".site-head")) return;
-
-  syncSiteHeadTheme();
-
-  if (!useFallback && typeof ScrollTrigger !== "undefined") {
-    ScrollTrigger.addEventListener("scroll", syncSiteHeadTheme);
-    ScrollTrigger.addEventListener("refresh", syncSiteHeadTheme);
+  if (useFallback) {
+    syncSiteHeadTheme();
+    return;
   }
-
-  window.addEventListener("scroll", syncSiteHeadTheme, { passive: true });
-  window.addEventListener("resize", syncSiteHeadTheme, { passive: true });
+  initNavListeners(syncSiteHeadTheme);
 }
 
 function initSiteHeadHideOnScroll(reduced) {
@@ -505,7 +408,7 @@ function initFinishSequence(reduced) {
   };
 
   const updateFinish = () => {
-    const progress = getFinishProgress(track);
+    const progress = getStickyTrackProgress(track);
 
     sticky.style.setProperty("--finish-p", progress.toFixed(4));
 
@@ -648,21 +551,6 @@ function initProjectHandoff(reduced) {
   );
 }
 
-function revealAllAboutLineMasks() {
-  document.querySelectorAll(".about-page .cs-line-mask").forEach((mask) => {
-    mask.classList.add("is-revealed");
-    const line = mask.querySelector(".cs-line");
-    if (line) line.style.transform = "none";
-  });
-}
-
-function getBeneProgress(track) {
-  if (!track) return 0;
-  const range = track.offsetHeight - window.innerHeight;
-  if (range <= 0) return 0;
-  return clampFinish(-track.getBoundingClientRect().top / range);
-}
-
 function initAboutBeneCarousel(reduced) {
   const section = document.querySelector(".about-bene");
   const track = section?.querySelector("[data-bene-track]");
@@ -743,7 +631,7 @@ function initAboutBeneCarousel(reduced) {
     setSlide(0);
     const onScroll = () => {
       if (isProgrammaticScroll) return;
-      const idx = progressToIndex(getBeneProgress(track));
+      const idx = progressToIndex(getStickyTrackProgress(track));
       if (idx !== activeIndex) setSlide(idx);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -824,123 +712,38 @@ function initAboutIntroHero(reduced) {
 }
 
 function initAboutLineMasks(reduced) {
-  const selectors =
-    ".about-contact .cs-line-mask .cs-line";
-  const lines =
-    typeof gsap !== "undefined"
-      ? gsap.utils.toArray(selectors)
-      : [...document.querySelectorAll(selectors)];
-
-  if (!lines.length) return;
-
-  if (reduced || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-    lines.forEach((line) => {
-      line.closest(".cs-line-mask")?.classList.add("is-revealed");
-      if (typeof gsap !== "undefined") gsap.set(line, { yPercent: 0 });
-    });
-    return;
-  }
-
-  lines.forEach((line) => {
-    gsap.set(line, { yPercent: 110 });
-    ScrollTrigger.create({
-      trigger: line.closest("section, .text-section") || line,
-      start: "top 82%",
-      once: true,
-      onEnter: () => {
-        line.closest(".cs-line-mask")?.classList.add("is-revealed");
-        gsap.to(line, { yPercent: 0, duration: 0.95, ease: "power3.out" });
-      },
-    });
+  initLineMaskReveals(".about-contact .cs-line-mask .cs-line", {
+    reduced,
+    excludeSelector: null,
+    triggerSelector: "section, .text-section",
+    stagger: 0,
   });
 }
 
 function initAboutQuoteBand(reduced) {
-  const quote = document.querySelector(".about-quote");
-  const block = quote?.querySelector(".about-quote__quote");
-  if (!quote || !block) return;
-
-  if (reduced || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-
-  gsap.set(block, { opacity: 0, y: 20 });
-  ScrollTrigger.create({
-    trigger: quote,
-    start: "top 78%",
-    once: true,
-    onEnter: () => {
-      gsap.to(block, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" });
-    },
-  });
+  const block = document.querySelector(".about-quote__quote");
+  if (!block) return;
+  initScrollReveals(block, { reduced, start: "top 78%", y: 20 });
 }
 
 function initAboutContactReveal(reduced) {
   const contact = document.querySelector(".about-contact");
   const inner = contact?.querySelector(".about-contact__inner");
-  if (!contact || !inner) return;
+  if (!inner) return;
 
-  if (reduced || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+  if (reduced || !hasMotionLibs()) {
     inner.style.opacity = "1";
     return;
   }
 
   document.body.classList.add("about-contact--js");
-  gsap.set(inner, { opacity: 0 });
-  ScrollTrigger.create({
-    trigger: contact,
-    start: "top 78%",
-    once: true,
-    onEnter: () => {
-      gsap.to(inner, { opacity: 1, duration: 0.9, ease: "power3.out" });
-    },
-  });
+  initScrollReveals(inner, { reduced, start: "top 78%", y: 0 });
 }
 
 function initAboutReveals(reduced) {
-  const items = [
-    ...document.querySelectorAll(
-      ".about-proof__stat, .about-work__card, .about-page .text-blocks__item, .about-looking__text"
-    ),
-  ];
-  if (!items.length) return;
-
-  if (reduced || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-    items.forEach((el) => {
-      el.style.opacity = "1";
-      el.style.transform = "none";
-    });
-    return;
-  }
-
-  items.forEach((el) => {
-    gsap.set(el, { opacity: 0, y: 22 });
-    ScrollTrigger.create({
-      trigger: el,
-      start: "top 88%",
-      once: true,
-      onEnter: () => {
-        gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" });
-      },
-    });
-  });
-}
-
-function initAboutNav() {
-  syncSiteHeadMetrics();
-  syncAboutNav();
-
-  if (typeof ScrollTrigger !== "undefined") {
-    ScrollTrigger.addEventListener("scroll", syncAboutNav);
-    ScrollTrigger.addEventListener("refresh", syncAboutNav);
-  }
-
-  window.addEventListener("scroll", syncAboutNav, { passive: true });
-  window.addEventListener(
-    "resize",
-    () => {
-      syncSiteHeadMetrics();
-      syncAboutNav();
-    },
-    { passive: true }
+  initScrollReveals(
+    ".about-proof__stat, .about-work__card, .about-page .text-blocks__item, .about-looking__text",
+    { reduced, y: 22, duration: 0.8 }
   );
 }
 
@@ -960,24 +763,13 @@ function initAbout() {
   initAboutQuoteBand(reduced);
   initAboutContactReveal(reduced);
   initAboutReveals(reduced);
-  initAboutNav();
+  initNavListeners(syncAboutNav);
 
-  const refresh = () => {
-    syncSiteHeadMetrics();
-    if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
-    syncAboutNav();
-  };
+  window.addEventListener("load", () => refreshScrollLayout({ sync: syncAboutNav }), { once: true });
+  onDebouncedResize(() => refreshScrollLayout({ sync: syncAboutNav }));
 
-  window.addEventListener("load", refresh, { once: true });
-
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(refresh, 150);
-  });
-
-  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-    revealAllAboutLineMasks();
+  if (!hasMotionLibs()) {
+    revealStaticMotion();
   }
 }
 
@@ -986,6 +778,7 @@ function initApp() {
 
   if (document.body.classList.contains("case-page")) {
     initCaseStudy();
+    initHeroGallery();
   }
 
   if (document.body.classList.contains("about-page")) {
@@ -997,8 +790,4 @@ function initApp() {
   }
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initApp);
-} else {
-  initApp();
-}
+onReady(initApp);

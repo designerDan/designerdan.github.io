@@ -1,18 +1,7 @@
 /**
  * Horizontal hero gallery — smooth scroll + image parallax
+ * Depends on shared.js for motion utilities.
  */
-
-function hgLerp(start, end, factor) {
-  return start * (1 - factor) + end * factor;
-}
-
-function hgClamp(min, max, value) {
-  return Math.max(min, Math.min(max, value));
-}
-
-function prefersReducedMotion() {
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
 
 class HeroGallery {
   constructor(root) {
@@ -46,8 +35,8 @@ class HeroGallery {
   setLimit() {
     if (!this.track || !this.viewport) return;
     this.scroll.limit = Math.max(0, this.track.scrollWidth - this.viewport.clientWidth);
-    this.scroll.target = hgClamp(0, this.scroll.limit, this.scroll.target);
-    this.scroll.current = hgClamp(0, this.scroll.limit, this.scroll.current);
+    this.scroll.target = clamp(this.scroll.target, 0, this.scroll.limit);
+    this.scroll.current = clamp(this.scroll.current, 0, this.scroll.limit);
   }
 
   isHeroVisible() {
@@ -104,7 +93,7 @@ class HeroGallery {
 
       const rect = parent.getBoundingClientRect();
       const elementCenter = rect.left + rect.width * 0.5;
-      const t = hgClamp((elementCenter - viewportCenter) / viewportCenter, -1, 1);
+      const t = clamp((elementCenter - viewportCenter) / viewportCenter, -1, 1);
       const shift = -t * maxShift;
 
       image.style.transform = `translate3d(${shift}%, 0, 0)`;
@@ -125,8 +114,8 @@ class HeroGallery {
   }
 
   render() {
-    this.scroll.target = hgClamp(0, this.scroll.limit, this.scroll.target);
-    this.scroll.current = hgLerp(this.scroll.current, this.scroll.target, this.scroll.ease);
+    this.scroll.target = clamp(this.scroll.target, 0, this.scroll.limit);
+    this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
 
     if (this.track) {
       const x = this.scroll.current < 0.01 ? 0 : -this.scroll.current;
@@ -148,10 +137,4 @@ function initHeroGallery() {
   const root = document.querySelector("[data-hero-gallery]");
   if (!root) return null;
   return new HeroGallery(root);
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initHeroGallery);
-} else {
-  initHeroGallery();
 }
