@@ -1,6 +1,6 @@
 # Daniel Mason
 
-> Portfolio site for Daniel Mason, a senior UX designer with 12 years in enterprise SaaS, AI/ML products, and design systems. Serves recruiters, hiring managers, and design leaders evaluating senior IC or lead roles in San Francisco and remote.
+> Portfolio site for Daniel Mason, a UX designer with 12 years in enterprise SaaS, AI/ML products, and design systems. Serves recruiters, hiring managers, and design leaders evaluating founding designer or lead roles in San Francisco and remote.
 
 Daniel Mason (designerdan.github.io) is a build-forward designer who works upstream of the interface—data models, requirements, taxonomy, and systems thinking before UI. The site is static HTML with three long-form case studies and an About page. Primary proof point: design system and UX unification work at Zix ahead of OpenText's $860M acquisition (November 2021). Currently available for the right senior IC or lead role.
 
