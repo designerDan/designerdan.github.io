@@ -167,6 +167,14 @@
       grid-column: 11 / 24;
     }
 
+    .assets-duo.v2.is-rev .assets-duo__item:first-child {
+      grid-column: 2 / 6;
+    }
+
+    .assets-duo.v2.is-rev .assets-duo__item:nth-child(2) {
+      grid-column: 6 / 23;
+    }
+
     .assets-duo.is-even .assets-duo__item:first-child {
       grid-column: 1 / 13;
     }

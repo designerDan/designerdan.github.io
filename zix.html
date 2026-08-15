@@ -179,11 +179,11 @@
         <h2 class="text-cta__eyebrow">The business problem</h2>
         <p class="text-cta__headline">
           <span class="cs-line-mask"><span class="cs-line">Zix was operating separate softwares,</span></span>
-          <span class="cs-line-mask"><span class="cs-line">neither of them sharing</span></span>
-          <span class="cs-line-mask"><span class="cs-line">a design language, interaction</span></span>
-          <span class="cs-line-mask"><span class="cs-line">patterns, or information architecture.</span></span>
+          <span class="cs-line-mask"><span class="cs-line">each of them using a different</span></span>
+          <span class="cs-line-mask"><span class="cs-line">design language, interaction</span></span>
+          <span class="cs-line-mask"><span class="cs-line">patterns, and information architecture.</span></span>
         </p>
-        <p class="text-cta__body">For enterprise buyers, this is a problem. A CISO or IT director sees integration risks, training overhead, and evidence of organizational fragmentation. A unified product signals maturity and reduces perceived vendor risk. A fragmented one raises it.</p>
+        <p class="text-cta__body">Enterprise buyers saw four separate products and had to judge the risk. Would the tools work together? Would staff need separate training? Could Zix support a larger, more complex account? A fragmented experience made the company look less mature at the moment trust mattered most.</p>
         <a href="./design-system.html" class="btn">Browse the pattern gallery</a>
       </div>
     </section>
@@ -192,7 +192,7 @@
       <div class="cs-wrap product-showcase__wrap">
         <h2 class="product-showcase__eyebrow">Product showcase</h2>
         <div class="product-showcase__intro">
-          <p>The brief: audit the product surface, establish a governed design system, and unify the experience across apps—without halting product development or triggering a full rebuild.</p>
+          <p>The goal: create a unified product experience across the suite without pausing roadmap work or forcing a costly rebuild.</p>
         </div>
         <div class="product-showcase__grid">
           <div class="product-showcase__item">
@@ -249,11 +249,12 @@
 
     <section class="text-section">
       <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">What I owned</h2></div>
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What was at stake</h2></div>
         <div class="text-section__columns">
-          <p class="text-section__headline">I was the sole hands-on designer.</p>
+          <p class="text-section__headline">Zix was a moving enterprise product organization.</p>
           <div class="text-section__prose">
-            <p>The UX Director provided strategic oversight; execution was mine. I owned the audit and research methodology, the design system end-to-end, and all interaction design across the engagement. The ratio of UX to engineering at Zix was approximately 70:1. That constraint shaped every decision I made about how to work.</p>
+            <p>Four products were shipping in parallel, teams had different priorities, and I did not control every roadmap or product decision.</p>
+            <p>My job was not to redesign everything or approve every screen. It was to create a shared system that helped independent teams make more consistent, customer-centered decisions while the business kept moving.</p>
           </div>
         </div>
       </div>
@@ -272,41 +273,42 @@
       </div>
     </section>
 
-
-    <section class="text-section">
-      <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">Understanding the problem</h2></div>
-        <div class="text-section__columns">
-          <p class="text-section__headline">I conducted a Top Tasks analysis across the product suite.</p>
-          <div class="text-section__prose">
-            <p>My work identified the most critical functions users performed, mapped them to existing workflows, and validated which tasks recurred across multiple apps. The finding that mattered most: the same tasks were being accomplished in structurally different ways depending on which app a user was in.</p>
-            <p>I also ran an extensive audit of design patterns across all 21 applications. The dominant interaction pattern, by a wide margin, was the table. But every team had implemented tables differently — different column structures, sort behaviors, action patterns, and visual treatment. The audit made the scope undeniable.</p>
+    <section class="text-blocks">
+      <div class="cs-wrap text-blocks__wrap">
+        <h2 class="text-blocks__eyebrow">Decisions that mattered</h2>
+        <div class="text-blocks__list">
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Build influence into the system</strong></h3>
+            <div class="text-blocks__prose">
+              <p>I could not review every screen or control every product decision. Trying to do so would have made design a bottleneck and slowed teams already working against separate priorities. Instead, I created a shared decision framework. The design system included reusable components, documented interaction rules, clear states, and a single source of truth connected to engineering handoffs.</p>
+              <p>The tradeoff was intentional. I gave up control over some local product choices so teams could move faster with a reliable default for common customer workflows. This was not a visual style guide. It was a way to distribute product judgment across a large organization.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Unify the highest-value workflows first</strong></h3>
+            <div class="text-blocks__prose">
+              <p>A complete product redesign was not realistic. The portfolio needed visible progress while each team continued its roadmap work. I used a Top Tasks analysis and a cross-product pattern audit to identify the workflows customers encountered most often. The audit showed that users completed the same core tasks in different ways depending on the product they were using.</p>            
+              <p>We prioritized the patterns with the broadest reach: tables, forms, dashboards, search, filters, bulk actions, error states, and administrative workflows. The tradeoff was that lower-priority inconsistencies remained in place for a time. In return, the program improved the areas customers used most often and gave teams concrete work they could ship in stages.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Improve familiar patterns instead of replacing them</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Tables were the dominant interaction pattern across the portfolio. They supported core admin work such as reviewing data, sorting, filtering, managing accounts, and taking action on large sets of records. The problem was not that customers needed a new pattern. The problem was that every team had implemented the same pattern differently.</p>
+              <p>I chose to standardize and improve tables rather than replace them. The shared pattern defined column behavior, sort and filter rules, bulk actions, readable spacing, accessible target sizes, empty states, success messages, error handling, and undo actions. This reduced unnecessary learning for existing users while creating a more predictable experience across products.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="asset-section">
-      <div class="cs-wrap">
-        <figure class="asset-section__figure">
-        <img class="asset-section__image" src="./imgs/zix/z02.webp"
-     srcset="./imgs/zix/z02@0.5x.webp 960w, ./imgs/zix/z02.webp 1920w, ./imgs/zix/z02@2x.webp 3840w"
-     sizes="100vw"
-     width="1920" height="1080"
-     alt="Admin user-story list beside Slack threads about display-name spoofing and customer parity." loading="lazy">
-        <figcaption class="asset-section__caption">Top Tasks became hundreds of admin stories; the hard calls happened in Slack.</figcaption>
-      </figure>
-      </div>
-    </section>
-
-
     <section class="banner-showroom">
       <figure class="banner-showroom__figure">
-        <img class="banner-showroom__image" src="./imgs/zix/z03.webp"
-     srcset="./imgs/zix/z03@0.5x.webp 960w, ./imgs/zix/z03.webp 1920w, ./imgs/zix/z03@2x.webp 3840w"
-     sizes="100vw"
-     width="1920" height="1080"
-     alt="Whiteboard session mapping table anatomy, row actions, filters, and a project timeline." loading="lazy">
+        <img class="banner-showroom__image" src="./imgs/zix/z07.webp"
+        srcset="./imgs/zix/z07@0.5x.webp 960w, ./imgs/zix/z07.webp 1920w, ./imgs/zix/z07@2x.webp 3840w"
+        sizes="100vw"
+        width="1920" height="1080"
+        alt="LDAP query test results shown at mobile, tablet, and desktop widths." loading="lazy">
         <div class="banner-showroom__scrim" aria-hidden="true"></div>
       </figure>
       <div class="banner-showroom__stage">
@@ -320,31 +322,18 @@
       </div>
     </section>
 
-    <section class="text-blocks">
-      <div class="cs-wrap text-blocks__wrap">
-        <h2 class="text-blocks__eyebrow">The three decisions that mattered</h2>
-        <div class="text-blocks__list">
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>Scale influence, not control.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>At a 70:1 designer-to-engineer ratio, the instinct to own every UX decision is a trap. I educated and empowered engineering teams to build correctly — documentation, making the right choice the easy choice, and trusted advisor relationships. The design system was a transfer of design judgment at scale.</p>
-            </div>
-          </div>
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>Don't redesign everything at once.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>I structured incremental unification: audit patterns, govern high-frequency interactions first (tables, forms, dashboards), then roll out across apps in priority order — always something concrete to ship.</p>
-            </div>
-          </div>
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>Work with the table pattern, not against it.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>I standardized and elevated the table pattern instead of replacing it. Consistent sort/filter, readable spacing, accessible targets — the existing paradigm done correctly and consistently everywhere.</p>
-            </div>
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">How I led the work</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">I began by making the problem visible.</p>
+          <div class="text-section__prose">
+            <p>I conducted an audit covering design patterns across 21 applications and showed where similar tasks had drifted into different workflows. I then turned those findings into practical guidance that teams could use. The system was built in Abstract and Sketch, with a single source of truth linked to engineering handoffs. Developers could access current components and interaction rules without relying on stale exports or repeated clarification.</p>
+            <p>The work also depended on relationships. I worked with engineering teams to understand implementation limits, clarify the intent behind patterns, and help teams apply the system to real product work. My role was to establish shared standards, make the right choice easier, and help teams understand when a workflow required a deliberate exception.</p>
           </div>
         </div>
       </div>
-    </section>
+    </section>  
 
     <section class="assets-duo">
       <div class="cs-wrap assets-duo__wrap">
@@ -361,32 +350,22 @@
       </div>
     </section>
 
-
     <section class="text-section">
       <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">Design system</h2></div>
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What this demonstrates</h2></div>
         <div class="text-section__columns">
-          <p class="text-section__headline">The design system in practice.</p>
+          <p class="text-section__headline">This engagement shaped how I lead design in complex organizations.</p>
           <div class="text-section__prose">
-            <p>The system was built on Abstract + Sketch, with a single source of truth linked directly to engineering handoffs. Developers accessed the latest version at all times — no stale exports, no "which file is current" conversations.</p>
-            <p>Prototypes were built against requirements, tested, and refined until releasable. Edge cases and failure states were system components — success messages, undo actions, and clear error states — not afterthoughts.</p>
-            <p>Accessibility was addressed systematically: larger interaction targets, increased spacing, and simplified flows were properties of the system.</p>
-            <a href="./design-system.html" class="btn">Browse the pattern gallery</a>
+            <p>When product teams are moving in parallel, central control does not scale. The work is to identify the decisions that should be shared, turn them into usable systems, and help teams apply them without waiting for permission. That is how enterprise design becomes durable: not through one designer owning every screen, but through many teams making better decisions with a common foundation.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="assets-duo is-rev">
+    <section class="assets-duo v2 is-rev">
       <div class="cs-wrap assets-duo__wrap">
-        <figure class="assets-duo__item">
-          <img class="assets-duo__image" src="./imgs/zix/z06.webp"
-            srcset="./imgs/zix/z06@0.5x.webp 960w, ./imgs/zix/z06.webp 1920w, ./imgs/zix/z06@2x.webp 3840w"
-            sizes="(max-width: 600px) 100vw, 50vw"
-            width="1920" height="880"
-            alt="Message search and bulk export at mobile, tablet, and desktop breakpoints." loading="lazy">
-          <figcaption class="assets-duo__caption">Same search-and-export flow, reflowed for three breakpoints.</figcaption>
-        </figure>
+        <div class="assets-duo__item">
+        </div>
         <figure class="assets-duo__item">
           <img class="assets-duo__image" src="./imgs/zix/z05.webp"
             srcset="./imgs/zix/z05@0.5x.webp 960w, ./imgs/zix/z05.webp 1920w, ./imgs/zix/z05@2x.webp 3840w"
@@ -399,19 +378,6 @@
     </section>
 
     <div class="asset-stack">
-      <section class="asset-section">
-        <div class="cs-wrap">
-          <figure class="asset-section__figure">
-          <img class="asset-section__image" src="./imgs/zix/z07.webp"
-      srcset="./imgs/zix/z07@0.5x.webp 960w, ./imgs/zix/z07.webp 1920w, ./imgs/zix/z07@2x.webp 3840w"
-      sizes="100vw"
-      width="1920" height="1080"
-      alt="LDAP query test results shown at mobile, tablet, and desktop widths." loading="lazy">
-          <figcaption class="asset-section__caption">Directory-import testing had to stay readable on a phone.</figcaption>
-        </figure>
-        </div>
-      </section>
-
       <section class="asset-section">
         <div class="cs-wrap">
           <figure class="asset-section__figure">
@@ -459,27 +425,6 @@
         </div>
       </section>
 
-      <section class="assets-duo is-even">
-        <div class="cs-wrap assets-duo__wrap">
-          <figure class="assets-duo__item">
-            <img class="assets-duo__image" src="./imgs/zix/z12.webp"
-              srcset="./imgs/zix/z12@0.5x.webp 960w, ./imgs/zix/z12.webp 1920w, ./imgs/zix/z12@2x.webp 3840w"
-              sizes="(max-width: 600px) 100vw, 50vw"
-              width="1920" height="1080"
-              alt="Mail log search with rows tagged Naughty, Nice, or Spam and a view action per row." loading="lazy">
-            <figcaption class="assets-duo__caption">Mail logs — filter by type, scan 42 results, open one to inspect.</figcaption>
-          </figure>
-          <figure class="assets-duo__item">
-            <img class="assets-duo__image" src="./imgs/zix/z13.webp"
-              srcset="./imgs/zix/z13@0.5x.webp 960w, ./imgs/zix/z13.webp 1920w, ./imgs/zix/z13@2x.webp 3840w"
-              sizes="(max-width: 600px) 100vw, 50vw"
-              width="1920" height="1080"
-              alt="Default permissions screen after a save, with a success toast, undo, and 125-user list." loading="lazy">
-            <figcaption class="assets-duo__caption">Default permissions — change once, confirm with toast and undo.</figcaption>
-          </figure>
-        </div>
-      </section>
-
       <section class="asset-section">
         <div class="cs-wrap">
           <figure class="asset-section__figure">
@@ -493,7 +438,6 @@
         </div>
       </section>
     </div>
-
     
     <section class="finish" data-nav-theme="paper" aria-label="Results and contact">
       <div class="finish__track">
@@ -502,7 +446,7 @@
           <div class="finish__stage">
             <div class="finish__act finish__act--proof">
               <div class="cs-wrap results-section__wrap">
-                <h2 class="results-section__eyebrow">Results</h2>
+                <h2 class="results-section__eyebrow">Impact</h2>
                 <div class="results-section__quote">
                   <blockquote class="results-section__pullquote">
                     <span class="results-section__quote-text">“At first [this software] was annoying to use, but in recent years they've made it much easier to deal with.”</span>

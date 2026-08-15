@@ -12,11 +12,13 @@ Source: https://designerdan.github.io/
 
 ## Designer of software worth millions. $860M to be exact.
 
-Available for founding designer and lead roles in SF and remote.
+Open to Founding Designer roles and Lead positions for high-growth SaaS & AI.
 
 ### Enterprise Email Security
 
 4 softwares. 1 design system. $860M exit.
+
++21% ARR · ~40k net new users
 
 Contributions: Design System, UX Ops, Accessibility
 
@@ -24,11 +26,15 @@ Contributions: Design System, UX Ops, Accessibility
 
 3 weeks. 1 AI POC. Kiewit.
 
+$1M+ pipeline · 50% of ENR 400
+
 Contributions: Product Strategy, IA, Rapid Prototyping
 
 ### Legal Nonprofit SaaS
 
 Ethics review. Salesforce. 80 NPS.
+
+80 NPS · 12x efficiency boost
 
 Contributions: Discovery, Workflows, Exec Buy-in
 
@@ -50,6 +56,12 @@ Source: https://designerdan.github.io/about
 - **90%+** — Pixly tag precision in testing
 - **80** — Open Door Legal NPS
 
+### Testimonial
+
+> “Your perspective is intriguing and I enjoy the playfulness with which you seem to approach both life and work. When you ask questions and dig at the ‘why’ of what we are doing, you move us in a better direction.”
+
+— President Improving Enterprises
+
 ### Who I am
 
 Build-forward. Upstream of the interface.
@@ -60,27 +72,7 @@ My best work happens upstream of the interface: data models, requirements, taxon
 
 I care about craft in the functional sense — that the grid works, the interaction holds up at edge cases, and the thing actually ships. And I’m suspicious of buzzwords: if you can’t explain why a decision was made, it wasn’t a decision. It was just a thing that happened.
 
-### My approach
-
-Three products where the thinking shows up.
-
-### How I work
-
-#### Work upstream of the interface.
-
-Open Door Legal’s grant data model couldn’t relate one client to multiple grants. I defined a Beneficiary junction object as a requirement — the interface was the last thing designed, not the first.
-
-#### Scale judgment, not control.
-
-At a 70:1 engineer-to-designer ratio, owning every decision is a trap. I invested in a governed design system and engineering relationships so the right call got made without me in the room.
-
-#### Treat constraints as the brief.
-
-A California ethics attorney had to approve ODL’s referral flows; Pixly’s AI needed an 80% confidence threshold to earn trust. The limits told me exactly what the design had to do.
-
-#### Sequence beats scope.
-
-On Pixly I rejected AI branding and scoped provenance out of the POC — answering “does this work at all?” first. A validated proof of concept shipped in three weeks.
+### What I value
 
 #### Consideration
 
@@ -100,11 +92,31 @@ Differentiation as an empathetic advantage — doing what’s different, filling
 
 Every element — color, typography, layout, interaction — considered so the product connects with people on a deeper level.
 
-### Testimonial
+### My approach
 
-> “Your perspective is intriguing and I enjoy the playfulness with which you seem to approach both life and work. When you ask questions and dig at the ‘why’ of what we are doing, you move us in a better direction.”
+Three products where the thinking shows up.
 
-— President Improving Enterprises
+- **Enterprise Email Security** — 4 softwares. 1 design system. $860M exit.
+- **Construction AI** — 3 weeks. 1 AI POC. Kiewit.
+- **Legal Nonprofit SaaS** — Ethics review. Salesforce. 80 NPS.
+
+### How I work
+
+#### Work upstream of the interface.
+
+Open Door Legal’s grant data model couldn’t relate one client to multiple grants. I defined a Beneficiary junction object as a requirement — the interface was the last thing designed, not the first.
+
+#### Scale judgment, not control.
+
+At a 70:1 engineer-to-designer ratio, owning every decision is a trap. I invested in a governed design system and engineering relationships so the right call got made without me in the room.
+
+#### Treat constraints as the brief.
+
+A California ethics attorney had to approve ODL’s referral flows; Pixly’s AI needed an 80% confidence threshold to earn trust. The limits told me exactly what the design had to do.
+
+#### Sequence beats scope.
+
+On Pixly I rejected AI branding and scoped provenance out of the POC — answering “does this work at all?” first. A validated proof of concept shipped in three weeks.
 
 ### What I’m looking for
 
@@ -142,80 +154,79 @@ Source: https://designerdan.github.io/zix
 
 ### The business problem
 
-Zix was operating separate softwares, neither of them sharing a design language, interaction patterns, or information architecture.
+Zix was operating separate softwares, each of them using a different design language, interaction patterns, and information architecture.
 
-For enterprise buyers, this is a problem. A CISO or IT director sees integration risks, training overhead, and evidence of organizational fragmentation. A unified product signals maturity and reduces perceived vendor risk. A fragmented one raises it.
+Enterprise buyers saw four separate products and had to judge the risk. Would the tools work together? Would staff need separate training? Could Zix support a larger, more complex account? A fragmented experience made the company look less mature at the moment trust mattered most.
 
 ### Product showcase
 
-The brief: audit the product surface, establish a governed design system, and unify the experience across apps—without halting product development or triggering a full rebuild.
+The goal: create a unified product experience across the suite without pausing roadmap work or forcing a costly rebuild.
 
 - Research
 - Audit
 - Patterns
 - System
 
-### What I owned
+### What was at stake
 
-I was the sole hands-on designer.
+Zix was a moving enterprise product organization.
 
-The UX Director provided strategic oversight; execution was mine. I owned the audit and research methodology, the design system end-to-end, and all interaction design across the engagement. The ratio of UX to engineering at Zix was approximately 70:1. That constraint shaped every decision I made about how to work.
+Four products were shipping in parallel, teams had different priorities, and I did not control every roadmap or product decision.
 
-### Understanding the problem
+My job was not to redesign everything or approve every screen. It was to create a shared system that helped independent teams make more consistent, customer-centered decisions while the business kept moving.
 
-I conducted a Top Tasks analysis across the product suite.
+### Decisions that mattered
 
-My work identified the most critical functions users performed, mapped them to existing workflows, and validated which tasks recurred across multiple apps. The finding that mattered most: the same tasks were being accomplished in structurally different ways depending on which app a user was in.
+#### Build influence into the system
 
-I also ran an extensive audit of design patterns across all 21 applications. The dominant interaction pattern, by a wide margin, was the table. But every team had implemented tables differently — different column structures, sort behaviors, action patterns, and visual treatment. The audit made the scope undeniable.
+I could not review every screen or control every product decision. Trying to do so would have made design a bottleneck and slowed teams already working against separate priorities. Instead, I created a shared decision framework. The design system included reusable components, documented interaction rules, clear states, and a single source of truth connected to engineering handoffs.
 
-### Design system
+The tradeoff was intentional. I gave up control over some local product choices so teams could move faster with a reliable default for common customer workflows. This was not a visual style guide. It was a way to distribute product judgment across a large organization.
 
-The design system in practice.
+#### Unify the highest-value workflows first
 
-The system was built on Abstract + Sketch, with a single source of truth linked directly to engineering handoffs. Developers accessed the latest version at all times — no stale exports, no "which file is current" conversations.
+A complete product redesign was not realistic. The portfolio needed visible progress while each team continued its roadmap work. I used a Top Tasks analysis and a cross-product pattern audit to identify the workflows customers encountered most often. The audit showed that users completed the same core tasks in different ways depending on the product they were using.
 
-Prototypes were built against requirements, tested, and refined until releasable. Edge cases and failure states were system components — success messages, undo actions, and clear error states — not afterthoughts.
+We prioritized the patterns with the broadest reach: tables, forms, dashboards, search, filters, bulk actions, error states, and administrative workflows. The tradeoff was that lower-priority inconsistencies remained in place for a time. In return, the program improved the areas customers used most often and gave teams concrete work they could ship in stages.
 
-Accessibility was addressed systematically: larger interaction targets, increased spacing, and simplified flows were properties of the system.
+#### Improve familiar patterns instead of replacing them
 
-### The three decisions that mattered
+Tables were the dominant interaction pattern across the portfolio. They supported core admin work such as reviewing data, sorting, filtering, managing accounts, and taking action on large sets of records. The problem was not that customers needed a new pattern. The problem was that every team had implemented the same pattern differently.
 
-#### Scale influence, not control.
-
-At a 70:1 designer-to-engineer ratio, the instinct to own every UX decision is a trap. I educated and empowered engineering teams to build correctly — documentation, making the right choice the easy choice, and trusted advisor relationships. The design system was a transfer of design judgment at scale.
-
-#### Don't redesign everything at once.
-
-I structured incremental unification: audit patterns, govern high-frequency interactions first (tables, forms, dashboards), then roll out across apps in priority order — always something concrete to ship.
-
-#### Work with the table pattern, not against it.
-
-I standardized and elevated the table pattern instead of replacing it. Consistent sort/filter, readable spacing, accessible targets — the existing paradigm done correctly and consistently everywhere.
+I chose to standardize and improve tables rather than replace them. The shared pattern defined column behavior, sort and filter rules, bulk actions, readable spacing, accessible target sizes, empty states, success messages, error handling, and undo actions. This reduced unnecessary learning for existing users while creating a more predictable experience across products.
 
 ### Banner
 
 A fragmented product does not get acquired for $860M. A coherent one does.
 
+### How I led the work
+
+I began by making the problem visible.
+
+I conducted an audit covering design patterns across 21 applications and showed where similar tasks had drifted into different workflows. I then turned those findings into practical guidance that teams could use. The system was built in Abstract and Sketch, with a single source of truth linked to engineering handoffs. Developers could access current components and interaction rules without relying on stale exports or repeated clarification.
+
+The work also depended on relationships. I worked with engineering teams to understand implementation limits, clarify the intent behind patterns, and help teams apply the system to real product work. My role was to establish shared standards, make the right choice easier, and help teams understand when a workflow required a deliberate exception.
+
+### What this demonstrates
+
+This engagement shaped how I lead design in complex organizations.
+
+When product teams are moving in parallel, central control does not scale. The work is to identify the decisions that should be shared, turn them into usable systems, and help teams apply them without waiting for permission. That is how enterprise design becomes durable: not through one designer owning every screen, but through many teams making better decisions with a common foundation.
+
 **Image captions**
 
 - Four products, four admin experiences — before anything could be unified.
-- Top Tasks became hundreds of admin stories; the hard calls happened in Slack.
 - 21 apps meant 21 ways to do the same admin task.
-- Same search-and-export flow, reflowed for three breakpoints.
 - High-traffic admin flows after the shared table and form patterns landed.
-- Directory-import testing had to stay readable on a phone.
 - Partner admins manage thousands of accounts — filters and bulk actions had to scale.
 - Quarantine — search 10,000 released messages, act on a page at a time.
 - Allowed-list requests — approve the domain, deny the IP, save the rest for later.
 - Domain protection — errors surfaced inline instead of after a failed save.
-- Mail logs — filter by type, scan 42 results, open one to inspect.
-- Default permissions — change once, confirm with toast and undo.
 - Partners run O365 audits from one dashboard — schedule, track, and hand off reports.
 
-### Results
+### Impact
 
-> At first [this software] was annoying to use, but in recent years they've made it much easier to deal with.
+> “At first [this software] was annoying to use, but in recent years they've made it much easier to deal with.”
 
 — Customer review Zix product user
 
@@ -255,42 +266,68 @@ Source: https://designerdan.github.io/pixly
 
 ### The business problem
 
-Pixly was capturing photos well. The problem was retrieval—and it was eroding their competitive position.
+Pixly helps construction teams capture jobsite photos. Capture worked. Finding the photo later, not so much.
 
-Construction teams generated hundreds of geo-tagged photos per project, but nobody could find them. Manual tags failed in the field. The brief: auto-tag at capture with computer vision, then redesign search to feel native—not bolted on.
+Field teams take hundreds of photos per project. Photos document safety issues, progress, materials, equipment, and site conditions. Pixly needed to test whether AI-powered tagging and content-based search could make its existing photo library easier to use.
 
 ### Product showcase
 
-Mobile-first capture and search across iOS, Android, and web—designed for field conditions and desktop reporting.
+The goal: test whether automatic image tagging and content-based search could help construction teams find project photos faster.
 
 - Capture
 - Albums
 - Tags
 - Search
 
-### What I owned
+### What was at stake
 
-Scope clarity on a three-partner engagement.
+Pixly was becoming a place where teams stored photos but could not retrieve knowledge.
 
-I led research and contextual inquiry, owned the tag taxonomy and vocabulary decisions, drove search interaction design and mobile-first direction, validated the AI confidence threshold model with users, and aligned SnapSoft and Carnera around a shared UX direction throughout.
+A product like that would be easy to replace and weaken Pixly's position in a market where documentation, proof, and reporting matter.
 
-SnapSoft owned the ML pipeline. Carnera executed visual UI. The decisions about what the system should communicate to users—and what it should stay quiet about—were mine.
+There was also a product-risk question. AI features can sound compelling in sales conversations but fail when users see wrong or irrelevant results. The work needed to protect trust while proving that automated tagging could improve retrieval in real jobsite conditions.
 
-### Research
+The three-week timeline raised the delivery risk. Every decision had to serve the central question. Time spent on advanced features would reduce time available to validate whether the core workflow worked.
 
-How field teams actually search.
+### Decisions that mattered
 
-I conducted contextual inquiry with 8 field users across 3 construction firms. Users think in terms of content, not chronology—materials, equipment, site conditions—not when or where a photo was taken. Average time to find a specific photo by scrolling: 4.2 minutes.
+#### Prove one useful customer outcome first
 
-Field adoption of manual tags sat at 15%. Meanwhile, 92% of photos were captured on mobile, but 40% of retrieval happened on desktop during reporting. Search sessions broke into specific recall and categorical browse—both requiring content-indexed search, surfaced differently in the UI.
+The team could have treated AI tagging as a broad platform effort. That would mean designing provenance, advanced library management, collaborative tagging, rich faceted navigation, and many possible AI features before learning whether users trusted the basics.
 
-### Users
+I recommended a narrower first bet: tag photos automatically at capture, map those tags to terms construction teams actually use, and make the results useful in search.
 
-Two distinct needs, one shared frustration.
+The tradeoff was deliberate. We deferred features that would matter in a mature tagging product so we could answer the first business question quickly: would people use AI-generated tags to find their work?
 
-Marcus — Site Superintendent. Takes 30–50 photos daily across subcontractor documentation, safety records, and progress updates. Primary device: phone, often in low-connectivity conditions. “By Friday I've taken 200 photos. Finding one from Tuesday? Forget it.”
+#### Design for trust, not just tag accuracy
 
-Sarah — Project Manager. Assembles weekly reports and compliance audits from photos across the whole team. Works on desktop. “I need all concrete pour photos from the east wing, from anyone on the team.”
+Computer vision can produce a label even when it is uncertain. Showing every predicted tag would create noisy search results and weaken trust. Hiding too much would reduce the value of the system.
+
+I worked with the team to set an 80% confidence threshold. Tags above that threshold appeared in search results. Tags below it stayed in the index but did not appear until a user confirmed or rejected them.
+
+The tradeoff was recall versus trust. We chose to show fewer results when the model was unsure because one clearly wrong result can damage confidence more than one missing result. This also created a feedback loop. User confirmation could improve the system without making uncertain AI behavior visible as a product failure.
+
+#### Translate AI labels into field language
+
+The AI could identify objects, but its labels did not always match the words people used on construction sites. A generic label such as “excavating equipment” was technically correct, but a superintendent was more likely to search for “excavator” or “backhoe.”
+
+I owned the vocabulary layer between model output and user behavior. I combined generic image labels with construction-specific labels and created a synonym map that matched the language field users used to describe materials, equipment, and site conditions.
+
+The tradeoff was more work up front. Without it, Pixly could claim technical accuracy while still failing the user's real task: finding photos with the words that came naturally to them.
+
+### Banner
+
+Search that speaks their language, not a bolt-on feature.
+
+### How I led the work
+
+I began with contextual inquiry across three construction firms.
+
+The research showed two distinct needs. Field users needed to find a specific photo quickly, often from memory. Project managers needed to browse a category of photos across a project, such as concrete work, equipment, or a site condition.
+
+It also showed that chronology was the wrong organizing model. People did not think, “Show me photos from Tuesday.” They thought, “Show me the concrete pour on the east wing,” or “Find all photos of the excavator.”
+
+I used those findings to align the partners around shared product decisions. The AI team had a clear definition of useful labels. The UI team had a clear search model and interaction direction. Pixly had a focused POC that connected technical capability to customer value.
 
 ### Technical integration
 
@@ -300,46 +337,28 @@ AWS Rekognition produces generic object labels. SageMaker custom models produce 
 
 SnapSoft's initial label set didn't map to field vocabulary. “Excavating equipment” isn't what Marcus says; “excavator” and “backhoe” are. Building the synonym map required sitting between ML output and user research—forcing an alignment neither party was initially scoping for.
 
-### The three decisions that mattered
+### What I would change
 
-#### AI that doesn't announce itself.
+The AI and UX work began with too much asynchronous back-and-forth on taxonomy decisions.
 
-No AI iconography. Tags surface as passive metadata and match annotations—not badges on every thumbnail. Field teams trust the system when it demonstrates accuracy, not when it declares capability.
+Bringing the ML and UX teams together during the first sprint would have reduced a lost week and produced faster alignment.
 
-#### Suppressing low-confidence tags.
+That experience reinforced a principle I use in AI product work: model quality and product meaning cannot be designed in isolation. The technology may identify an object, but the product still has to decide what it means, when to show it, and whether users can trust it.
 
-An 80% confidence floor calibrated trust. Tags below threshold stay in the index but out of results until users confirm or reject—building a feedback loop without exposing uncertain AI output.
+### What this demonstrates
 
-#### One search input, not a new surface.
+I choose small, credible bets that prove concepts.
 
-Natural language resolves intent—“excavator near Building C” maps date, location, and material tags. Filter chips remain for power users. Voice input is parity with text for gloved hands and bright sun.
-
-### What was validated and what wasn't
-
-#### Validated: tag accuracy.
-
-Exceeded 90% precision on high-confidence construction-specific tags, confirmed through user testing and manual audit. The taxonomy held up against real field vocabulary.
-
-#### Hypothesis: search adoption.
-
-Target of 60%+ engagement within the first month (up from 23% on date/location filters) requires production deployment to measure.
-
-#### Scoped out deliberately.
-
-Collaborative tagging provenance and faceted navigation for mature tag libraries were deferred to production. Co-locating AI and UX for the first sprint would have saved the week lost to async taxonomy back-and-forth.
-
-### Banner
-
-Search that speaks their language, not a bolt-on feature.
+I don't go all in until the concept is proven. When I do I make sure to lead across research, interaction design, and partner alignment. I did not own the ML pipeline or the visual UI team for this engagement but I did own the decisions that connected those moving parts to a clear customer outcome.
 
 **Image captions**
 
 - Tagging runs in the photo viewer — not a separate admin screen.
 - Same feed serves field capture and desktop retrieval workflows.
 - System photo picker for batch upload from the device camera roll.
+- Tag names and counts after merging ML labels with field vocabulary.
 - Batch upload on desktop; tagging status shown per thumbnail.
 - Mobile album grid shows tag counts while batch tagging runs.
-- Tag names and counts after merging ML labels with field vocabulary.
 - Sidebar tag list matches numbered pins on the photo.
 - Tags appear as numbered pins on the photo.
 - Album grid after batch tagging finishes.
@@ -348,6 +367,22 @@ Search that speaks their language, not a bolt-on feature.
 - Issue tag count shown separately from other tag types.
 - General tag grid with edit and delete actions per row.
 - Issue filter applied in photo viewer sidebar.
+
+### Impact
+
+> “Pixly saves us time and resources and has streamlined our photo documentation process. It's an absolute game-changer!”
+
+— Tim Van Hook, Director of Learning & Development, Kitchen Saver
+
+Tag accuracy validated above 90% precision during the AWS-funded POC. The path to full deployment is open—with $1M+ pipeline unlocked with Kiewit, Granite, and Kahua.
+
+### Next project
+
+Ethics review. Salesforce. 80 NPS.
+
+Infrastructure for Legal Tech
+
+NPS 80
 
 
 ---
@@ -373,56 +408,70 @@ Source: https://designerdan.github.io/odl
 - **Client:** Open Door Legal
 - **Timeline:** 6 months
 
-### The client
+### The business problem
 
-Poverty is dramatically reduced when everyone has access to legal representation.
+Open Door Legal is a San Francisco nonprofit that helps people access legal support across housing, immigration, and family law.
 
-Open Door Legal is an award-winning San Francisco nonprofit running a high-volume intake and referral operation across housing, immigration, and family law. When they came to me, they had two problems. One they knew about. One they discovered once we started working.
+Its staff handle a high volume of client intakes and referrals. When a client needed help outside ODL's direct services, staff had to find a partner organization, contact them through separate channels, track the referral manually, and follow up outside the system. This manual process was time-consuming, error-prone, and made it difficult to monitor the referral process or identify gaps in service.
 
 ### Product showcase
 
-The brief: build a two-sided referral marketplace inside Salesforce—connecting ODL with partner legal organizations—so referrals could be created, sent, tracked, and received in one system.
+The goal: build a two-sided referral marketplace in Salesforce, then create a grant-management foundation that reduced reporting overhead without placing compliance work on front-line staff.
 
 - Compliance
 - Onboarding
 - Management
 - Workflows
 
-### Phase 1 — The referral feature
+### What was at stake
 
-ODL's referral process was entirely manual.
+A weak referral system introduced risk under California professional-conduct rules.
 
-When a client's needs fell outside what ODL could directly serve, admins searched an external database, retrieved contact details, and manually reached out by phone, email, fax, or post. Every referral was logged by hand. I was the sole designer—I drove research, defined user flows for both sides of the marketplace, owned all interaction design, and managed the client relationship through reviews and testing.
+A weak grant-management system could create inaccurate funder reports, staff burnout, and risk to grant renewal. For a nonprofit, reporting quality is directly connected to the ability to continue providing services.
 
-### The constraint nobody warned me about
+The design challenge was to improve operational speed without asking case managers to become compliance experts. The system had to guide them through the right steps while preserving the focus on the client.
 
-This wasn't just a workflow problem—it was a legal ethics problem.
+### Decisions that mattered
 
-Attorneys are bound by the California Rules of Professional Conduct. Sharing client information across a network triggers obligations around confidentiality, informed consent, and the duty to prospective clients. A California attorney reviewed the proposed system and issued a formal ethics opinion before we could ship.
+#### Treat consent and confidentiality as product states
 
-Informed consent had to be built into referral creation. Data visible to receiving organizations required explicit scoping. The simplified conflict check was deliberately limited to three fields: first name, last name, and date of birth. The templated outbound client summary only auto-generates after a clean conflict check clears.
+The referral process involved sharing client information with outside legal organizations. That is not a standard handoff. Attorneys have duties around confidentiality, informed consent, and prospective clients.
 
-### Phase 2 — Grant management
+The easy approach would have been to treat consent as a checkbox and rely on staff training to prevent mistakes. That would leave too much room for an incorrect action during a busy workflow.
 
-Why this problem is existential for a nonprofit.
+I recommended making consent, data visibility, conflict status, and partner eligibility explicit states in the product. Staff could see what was allowed, what information would be shared, and what had to happen before a referral could move forward. The tradeoff was a more structured workflow. In return, the system reduced reliance on memory and helped staff make the safe choice at the moment it mattered.
 
-ODL's funding comes from grants—each with unique reporting requirements. Grant administration was a convoluted, multi-step process: manual onboarding, monthly reconciliation across disconnected reports, and significant manual assembly for funder reports. The risk isn't inefficiency—it's reporting inaccuracy and compliance exposure on renewals.
+#### Make referrals self-contained
 
-The brief: redesign grant management in Salesforce to reduce administrative overhead by 90%, with as little burden on line staff as possible. The Beneficiary junction object—connecting contacts, grant activities, intakes, cases, and time forecasts—was the architectural linchpin that unlocked per-funder reporting without manual reconciliation.
+Salesforce often spreads work across related lists, tabs, and separate records. That can work for low-risk CRM tasks, but it creates friction when staff need to understand, act on, and close a referral quickly.
 
-### The decisions that mattered
+I designed the referral as a self-contained object. Everything needed to process the referral, communicate with a partner, track the client's status, and close the loop appeared in one workflow. The tradeoff was moving away from default Salesforce navigation patterns. The benefit was lower context switching and a clearer view of what remained to be done.
 
-#### In-network and out-of-network as first-class concepts.
+A closed referral also needed an intentional end state. Staff needed to know that the work was complete so they could return to their queue without wondering whether an action had been missed.
 
-Not every organization ODL refers to is in Salesforce. I designed in-network and out-of-network as explicit, equal designations at referral creation—keeping the manual path inside the product rather than beside it.
+#### Build grant reporting into the data model
 
-#### The referral as a self-contained object.
+The grant-management problem could not be solved with cleaner screens alone. ODL needed to connect one client to multiple grants, activities, intakes, cases, outcomes, and time forecasts. Without those relationships, staff would keep reconciling reports by hand. That created administrative cost, reporting errors, and funding risk.
 
-Everything needed to process, act on, or close a referral is present in a single view—a deliberate choice against Salesforce's default related-list navigation for a high-volume, context-switching operation.
+I helped define the Beneficiary junction object as the architectural link between the client, grant activities, and related service records. This made per-funder reporting possible without manual reconstruction of the client's service history.
 
-#### Designing for the end state.
+The tradeoff was investing in upstream data-model work before designing the final interface. The benefit was a system that could produce reliable reporting and reduce the burden on staff.
 
-A closed referral still needs to communicate completeness and release attention. Staff should leave a closed referral and return to their queue without uncertainty about whether something was missed.
+### Banner
+
+Phase 1 results: NPS hit the 120-day target of 80. They came back for Phase 2 without a competitive process.
+
+### How I led the work
+
+I started by mapping how staff actually worked and where the system failed the process.
+
+The existing workflows relied on an external databases, manual contact through several channels, and hand-entered status tracking.
+
+I translated that reality into a two-sided workflow for referrers, receiving partners, and the system itself. I brought the client into regular reviews, tested the flows, and worked through the exceptions that made the difference between a polished concept and an operational product.
+
+For grant management, I shifted upstream. The first question was not what the screen should look like. It was what objects needed to exist, how they needed to relate, and which data had to be captured during intake and case closure.
+
+That work made it possible to surface grant-relevant fields at the right moment. Staff did not need to remember reporting rules separately from serving clients.
 
 ### What this engagement required that most don't
 
@@ -438,9 +487,13 @@ Case managers shouldn't need to think about grant compliance. Intake finalizatio
 
 The grant data model work required operating at the boundary of UX and systems design—defining what objects needed to exist and how they needed to relate before any screens could be meaningful.
 
-### Banner
+### What this demonstrates
 
-Phase 1 results: NPS hit the 120-day target of 80. They came back for Phase 2 without a competitive process.
+How I turn legal, operational, and data constraints into safer products that work in the real world.
+
+This project required more than workflow design. It required judgment about what should be automated, what information should remain limited, and how legal and funding constraints could become useful product behavior. I did not treat ethics, compliance, or data structure as constraints added after the design. I used them to define the product from the start.
+
+That is how I approach high-stakes systems: make the safe path clear, make the real workflow visible, and build the underlying structure before asking the interface to solve a problem it cannot solve on its own.
 
 **Image captions**
 
@@ -461,6 +514,18 @@ Phase 1 results: NPS hit the 120-day target of 80. They came back for Phase 2 wi
 - Close Case Outcomes step; Degree of resolution Positive; Standard outcomes and State bar outcomes Available and Chosen lists.
 - Checklist confirmation step; Conflict Check Correct and Guest Accommodations Correct checked; Client Parties and Adverse Parties tables.
 
+### Results
 
----
+> “You're the best designer we've ever had.”
 
+— Executive Director Open Door Legal
+
+NPS hit the 120-day target of 80 following the referral feature launch. Redundancies in referral handling were down 16% at measurement. Phase 2 grant management is in QA ahead of deployment—the 90% administration reduction is the production hypothesis.
+
+### Next project
+
+21 apps. 1 system. $860M exit.
+
+Unifying apps across a merger
+
+$860M acquisition

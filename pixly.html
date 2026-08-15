@@ -171,11 +171,12 @@
       <div class="cs-wrap text-cta__wrap">
         <h2 class="text-cta__eyebrow">The business problem</h2>
         <p class="text-cta__headline">
-          <span class="cs-line-mask"><span class="cs-line">Pixly was capturing photos well.</span></span>
-          <span class="cs-line-mask"><span class="cs-line">The problem was retrieval—and it was</span></span>
-          <span class="cs-line-mask"><span class="cs-line">eroding their competitive position.</span></span>
+          <span class="cs-line-mask"><span class="cs-line">Pixly helps construction teams capture</span></span>
+          <span class="cs-line-mask"><span class="cs-line">jobsite photos. Capture worked.</span></span>
+          <span class="cs-line-mask"><span class="cs-line">Finding the photo later, not so much.</span></span>
         </p>
-        <p class="text-cta__body">Construction teams generated hundreds of geo-tagged photos per project, but nobody could find them. Manual tags failed in the field. The brief: auto-tag at capture with computer vision, then redesign search to feel native—not bolted on.</p>
+        <p class="text-cta__body">Field teams take hundreds of photos per project. Photos document safety issues, progress, materials, equipment, and site conditions. Pixly needed to test whether AI-powered tagging and content-based search could make its existing photo library easier to use.
+        </p>
       </div>
     </section>
 
@@ -183,7 +184,7 @@
       <div class="cs-wrap product-showcase__wrap">
         <h2 class="product-showcase__eyebrow">Product showcase</h2>
         <div class="product-showcase__intro">
-          <p>Mobile-first capture and search across iOS, Android, and web—designed for field conditions and desktop reporting.</p>
+          <p>The goal: test whether automatic image tagging and content-based search could help construction teams find project photos faster.</p>
         </div>
         <div class="product-showcase__grid">
           <div class="product-showcase__item">
@@ -240,12 +241,13 @@
 
     <section class="text-section">
       <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">What I owned</h2></div>
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What was at stake</h2></div>
         <div class="text-section__columns">
-          <p class="text-section__headline">Scope clarity on a three-partner engagement.</p>
+          <p class="text-section__headline">Pixly was becoming a place where teams stored photos but could not retrieve knowledge. </p>
           <div class="text-section__prose">
-            <p>I led research and contextual inquiry, owned the tag taxonomy and vocabulary decisions, drove search interaction design and mobile-first direction, validated the AI confidence threshold model with users, and aligned SnapSoft and Carnera around a shared UX direction throughout.</p>
-            <p>SnapSoft owned the ML pipeline. Carnera executed visual UI. The decisions about what the system should communicate to users—and what it should stay quiet about—were mine.</p>
+            <p>A product like that would be easy to replace and weaken Pixly's position in a market where documentation, proof, and reporting matter.</p>
+            <p>There was also a product-risk question. AI features can sound compelling in sales conversations but fail when users see wrong or irrelevant results. The work needed to protect trust while proving that automated tagging could improve retrieval in real jobsite conditions.</p>
+            <p>The three-week timeline raised the delivery risk. Every decision had to serve the central question. Time spent on advanced features would reduce time available to validate whether the core workflow worked.</p>
           </div>
         </div>
       </div>
@@ -264,48 +266,33 @@
       </div>
     </section>
 
-    <section class="text-section">
-      <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">Research</h2></div>
-        <div class="text-section__columns">
-          <p class="text-section__headline">How field teams actually search.</p>
-          <div class="text-section__prose">
-            <p>I conducted contextual inquiry with 8 field users across 3 construction firms. Users think in terms of content, not chronology—materials, equipment, site conditions—not when or where a photo was taken. Average time to find a specific photo by scrolling: 4.2 minutes.</p>
-            <p>Field adoption of manual tags sat at 15%. Meanwhile, 92% of photos were captured on mobile, but 40% of retrieval happened on desktop during reporting. Search sessions broke into specific recall and categorical browse—both requiring content-indexed search, surfaced differently in the UI.</p>
+    <section class="text-blocks">
+      <div class="cs-wrap text-blocks__wrap">
+        <h2 class="text-blocks__eyebrow">Decisions that mattered</h2>
+        <div class="text-blocks__list">
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Prove one useful customer outcome first</strong></h3>
+            <div class="text-blocks__prose">
+              <p>The team could have treated AI tagging as a broad platform effort. That would mean designing provenance, advanced library management, collaborative tagging, rich faceted navigation, and many possible AI features before learning whether users trusted the basics.</p>
+              <p>I recommended a narrower first bet: tag photos automatically at capture, map those tags to terms construction teams actually use, and make the results useful in search.</p>
+              <p>The tradeoff was deliberate. We deferred features that would matter in a mature tagging product so we could answer the first business question quickly: would people use AI-generated tags to find their work?</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="assets-duo">
-      <div class="cs-wrap assets-duo__wrap">
-        <figure class="assets-duo__item">
-          <img class="assets-duo__image" src="./imgs/pixly/px-02.webp"
-            srcset="./imgs/pixly/px-02@0.5x.webp 720w, ./imgs/pixly/px-02.webp 1440w, ./imgs/pixly/px-02@2x.webp 2880w"
-            sizes="(max-width: 600px) 100vw, 50vw"
-            width="1440" height="1024"
-            alt="Pixly Feed in list view with search field, image-search icon, Filter control, and two photo entries." loading="lazy">
-          <figcaption class="assets-duo__caption">Same feed serves field capture and desktop retrieval workflows.</figcaption>
-        </figure>
-        <figure class="assets-duo__item">
-          <img class="assets-duo__image" src="./imgs/pixly/px-03.webp"
-            srcset="./imgs/pixly/px-03@0.5x.webp 197w, ./imgs/pixly/px-03.webp 393w, ./imgs/pixly/px-03@2x.webp 786w"
-            sizes="(max-width: 600px) 100vw, 50vw"
-            width="393" height="852"
-            alt="Android photo picker, Photos tab; one gate thumbnail selected; Add button at bottom." loading="lazy">
-          <figcaption class="assets-duo__caption">System photo picker for batch upload from the device camera roll.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="text-section">
-      <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">Users</h2></div>
-        <div class="text-section__columns">
-          <p class="text-section__headline">Two distinct needs, one shared frustration.</p>
-          <div class="text-section__prose">
-            <p><strong>Marcus — Site Superintendent.</strong> Takes 30–50 photos daily across subcontractor documentation, safety records, and progress updates. Primary device: phone, often in low-connectivity conditions. “By Friday I've taken 200 photos. Finding one from Tuesday? Forget it.”</p>
-            <p><strong>Sarah — Project Manager.</strong> Assembles weekly reports and compliance audits from photos across the whole team. Works on desktop. “I need all concrete pour photos from the east wing, from anyone on the team.”</p>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Design for trust, not just tag accuracy</strong></h3>
+            <div class="text-blocks__prose">
+              <p>Computer vision can produce a label even when it is uncertain. Showing every predicted tag would create noisy search results and weaken trust. Hiding too much would reduce the value of the system.</p>
+              <p>I worked with the team to set an 80% confidence threshold. Tags above that threshold appeared in search results. Tags below it stayed in the index but did not appear until a user confirmed or rejected them.</p>
+              <p>The tradeoff was recall versus trust. We chose to show fewer results when the model was unsure because one clearly wrong result can damage confidence more than one missing result. This also created a feedback loop. User confirmation could improve the system without making uncertain AI behavior visible as a product failure.</p>
+            </div>
+          </div>
+          <div class="text-blocks__item scroll-reveal">
+            <h3 class="text-blocks__item-title"><strong>Translate AI labels into field language</strong></h3>
+            <div class="text-blocks__prose">
+              <p>The AI could identify objects, but its labels did not always match the words people used on construction sites. A generic label such as “excavating equipment” was technically correct, but a superintendent was more likely to search for “excavator” or “backhoe.”</p>
+              <p>I owned the vocabulary layer between model output and user behavior. I combined generic image labels with construction-specific labels and created a synonym map that matched the language field users used to describe materials, equipment, and site conditions.</p>
+              <p>The tradeoff was more work up front. Without it, Pixly could claim technical accuracy while still failing the user's real task: finding photos with the words that came naturally to them.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -331,27 +318,15 @@
       </div>
     </section>
 
-    <section class="text-blocks">
-      <div class="cs-wrap text-blocks__wrap">
-        <h2 class="text-blocks__eyebrow">The three decisions that mattered</h2>
-        <div class="text-blocks__list">
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>AI that doesn't announce itself.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>No AI iconography. Tags surface as passive metadata and match annotations—not badges on every thumbnail. Field teams trust the system when it demonstrates accuracy, not when it declares capability.</p>
-            </div>
-          </div>
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>Suppressing low-confidence tags.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>An 80% confidence floor calibrated trust. Tags below threshold stay in the index but out of results until users confirm or reject—building a feedback loop without exposing uncertain AI output.</p>
-            </div>
-          </div>
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>One search input, not a new surface.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>Natural language resolves intent—“excavator near Building C” maps date, location, and material tags. Filter chips remain for power users. Voice input is parity with text for gloved hands and bright sun.</p>
-            </div>
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">How I led the work</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">I began with contextual inquiry across three construction firms. </p>
+          <div class="text-section__prose">
+            <p>The research showed two distinct needs. Field users needed to find a specific photo quickly, often from memory. Project managers needed to browse a category of photos across a project, such as concrete work, equipment, or a site condition.</p>
+            <p>It also showed that chronology was the wrong organizing model. People did not think, “Show me photos from Tuesday.” They thought, “Show me the concrete pour on the east wing,” or “Find all photos of the excavator.”</p>
+            <p>I used those findings to align the partners around shared product decisions. The AI team had a clear definition of useful labels. The UI team had a clear search model and interaction direction. Pixly had a focused POC that connected technical capability to customer value.</p>
           </div>
         </div>
       </div>
@@ -360,22 +335,21 @@
     <section class="assets-duo">
       <div class="cs-wrap assets-duo__wrap">
         <figure class="assets-duo__item">
-          <img class="assets-duo__image" src="./imgs/pixly/px-06.webp"
-            srcset="./imgs/pixly/px-06@0.5x.webp 720w, ./imgs/pixly/px-06.webp 1440w, ./imgs/pixly/px-06@2x.webp 2880w"
+          <img class="assets-duo__image" src="./imgs/pixly/px-02.webp"
+            srcset="./imgs/pixly/px-02@0.5x.webp 720w, ./imgs/pixly/px-02.webp 1440w, ./imgs/pixly/px-02@2x.webp 2880w"
             sizes="(max-width: 600px) 100vw, 50vw"
             width="1440" height="1024"
-            alt="Pixly General album upload with five photos selected; four thumbnails show Tagging photos status." loading="lazy">
-          <figcaption class="assets-duo__caption">Batch upload on desktop; tagging status shown per thumbnail.</figcaption>
+            alt="Pixly Feed in list view with search field, image-search icon, Filter control, and two photo entries." loading="lazy">
+          <figcaption class="assets-duo__caption">Same feed serves field capture and desktop retrieval workflows.</figcaption>
         </figure>
         <figure class="assets-duo__item">
-          <img class="assets-duo__image" src="./imgs/pixly/px-05.webp"
-            srcset="./imgs/pixly/px-05@0.5x.webp 197w, ./imgs/pixly/px-05.webp 393w, ./imgs/pixly/px-05@2x.webp 786w"
+          <img class="assets-duo__image" src="./imgs/pixly/px-03.webp"
+            srcset="./imgs/pixly/px-03@0.5x.webp 197w, ./imgs/pixly/px-03.webp 393w, ./imgs/pixly/px-03@2x.webp 786w"
             sizes="(max-width: 600px) 100vw, 50vw"
             width="393" height="852"
-            alt="Pixly mobile General album, Jan 21 2025; one photo tagged; five thumbnails show Tagging photos status." loading="lazy">
-          <figcaption class="assets-duo__caption">Mobile album grid shows tag counts while batch tagging runs.</figcaption>
+            alt="Android photo picker, Photos tab; one gate thumbnail selected; Add button at bottom." loading="lazy">
+          <figcaption class="assets-duo__caption">System photo picker for batch upload from the device camera roll.</figcaption>
         </figure>
-        
       </div>
     </section>
 
@@ -405,27 +379,48 @@
       </div>
     </section>
 
-    <section class="text-blocks">
-      <div class="cs-wrap text-blocks__wrap">
-        <h2 class="text-blocks__eyebrow">What was validated and what wasn't</h2>
-        <div class="text-blocks__list">
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>Validated: tag accuracy.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>Exceeded 90% precision on high-confidence construction-specific tags, confirmed through user testing and manual audit. The taxonomy held up against real field vocabulary.</p>
-            </div>
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What I would change</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">The AI and UX work began with too much asynchronous back-and-forth on taxonomy decisions.</p>
+          <div class="text-section__prose">
+            <p>Bringing the ML and UX teams together during the first sprint would have reduced a lost week and produced faster alignment.</p>
+            <p>That experience reinforced a principle I use in AI product work: model quality and product meaning cannot be designed in isolation. The technology may identify an object, but the product still has to decide what it means, when to show it, and whether users can trust it.</p>
           </div>
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>Hypothesis: search adoption.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>Target of 60%+ engagement within the first month (up from 23% on date/location filters) requires production deployment to measure.</p>
-            </div>
-          </div>
-          <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>Scoped out deliberately.</strong></h3>
-            <div class="text-blocks__prose">
-              <p>Collaborative tagging provenance and faceted navigation for mature tag libraries were deferred to production. Co-locating AI and UX for the first sprint would have saved the week lost to async taxonomy back-and-forth.</p>
-            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assets-duo">
+      <div class="cs-wrap assets-duo__wrap">
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/pixly/px-06.webp"
+            srcset="./imgs/pixly/px-06@0.5x.webp 720w, ./imgs/pixly/px-06.webp 1440w, ./imgs/pixly/px-06@2x.webp 2880w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="1440" height="1024"
+            alt="Pixly General album upload with five photos selected; four thumbnails show Tagging photos status." loading="lazy">
+          <figcaption class="assets-duo__caption">Batch upload on desktop; tagging status shown per thumbnail.</figcaption>
+        </figure>
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/pixly/px-05.webp"
+            srcset="./imgs/pixly/px-05@0.5x.webp 197w, ./imgs/pixly/px-05.webp 393w, ./imgs/pixly/px-05@2x.webp 786w"
+            sizes="(max-width: 600px) 100vw, 50vw"
+            width="393" height="852"
+            alt="Pixly mobile General album, Jan 21 2025; one photo tagged; five thumbnails show Tagging photos status." loading="lazy">
+          <figcaption class="assets-duo__caption">Mobile album grid shows tag counts while batch tagging runs.</figcaption>
+        </figure>
+        
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What this demonstrates</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">I choose small, credible bets that prove concepts.</p>
+          <div class="text-section__prose">
+            <p>I don't go all in until the concept is proven. When I do I make sure to lead across research, interaction design, and partner alignment. I did not own the ML pipeline or the visual UI team for this engagement but I did own the decisions that connected those moving parts to a clear customer outcome.</p>
           </div>
         </div>
       </div>
@@ -530,7 +525,7 @@
           <div class="finish__stage">
             <div class="finish__act finish__act--proof">
               <div class="cs-wrap results-section__wrap">
-                <h2 class="results-section__eyebrow">Results</h2>
+                <h2 class="results-section__eyebrow">Impact</h2>
                 <div class="results-section__quote">
                   <blockquote class="results-section__pullquote">
                     <span class="results-section__quote-text">“Pixly saves us time and resources and has streamlined our photo documentation process. It's an absolute game-changer!”</span>

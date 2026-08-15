@@ -176,13 +176,14 @@
 
     <section class="text-cta">
       <div class="cs-wrap text-cta__wrap">
-        <h2 class="text-cta__eyebrow">The client</h2>
+        <h2 class="text-cta__eyebrow">The business problem</h2>
         <p class="text-cta__headline">
-          <span class="cs-line-mask"><span class="cs-line">Poverty is dramatically reduced when</span></span>
-          <span class="cs-line-mask"><span class="cs-line">everyone has access to legal</span></span>
-          <span class="cs-line-mask"><span class="cs-line">representation.</span></span>
+          <span class="cs-line-mask"><span class="cs-line">Open Door Legal is a San Francisco</span></span>
+          <span class="cs-line-mask"><span class="cs-line">nonprofit that helps people access </span></span>
+          <span class="cs-line-mask"><span class="cs-line">legal support across housing,</span></span>
+          <span class="cs-line-mask"><span class="cs-line">immigration, and family law.</span></span>
         </p>
-        <p class="text-cta__body">Open Door Legal is an award-winning San Francisco nonprofit running a high-volume intake and referral operation across housing, immigration, and family law. When they came to me, they had two problems. One they knew about. One they discovered once we started working.</p>
+        <p class="text-cta__body">Its staff handle a high volume of client intakes and referrals. When a client needed help outside ODL's direct services, staff had to find a partner organization, contact them through separate channels, track the referral manually, and follow up outside the system. This manual process was time-consuming, error-prone, and made it difficult to monitor the referral process or identify gaps in service.</p>
       </div>
     </section>
 
@@ -190,7 +191,7 @@
       <div class="cs-wrap product-showcase__wrap">
         <h2 class="product-showcase__eyebrow">Product showcase</h2>
         <div class="product-showcase__intro">
-          <p>The brief: build a two-sided referral marketplace inside Salesforce—connecting ODL with partner legal organizations—so referrals could be created, sent, tracked, and received in one system.</p>
+          <p>The goal: build a two-sided referral marketplace in Salesforce, then create a grant-management foundation that reduced reporting overhead without placing compliance work on front-line staff.</p>
         </div>
         <div class="product-showcase__grid">
           <div class="product-showcase__item">
@@ -247,11 +248,12 @@
 
     <section class="text-section">
       <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">Phase 1 — The referral feature</h2></div>
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What was at stake</h2></div>
         <div class="text-section__columns">
-          <p class="text-section__headline">ODL's referral process was entirely manual.</p>
+          <p class="text-section__headline">A weak referral system introduced risk under California professional-conduct rules.</p>
           <div class="text-section__prose">
-            <p>When a client's needs fell outside what ODL could directly serve, admins searched an external database, retrieved contact details, and manually reached out by phone, email, fax, or post. Every referral was logged by hand. I was the sole designer—I drove research, defined user flows for both sides of the marketplace, owned all interaction design, and managed the client relationship through reviews and testing.</p>
+            <p>A weak grant-management system could create inaccurate funder reports, staff burnout, and risk to grant renewal. For a nonprofit, reporting quality is directly connected to the ability to continue providing services.</p>
+            <p>The design challenge was to improve operational speed without asking case managers to become compliance experts. The system had to guide them through the right steps while preserving the focus on the client.</p>
           </div>
         </div>
       </div>
@@ -270,87 +272,33 @@
       </div>
     </section>
 
-    <section class="text-section">
-      <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">The constraint nobody warned me about</h2></div>
-        <div class="text-section__columns">
-          <p class="text-section__headline">This wasn't just a workflow problem—it was a legal ethics problem.</p>
-          <div class="text-section__prose">
-            <p>Attorneys are bound by the California Rules of Professional Conduct. Sharing client information across a network triggers obligations around confidentiality, informed consent, and the duty to prospective clients. A California attorney reviewed the proposed system and issued a formal ethics opinion before we could ship.</p>
-            <p>Informed consent had to be built into referral creation. Data visible to receiving organizations required explicit scoping. The simplified conflict check was deliberately limited to three fields: first name, last name, and date of birth. The templated outbound client summary only auto-generates after a clean conflict check clears.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="assets-duo">
-      <div class="cs-wrap assets-duo__wrap">
-        <figure class="assets-duo__item">
-          <img class="assets-duo__image" src="./imgs/odl/odl-02.webp"
-               srcset="./imgs/odl/odl-02@0.5x.webp 960w, ./imgs/odl/odl-02.webp 1920w, ./imgs/odl/odl-02@2x.webp 3840w"
-               sizes="(max-width: 600px) 100vw, 50vw"
-               width="1920" height="1174"
-               alt="Flowchart of referral steps above numbered screen map for Referrer, Referring partner, and System rows." loading="lazy">
-          <figcaption class="assets-duo__caption">Flowchart of referral steps above numbered screen map for Referrer, Referring partner, and System rows.</figcaption>
-        </figure>
-        <figure class="assets-duo__item">
-          <img class="assets-duo__image" src="./imgs/odl/odl-02-2.webp"
-               srcset="./imgs/odl/odl-02-2@0.5x.webp 440w, ./imgs/odl/odl-02-2.webp 880w, ./imgs/odl/odl-02-2@2x.webp 1760w"
-               sizes="(max-width: 600px) 100vw, 50vw"
-               width="880" height="619"
-               alt="Flowchart; Submit Referral leads to Available Referral Partners decision, then self-serve, share client information, or Simplified conflict check." loading="lazy">
-          <figcaption class="assets-duo__caption">Flowchart; Submit Referral leads to Available Referral Partners decision, then self-serve, share client information, or Simplified conflict check.</figcaption>
-        </figure>
-      </div>
-    </section>
-
     <section class="text-blocks">
       <div class="cs-wrap text-blocks__wrap">
-        <h2 class="text-blocks__eyebrow">The decisions that mattered</h2>
+        <h2 class="text-blocks__eyebrow">Decisions that mattered</h2>
         <div class="text-blocks__list">
           <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>In-network and out-of-network as first-class concepts.</strong></h3>
+            <h3 class="text-blocks__item-title"><strong>Treat consent and confidentiality as product states</strong></h3>
             <div class="text-blocks__prose">
-              <p>Not every organization ODL refers to is in Salesforce. I designed in-network and out-of-network as explicit, equal designations at referral creation—keeping the manual path inside the product rather than beside it.</p>
+              <p>The referral process involved sharing client information with outside legal organizations. That is not a standard handoff. Attorneys have duties around confidentiality, informed consent, and prospective clients.</p>
+              <p>The easy approach would have been to treat consent as a checkbox and rely on staff training to prevent mistakes. That would leave too much room for an incorrect action during a busy workflow.</p>
+              <p>I recommended making consent, data visibility, conflict status, and partner eligibility explicit states in the product. Staff could see what was allowed, what information would be shared, and what had to happen before a referral could move forward. The tradeoff was a more structured workflow. In return, the system reduced reliance on memory and helped staff make the safe choice at the moment it mattered.</p>
             </div>
           </div>
           <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>The referral as a self-contained object.</strong></h3>
+            <h3 class="text-blocks__item-title"><strong>Make referrals self-contained</strong></h3>
             <div class="text-blocks__prose">
-              <p>Everything needed to process, act on, or close a referral is present in a single view—a deliberate choice against Salesforce's default related-list navigation for a high-volume, context-switching operation.</p>
+              <p>Salesforce often spreads work across related lists, tabs, and separate records. That can work for low-risk CRM tasks, but it creates friction when staff need to understand, act on, and close a referral quickly.</p>
+              <p>I designed the referral as a self-contained object. Everything needed to process the referral, communicate with a partner, track the client's status, and close the loop appeared in one workflow. The tradeoff was moving away from default Salesforce navigation patterns. The benefit was lower context switching and a clearer view of what remained to be done.</p>
+              <p>A closed referral also needed an intentional end state. Staff needed to know that the work was complete so they could return to their queue without wondering whether an action had been missed.</p>
             </div>
           </div>
           <div class="text-blocks__item scroll-reveal">
-            <h3 class="text-blocks__item-title"><strong>Designing for the end state.</strong></h3>
+            <h3 class="text-blocks__item-title"><strong>Build grant reporting into the data model</strong></h3>
             <div class="text-blocks__prose">
-              <p>A closed referral still needs to communicate completeness and release attention. Staff should leave a closed referral and return to their queue without uncertainty about whether something was missed.</p>
+              <p>The grant-management problem could not be solved with cleaner screens alone. ODL needed to connect one client to multiple grants, activities, intakes, cases, outcomes, and time forecasts. Without those relationships, staff would keep reconciling reports by hand. That created administrative cost, reporting errors, and funding risk.</p>
+              <p>I helped define the Beneficiary junction object as the architectural link between the client, grant activities, and related service records. This made per-funder reporting possible without manual reconstruction of the client's service history.</p>
+              <p>The tradeoff was investing in upstream data-model work before designing the final interface. The benefit was a system that could produce reliable reporting and reduce the burden on staff.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="asset-section">
-      <div class="cs-wrap">
-        <figure class="asset-section__figure">
-          <img class="asset-section__image" src="./imgs/odl/odl-03.webp"
-               srcset="./imgs/odl/odl-03@0.5x.webp 960w, ./imgs/odl/odl-03.webp 1920w, ./imgs/odl/odl-03@2x.webp 3840w"
-               sizes="100vw"
-               width="1920" height="1080"
-               alt="Referral Client info; Check for conflicts fields filled; message Conflicts with the listed parties were found; Declined referral button shown." loading="lazy">
-          <figcaption class="asset-section__caption">Referral Client info; Check for conflicts fields filled; message Conflicts with the listed parties were found; Declined referral button shown.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="text-section">
-      <div class="cs-wrap text-section__wrap">
-        <div class="text-section__header"><h2 class="text-section__eyebrow">Phase 2 — Grant management</h2></div>
-        <div class="text-section__columns">
-          <p class="text-section__headline">Why this problem is existential for a nonprofit.</p>
-          <div class="text-section__prose">
-            <p>ODL's funding comes from grants—each with unique reporting requirements. Grant administration was a convoluted, multi-step process: manual onboarding, monthly reconciliation across disconnected reports, and significant manual assembly for funder reports. The risk isn't inefficiency—it's reporting inaccuracy and compliance exposure on renewals.</p>
-            <p>The brief: redesign grant management in Salesforce to reduce administrative overhead by 90%, with as little burden on line staff as possible. The Beneficiary junction object—connecting contacts, grant activities, intakes, cases, and time forecasts—was the architectural linchpin that unlocked per-funder reporting without manual reconciliation.</p>
           </div>
         </div>
       </div>
@@ -376,6 +324,42 @@
       </div>
     </section>
 
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">How I led the work</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">I started by mapping how staff actually worked and where the system failed the process.</p>
+          <div class="text-section__prose">
+            <p>The existing workflows relied on an external  databases, manual contact through several channels, and hand-entered status tracking.</p>
+            <p>I translated that reality into a two-sided workflow for referrers, receiving partners, and the system itself. I brought the client into regular reviews, tested the flows, and worked through the exceptions that made the difference between a polished concept and an operational product.</p>
+            <p>For grant management, I shifted upstream. The first question was not what the screen should look like. It was what objects needed to exist, how they needed to relate, and which data had to be captured during intake and case closure.</p>
+            <p>That work made it possible to surface grant-relevant fields at the right moment. Staff did not need to remember reporting rules separately from serving clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>  
+
+    <section class="assets-duo">
+      <div class="cs-wrap assets-duo__wrap">
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/odl/odl-02.webp"
+               srcset="./imgs/odl/odl-02@0.5x.webp 960w, ./imgs/odl/odl-02.webp 1920w, ./imgs/odl/odl-02@2x.webp 3840w"
+               sizes="(max-width: 600px) 100vw, 50vw"
+               width="1920" height="1174"
+               alt="Flowchart of referral steps above numbered screen map for Referrer, Referring partner, and System rows." loading="lazy">
+          <figcaption class="assets-duo__caption">Flowchart of referral steps above numbered screen map for Referrer, Referring partner, and System rows.</figcaption>
+        </figure>
+        <figure class="assets-duo__item">
+          <img class="assets-duo__image" src="./imgs/odl/odl-02-2.webp"
+               srcset="./imgs/odl/odl-02-2@0.5x.webp 440w, ./imgs/odl/odl-02-2.webp 880w, ./imgs/odl/odl-02-2@2x.webp 1760w"
+               sizes="(max-width: 600px) 100vw, 50vw"
+               width="880" height="619"
+               alt="Flowchart; Submit Referral leads to Available Referral Partners decision, then self-serve, share client information, or Simplified conflict check." loading="lazy">
+          <figcaption class="assets-duo__caption">Flowchart; Submit Referral leads to Available Referral Partners decision, then self-serve, share client information, or Simplified conflict check.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="text-blocks">
       <div class="cs-wrap text-blocks__wrap">
         <h2 class="text-blocks__eyebrow">What this engagement required that most don't</h2>
@@ -396,6 +380,34 @@
             <h3 class="text-blocks__item-title"><strong>Working upstream of the UI.</strong></h3>
             <div class="text-blocks__prose">
               <p>The grant data model work required operating at the boundary of UX and systems design—defining what objects needed to exist and how they needed to relate before any screens could be meaningful.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="asset-section">
+      <div class="cs-wrap">
+        <figure class="asset-section__figure">
+          <img class="asset-section__image" src="./imgs/odl/odl-03.webp"
+                srcset="./imgs/odl/odl-03@0.5x.webp 960w, ./imgs/odl/odl-03.webp 1920w, ./imgs/odl/odl-03@2x.webp 3840w"
+                sizes="100vw"
+                width="1920" height="1080"
+                alt="Referral Client info; Check for conflicts fields filled; message Conflicts with the listed parties were found; Declined referral button shown." loading="lazy">
+          <figcaption class="asset-section__caption">Referral Client info; Check for conflicts fields filled; message Conflicts with the listed parties were found; Declined referral button shown.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="text-section">
+      <div class="cs-wrap text-section__wrap">
+        <div class="text-section__header"><h2 class="text-section__eyebrow">What this demonstrates</h2></div>
+        <div class="text-section__columns">
+          <p class="text-section__headline">How I turn legal, operational, and data constraints into safer products that work in the real world.</p>
+          <div class="text-section__prose">
+            <p>This project required more than workflow design. It required judgment about what should be automated, what information should remain limited, and how legal and funding constraints could become useful product behavior.
+            <p>I did not treat ethics, compliance, or data structure as constraints added after the design. I used them to define the product from the start.</p>
+            <p>That is how I approach high-stakes systems: make the safe path clear, make the real workflow visible, and build the underlying structure before asking the interface to solve a problem it cannot solve on its own.</p>
             </div>
           </div>
         </div>
