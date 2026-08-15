@@ -189,7 +189,7 @@
 /* ── Bene pinned carousel ── */
 .about-bene {
   background-color: var(--color-black);
-  margin: 0;
+  margin-block: var(--section-gap-lg) 0;
 }
 
 .about-bene__stage,
@@ -564,15 +564,10 @@
   outline-offset: 4px;
 }
 
-/* ── How I work — uses shared .text-blocks ── */
-.about-page .text-blocks {
-  margin: 0 0 var(--about-section-gap);
-}
-
 /* ── Looking for split (mirrors bene layout; image left, no carousel) ── */
 .about-looking {
   background-color: var(--color-black);
-  margin: 0;
+  margin-block: var(--section-gap-lg) 0;
 }
 
 .about-contact {
@@ -647,6 +642,7 @@
   text-decoration-thickness: 2px;
   text-transform: uppercase;
   text-underline-offset: 3px;
+  margin-top: 2.5rem;
 }
 
 .about-contact__link:hover,
